@@ -44,13 +44,13 @@ end
 # post item
 get "/post/new" do
   redirect "/profile/new" unless @profile
-  erb :new_post
+  erb :'posts/new'
 end
 
 # view item
 get "/post/:id" do
   @post = "this is a post"
-  erb :post
+  erb :'posts/show'
 end
 
 post "/post/create" do
@@ -61,7 +61,7 @@ end
 
 # login / logout routes
 get "/profile/new" do
-  erb :new_profile
+  erb :'profiles/new'
 end
 
 get "/auth/singly/callback" do
