@@ -3,7 +3,12 @@
   <title>bidsy</title>
 </head>
 <body>
-  <%= @profiles %>
+  <% if @profile %>
+    <%= @profile['name'] %>
+    <a href="/logout">Logout</a>
+  <% else %>
+    <a href="/auth/singly?service=facebook">Login</a>
+  <% end %>
   <%= yield %>
 </body>
 </html>

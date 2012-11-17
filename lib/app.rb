@@ -15,7 +15,7 @@ use OmniAuth::Builder do
 end
 
 before do
-  @profiles = HTTParty.get(profiles_url,
+  @profile = HTTParty.get(profile_url,
     query: { access_token: session[:access_token] }
   ).parsed_response if session[:access_token]
 end
@@ -25,9 +25,15 @@ get "/" do
   erb :index
 end
 
+# post item
+get "/post" do
+  redirect "/profile/new" unless @profile
+  erb :post
+end
+
 # login / logout routes
-get "login" do
-  erb :login
+get "/profile/new" do
+  erb :new_profile
 end
 
 get "/auth/singly/callback" do
@@ -41,6 +47,6 @@ get "/logout" do
   redirect "/"
 end
 
-def profiles_url
-  "#{SINGLY_API}/profiles"
+def profile_url
+  "#{SINGLY_API}/profile"
 end
