@@ -13,11 +13,9 @@
     <ul>
       <li>
         <a href="/">
-          <img id="headerLogo" src="/images/logo_inv_small.png">
+          <%= image_tag "/images/logo_inv_small.png", id: "headerLogo" %>
         </a>
       </li>
-
-
 <% if @profile %>
       <li>
         <a href="/logout">Logout</a>
