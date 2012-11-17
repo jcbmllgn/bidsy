@@ -13,13 +13,16 @@ SINGLY_SECRET = "30493d0e5acf724c92d10d20a7db80ad"
 # id => [ Posts ]
 DATA = { }
 
-# class Post
+class Post
+  attr_reader :title, :starting_price, :description
 
-#   def initialize( id )
-#     @id = id
-#   end
+  def initialize( params )
+    @title = params['title']
+    @starting_price = params['starting-price']
+    @description = params['description']
+  end
 
-# end
+end
 
 enable :sessions
 
@@ -48,13 +51,23 @@ get "/post/new" do
 end
 
 # view item
-get "/post/:id" do
-  @post = "this is a post"
+get "/post/:profile_id/:id" do
+  @post = DATA[params["profile_id"]][params["id"].to_i]
   erb :'posts/show'
 end
 
 post "/post/create" do
+  authorize!
 
+  # give this user a space in out array if they don't have one.
+  unless DATA[@profile['id']]
+    DATA[@profile['id']] = []
+  end
+
+  # add the new post to the DATA hash
+  DATA[@profile['id']] << Post.new(params)
+
+  redirect "/post/#{@profile['id']}/0"
 end
 
 # AUTH =====================================
