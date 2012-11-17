@@ -8,6 +8,10 @@ SINGLY_API = "https://api.singly.com"
 SINGLY_ID = "9218ff10ccad13f577faa0e29b4827c1"
 SINGLY_SECRET = "30493d0e5acf724c92d10d20a7db80ad"
 
+# Mock a database
+# id => [Posts]
+DATA = { }
+
 enable :sessions
 
 use OmniAuth::Builder do
@@ -26,8 +30,14 @@ get "/" do
 end
 
 # post item
-get "/post" do
+get "/post/new" do
   redirect "/profile/new" unless @profile
+  erb :new_post
+end
+
+# view item
+get "/post/:id" do
+  @post = "this is a post"
   erb :post
 end
 

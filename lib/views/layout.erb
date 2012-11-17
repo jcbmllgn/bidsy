@@ -4,6 +4,8 @@
 </head>
 <body>
   <% if @profile %>
+    <img src="<%= @profile['thumbnail_url'] %>">
+    <span><%= @profile['description'] %></span>
     <%= @profile['name'] %>
     <a href="/logout">Logout</a>
   <% else %>
