@@ -67,7 +67,7 @@ post "/post/create" do
   # add the new post to the DATA hash
   DATA[@profile['id']] << Post.new(params)
 
-  redirect "/post/#{@profile['id']}/0"
+  redirect "/post/#{@profile['id']}/#{DATA[@profile['id']].size - 1}"
 end
 
 # AUTH =====================================
