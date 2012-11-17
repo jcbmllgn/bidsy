@@ -14,12 +14,22 @@ use OmniAuth::Builder do
   provider :singly, SINGLY_ID, SINGLY_SECRET
 end
 
+before do
+  @profiles = HTTParty.get(profiles_url,
+    query: { access_token: session[:access_token] }
+  ).parsed_response if session[:access_token]
+end
+
 # landing page
 get "/" do
   erb :index
 end
 
 # login / logout routes
+get "login" do
+  erb :login
+end
+
 get "/auth/singly/callback" do
   auth = request.env["omniauth.auth"]
   session[:access_token] = auth.credentials.token
@@ -29,4 +39,8 @@ end
 get "/logout" do
   session.clear
   redirect "/"
+end
+
+def profiles_url
+  "#{SINGLY_API}/profiles"
 end
