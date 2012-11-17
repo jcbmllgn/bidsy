@@ -1,16 +1,54 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>bidsy</title>
+  <title>Bidsy.co - Sell Beautifully</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <% if @profile %>
-    <img src="<%= @profile['thumbnail_url'] %>">
-    <span><%= @profile['description'] %></span>
-    <%= @profile['name'] %>
-    <a href="/logout">Logout</a>
-  <% else %>
-    <a href="/auth/singly?service=facebook">Login</a>
-  <% end %>
-  <%= yield %>
+
+<div id="header">
+  <nav>
+    <ul>
+      <li>
+        <a href="">
+          <img id="headerLogo" src="/images/logo_inv_small.png">
+        </a>
+      </li>
+
+
+<% if @profile %>
+      <li>
+        <a href="/logout">Logout</a>
+      </li>
+      <li>
+        <a href="/post/new">Add Product</a>
+      </li>
+      <li>
+        
+        <a href="#">
+          <img id="userIconSmall" src="<%= @profile['thumbnail_url'] %>">
+          <%= @profile['name'] %>
+        </a>
+      </li>
+<% else %>
+      <li>
+        <a href="/auth/singly?service=facebook">Login</a>
+      </li>
+      <li>
+        <a href="/post/new">Add Product</a>
+      </li>
+<% end %>
+    </ul>
+  </nav>
+  <div style="clear: both;"></div>
+</div>
+
+<div id="container">
+
+
+</div>
+
+
 </body>
 </html>
