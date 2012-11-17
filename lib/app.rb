@@ -1,7 +1,8 @@
 require 'rubygems'
 require "httparty"
-require "sinatra"
 require "omniauth-singly"
+require "sinatra"
+require 'sinatra/static_assets'
 
 # Singly
 SINGLY_API = "https://api.singly.com"
@@ -9,8 +10,16 @@ SINGLY_ID = "9218ff10ccad13f577faa0e29b4827c1"
 SINGLY_SECRET = "30493d0e5acf724c92d10d20a7db80ad"
 
 # Mock a database
-# id => [Posts]
+# id => [ Posts ]
 DATA = { }
+
+# class Post
+
+#   def initialize( id )
+#     @id = id
+#   end
+
+# end
 
 enable :sessions
 
@@ -24,10 +33,13 @@ before do
   ).parsed_response if session[:access_token]
 end
 
-# landing page
+# LANDING ==================================
+
 get "/" do
   erb :index
 end
+
+# POSTS ====================================
 
 # post item
 get "/post/new" do
@@ -40,6 +52,12 @@ get "/post/:id" do
   @post = "this is a post"
   erb :post
 end
+
+post "/post/create" do
+
+end
+
+# AUTH =====================================
 
 # login / logout routes
 get "/profile/new" do
@@ -55,6 +73,10 @@ end
 get "/logout" do
   session.clear
   redirect "/"
+end
+
+def authorize!
+  redirect '/' unless @profile
 end
 
 def profile_url
