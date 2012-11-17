@@ -52,6 +52,13 @@ table {
 Custom css here:
 ---------------------- */
 
+
+/* Font styling: */
+
+p {
+	color: #3e3e3e;
+}
+
 a {
 	color: #3e3e3e;
 	text-decoration: none;
@@ -61,9 +68,56 @@ a:hover {
 	text-decoration: underline;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
 	color: #3e3e3e;
+	font-weight: bold;
+	font-size: 27px;
+	line-height: 30px;
+	margin-bottom: 10px;
 }
+
+h2 {
+	color: #646464;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 26px;
+	margin-bottom: 8px;
+}
+
+h3 {
+	color: #3e3e3e;
+	font-weight: bold;
+	font-size: 19px;
+	line-height: 22px;
+	margin-bottom: 6px;
+}
+
+h4 {
+	color: #a0a0a0;
+	font-weight: bold;
+	font-size: 19px;
+	line-height: 22px;
+	margin-bottom: 5px;
+}
+
+h5 {
+	color: #3e3e3e;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 18px;
+	margin-bottom: 5px;
+}
+
+h6 {
+	color: #3e3e3e;
+	font-size: 16px;
+	line-height: 18px;
+	margin-bottom: 5px;
+}
+
+
+/* Other styling */
+
 
 #header {
 	background-color: #e15429;
@@ -163,6 +217,34 @@ h1, h2, h3, h4, h5, h6 {
 #landingSellBtn:hover {
 	background-color: #1a97bd;
 	text-decoration: none;
+}
+
+/* Product page: */
+
+#productLeftCol {
+	width: 625px;
+	min-height: 900px;
+	float: left;
+}
+
+#productDetials h1 {
+	margin-top: 10px;
+}
+
+#productDetials .productParagraph {
+	margin-top: 15px;
+	color: #434343;
+	line-height: 20px;
+	font-size: 14px;
+}
+
+
+#productRightCol {
+	width: 300px;
+	height: 900px;
+	float: right;
+
+	background-color: #e3e3e3;
 }
 
 /* style for widgets */
