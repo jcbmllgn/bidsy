@@ -1,10 +1,10 @@
 <div id="productLeftCol">
 	<div class="productGallery">
-		<img src="/wine/1.jpeg">
+		<%= image_tag @post.img_path %>
 	</div>
 
 	<div id="productDetials">
-		<h1>Refurbished Breville IKON Hemisphere</h1>
+		<h1><%= @post.title %></h1>
 
 		<div class="productStats">
 			<div class="row">
@@ -21,7 +21,7 @@
 			</div>
 		</div>
 
-		<p class="productParagraph">The Breville IKON Die-Cast Hemisphere Blender is perfect for ice-crushing, blending and making your favorite smoothies or drinks. The patented hemisphere bowl blade system utilizes a large, semicircular shredding blade positioned to hug the uniquely shaped bowl. Because of this design, there are no still zones around the blades, and ingredients are shredded into fine, consistent particles. The 1.5 liter (51 oz.) glass jar is designed for clarity.</p>
+		<p class="productParagraph"><%= @post.description %></p>
 
 	</div>
 
@@ -30,11 +30,12 @@
 <div id="productRightCol">
 	<div class="widget bidWidget">
 		<div class="row">
-			<p>Enter <span>$28.00</span> or more:</p>
+			<!-- MAKE A HELPER FOR THIS -->
+			<p>Enter <span>$<%= @post.current_price + 1 %></span> or more:</p>
 		</div>
 		<div class="row amountRow">
 			<input type="text" placeholder="$">
-			<p>Current Bid: <span>$27.00</span></p>
+			<p>Current Bid: <span><%= @post.current_price %></span></p>
 		</div>
 		<a href="#">
 			<div>Place bid</div>

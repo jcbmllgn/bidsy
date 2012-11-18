@@ -15,7 +15,8 @@ SINGLY_SECRET = "30493d0e5acf724c92d10d20a7db80ad"
 DATA = { }
 
 class Post
-  attr_reader :title, :description, :starting_price, :fields, :img_path
+  attr_reader :title, :description, :starting_price, :current_price, :fields,
+    :img_path
 
   @@field_options = [
     'condition',
@@ -24,10 +25,11 @@ class Post
   ]
 
   def initialize( img_path, params )
+    @img_path = img_path
     @title = params['title']
     @description = params['description']
-    @starting_price = params['starting-price']
-    @img_path = img_path
+    @starting_price = params['starting-price'].to_i
+    @current_price = @starting_price
 
     @fields = { }
     # params['fields'].each do |key, value|
@@ -36,6 +38,16 @@ class Post
   end
 
 end
+
+DATA['example'] = []
+DATA['example'][0] = Post.new('car/1.jpeg', 'title' => 'Example Posting',
+'description' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+'starting-price' => '100')
 
 enable :sessions
 
