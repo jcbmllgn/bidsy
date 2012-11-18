@@ -1,7 +1,5 @@
 <ul>
-
   <% @posts.each_with_index do |post, i| %>
     <li><a href="/post/<%= i %>"><%= post.title %> - Seller: <%= post.profile['name'] %></a></li>
   <% end %>
-
 </ul>

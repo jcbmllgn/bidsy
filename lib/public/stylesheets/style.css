@@ -284,11 +284,11 @@ h6 {
 	margin: -12px auto 0px;
 	border-radius: 8px;
 	-webkit-border-radius: 8px;
-	border: 2px solid #29b6e1;
+	border: 2px solid #5429e1;
 }
 
 #landingSellBtn {
-	background-color: #29b6e1;
+	background-color: #5429e1;
 	color: white;
 	padding: 8px 35px;
 	font-weight: bold;
@@ -298,7 +298,7 @@ h6 {
 }
 
 #landingSellBtn:hover {
-	background-color: #1a97bd;
+	background-color: #401abd;
 	text-decoration: none;
 }
 
