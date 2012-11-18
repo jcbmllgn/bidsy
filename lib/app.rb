@@ -94,6 +94,7 @@ post "/post/create" do
   name = "#{params['image'][:filename]}_#{@profile['id']}"
   path = File.join 'lib', 'public', 'uploaded_files', name
   FileUtils.cp params['image'][:tempfile], path
+
   img_path = File.join '/', 'uploaded_files', name
 
   # give this user a space in out array if they don't have one.
@@ -105,28 +106,6 @@ post "/post/create" do
   DATA[@profile['id']] << Post.new(img_path, params)
 
   redirect "/post/#{@profile['id']}/#{DATA[@profile['id']].size - 1}"
-end
-
-post "/post/image" do
-  authorize!
-
-  p params
-
-  return upload_image
-end
-
-def upload_image
-  # make dir if it aint there
-  unless File.exists? File.join('lib', 'public', 'uploaded_files')
-    Dir.mkdir File.join('lib', 'public', 'uploaded_files')
-  end
-
-  # take the given image and move it somewhere we can serve it.
-  name = "params['image'][:filename]_#{@profile['id']}"
-  path = File.join 'lib', 'public', 'uploaded_files', name
-  FileUtils.cp params['image'][:tempfile], path
-
-  File.join '/', 'uploaded_files', name
 end
 
 # AUTH =====================================
