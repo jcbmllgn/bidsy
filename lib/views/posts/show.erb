@@ -7,18 +7,12 @@
 		<h1><%= @post.title %></h1>
 
 		<div class="productStats">
-			<div class="fieldRow">
-					<p class="key">Manufacturer</p>
-					<p class="value">Breville</p>
-			</div>
-			<div class="fieldRow">
-				<p class="key">Dimensions</p>
-				<p class="value">3ft x 1ft x 1ft</p>
-			</div>
-			<div class="fieldRow">
-				<p class="key">Condtion</p>
-				<p class="value">Like new</p>
-			</div>
+			<% @post.fields.each do |k,v| %>
+				<div class="fieldRow">
+					<p class="key"><%= k %></p>
+					<p class="value"><%= v %></p>
+				</div>
+			<% end %>
 		</div>
 
 		<p class="productParagraph"><%= @post.description %></p>
