@@ -24,11 +24,10 @@
 <div id="productRightCol">
 	<div class="widget bidWidget">
 		<div class="row">
-			<h3>Going for <span>$<%= @post.current_price + 1 %></span></h3>
+			<h3>Current Bid: <span>$<%= @post.current_price %></span></h3>
 		</div>
 		<div class="row amountRow">
-			<input type="text" value="<%= @post.current_price + 1 %>">
-			<p>Current Bid: <span>$<%= @post.current_price %></span></p>
+			<input type="text" placeholder="$<%= @post.current_price + 1 %> or more">
 		</div>
 		<a id="placeBidBtn" href="#">
 			<div>Place bid</div>
