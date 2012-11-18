@@ -24,12 +24,11 @@
 <div id="productRightCol">
 	<div class="widget bidWidget">
 		<div class="row">
-			<!-- MAKE A HELPER FOR THIS -->
-			<p>Enter <span>$<%= @post.current_price + 1 %></span> or more:</p>
+			<h3>Going for <span>$<%= @post.current_price + 1 %></span></h3>
 		</div>
 		<div class="row amountRow">
-			<input type="text" placeholder="$">
-			<p>Current Bid: <span><%= @post.current_price %></span></p>
+			<input type="text" value="<%= @post.current_price + 1 %>">
+			<p>Current Bid: <span>$<%= @post.current_price %></span></p>
 		</div>
 		<a id="placeBidBtn" href="#">
 			<div>Place bid</div>
@@ -37,15 +36,15 @@
 
 	</div>
 	<div class="widget userWidget">
-      <img src="<%= @profile['thumbnail_url'] %>">
-      <h4>Jacob Mulligan</h4>
-      <p>Front end developer, designer, professional notetaker, NASA fan.</p>
+      <img src="<%= @post.profile['thumbnail_url'] %>">
+      <h4><%= @post.profile['name'] %></h4>
+      <p><%= @post.profile['description'] %></p>
 
       <div style="clear: both;"></div>
 	</div>
 
 	<div class="widget statsWidget">
-		<h1><span>2</span>d <span>52</span>min left</h1>
+		<h1><span>6</span>d <span>59</span>min left</h1>
 		<h2><span>32</span> page views</h2>
 		<h2><span>7</span> bids</h2>
 		<h6>Boston, MA</h6>
@@ -53,28 +52,34 @@
 
 </div>
 
-
+<div class="popup">
 	<% if @profile %>
-	<div class="popup">
-		<div class="modalTopLoggedIn">
-			<h2>Please confirm your bid:</h2>
-			<h3>$180</h3>
-		</div>
-		<div class="confirmBid">
-			<a href="#">Confirm</a>
-		</div>
-		<% else %>
 		<div class="modalTop">
 			<div class="aBlock">
-				<%= image_tag "/images/questionMark.png" %>
-
+				<img src="<%= @profile['thumbnail_url'] %>" width="120" height="120">
 			</div>
 			<div class="aBlock">
 				<%= image_tag "/images/arrows.png", style: "margin-top:30px;" %>
 			</div>
 			<div class="aBlock">
-				<img src="<%= @profile['thumbnail_url'] %>">
-
+				<img src="<%= @post.profile['thumbnail_url'] %>" width="120" height="120">
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+		<div class="confirmBid">
+			<h2>Confirm your bid for $<span id="bidValue"><%= @post.current_price + 1 %></span></h2>
+			<a href="#">Confirm</a>
+		</div>
+	<% else %>
+		<div class="modalTop">
+			<div class="aBlock">
+				<%= image_tag "/images/questionMark.png" %>
+			</div>
+			<div class="aBlock">
+				<%= image_tag "/images/arrows.png", style: "margin-top:30px;" %>
+			</div>
+			<div class="aBlock">
+				<img src="<%= @post.profile['thumbnail_url'] %>">
 			</div>
 			<div style="clear:both;"></div>
 		</div>
@@ -85,23 +90,26 @@
 		<div id="logins">
 			<a class="facebookLogin" href="/auth/singly?service=facebook">Sign in with Facebook</a> <span>or</span> <a class="linkedinLogin" href="/auth/singly?service=linkedin">Sign in with LinkedIn</a>
 		</div>
-		<% end %>
+	<% end %>
 	</div>
 	<div class="modalBlackout"></div>
 
 <script type="text/javascript">
 
+// price confirm update
+$('.bidWidget .amountRow input').on('change', function (e) {
+	$('.confirmBid #bidValue').html($(this).val());
+});
 
 //JS for the modal:
 
 // prompts modal when user clicks on "place bid button":
 $('#placeBidBtn').click(function(){
 	//Remove any modals, if there are any:
-
 	$('.modalBlackout, .popup').fadeIn();
 });
 
-// If user clicks on blackdrop or 'x' button the modal closes. 
+// If user clicks on blackdrop or 'x' button the modal closes.
 $('.modalBlackout, #editModal').click(function(){
 	$(this).fadeOut();
 	$('.popup').fadeOut();
