@@ -27,7 +27,7 @@
 			<h3>Going for <span>$<%= @post.current_price + 1 %></span></h3>
 		</div>
 		<div class="row amountRow">
-			<input type="text" placeholder="$<%= @post.current_price + 1 %>">
+			<input type="text" value="<%= @post.current_price + 1 %>">
 			<p>Current Bid: <span>$<%= @post.current_price %></span></p>
 		</div>
 		<a id="placeBidBtn" href="#">
@@ -67,7 +67,7 @@
 			<div style="clear:both;"></div>
 		</div>
 		<div class="confirmBid">
-			<h2>Confirm your bid for $180</h2>
+			<h2>Confirm your bid for $<span id="bidValue"><%= @post.current_price + 1 %></span></h2>
 			<a href="#">Confirm</a>
 		</div>
 	<% else %>
@@ -96,10 +96,10 @@
 
 <script type="text/javascript">
 
-
-// Countdown:
-
-
+// price confirm update
+$('.bidWidget .amountRow input').on('change', function (e) {
+	$('.confirmBid #bidValue').html($(this).val());
+});
 
 //JS for the modal:
 
