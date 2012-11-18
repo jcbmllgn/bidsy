@@ -1,5 +1,5 @@
 <ul>
   <% @posts.each_with_index do |post, i| %>
-    <li><a href="/post/<%= i %>"><%= post.title %> - Seller: <%= post.profile['name'] %></a></li>
+    <a class="listPost" href="/post/<%= i %>"><li><img width="36" height="36" src="<%= post.profile['thumbnail_url'] %>"><%= post.title %><span class="listPrice">$<%= post.current_price %></span></li></a>
   <% end %>
 </ul>
