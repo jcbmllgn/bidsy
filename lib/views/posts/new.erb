@@ -1,22 +1,44 @@
-<form id="publishForm" action="/post/create" method="POST">
-  Title: <input type="text" name="title"><br>
-  Description: <textarea name="description"></textarea><br>
+<div id="productLeftCol">
+  <div class="productGallery">
+    <img onClick="javascript:opendialogbox('imageuploadform1');" src="/wine/1.jpeg">
+  </div>
 
-  <!-- COMING FROM ARRAY -->
-  Condition: <input type="text" name="fields[condition]"><br>
-  Manufacturer: <input type="text" name="fields[manufacturer]"><br>
-  Year: <input type="text" name="fields[year]"><br>
+  <div id="productDetials">
+    <h1>Refurbished Breville IKON Hemisphere</h1>
 
-  <input type="submit" value="Submit">
-</form>
+    <div class="productStats">
+      <div class="row">
+          <p class="key">Manufacturer</p>
+          <p class="value">Breville</p>
+      </div>
+      <div class="row">
+        <p class="key">Dimensions</p>
+        <p class="value">3ft x 1ft x 1ft</p>
+      </div>
+      <div class="row">
+        <p class="key">Condtion</p>
+        <p class="value">Like new</p>
+      </div>
+    </div>
 
-<script type="text/javascript">
-  // $('#publishForm').on('click', function (e) {
-    
-  //   console.log($('#publishForm').serializeArray());
+    <p class="productParagraph">The Breville IKON Die-Cast Hemisphere Blender is perfect for ice-crushing, blending and making your favorite smoothies or drinks. The patented hemisphere bowl blade system utilizes a large, semicircular shredding blade positioned to hug the uniquely shaped bowl. Because of this design, there are no still zones around the blades, and ingredients are shredded into fine, consistent particles. The 1.5 liter (51 oz.) glass jar is designed for clarity.</p>
 
-  //   // we handled this.
-  //   e.preventDefault()
-  //   return false;
-  // })
-</script>
+  </div>
+
+</div>
+
+<div id="productRightCol">
+  <div class="widget bidWidget">
+    <div class="row">
+      <p>Enter <span>$28.00</span> or more:</p>
+    </div>
+    <div class="row amountRow">
+      <input type="text" placeholder="$">
+      <p>Current Bid: <span>$27.00</span></p>
+    </div>
+    <a href="#">
+      <div>Place bid</div>
+    </a>
+  </div>
+
+</div>
