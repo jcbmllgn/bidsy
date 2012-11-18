@@ -548,7 +548,7 @@ text-align: center;
 .userWidget h4 {
 	float: left;
 	margin-left: 2px;
-	width: 60%;
+	width: 65%;
 }
 
 #productRightCol .editMode {
@@ -558,8 +558,6 @@ text-align: center;
 .statsWidget {
 	margin-top: 20px;
 }
-
-.statsWidget h1 
 
 /* New Post Styles */
 

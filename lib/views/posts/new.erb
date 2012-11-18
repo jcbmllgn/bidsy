@@ -15,11 +15,15 @@
     <div class="productStats editMode">
       <div class="fieldRow">
           <p class="key">Manufacturer</p>
-          <p class="value" contenteditable="true">Breville</p>
+          <p class="value" contenteditable="true">Edit this</p>
       </div>
       <div class="fieldRow">
         <p class="key">Condtion</p>
-        <p class="value" contenteditable="true">Like new</p>
+        <p class="value" contenteditable="true">Edit this</p>
+      </div>
+      <div class="fieldRow">
+        <p class="key">Year</p>
+        <p class="value" contenteditable="true">Edit this</p>
       </div>
 
       <div class="breakLine">
@@ -28,10 +32,10 @@
         <p>The more fields you select and fill out the most attractive it will be to a buyer.</p>
       </div>
 
-      <div class="fieldRow" id="rowCreator">
+      <div id="rowCreator">
         <select>
           <option>Select one</option>
-          <option value="Year">Year</option>
+          <option value="Material">Material</option>
           <option value="Dimensions">Dimensions</option>
         </select>
         <p>< Select an attribute</p>
@@ -62,8 +66,8 @@
 
   <div class="widget userWidget editMode">
       <img src="<%= @profile['thumbnail_url'] %>">
-      <h4>Jacob Mulligan</h4>
-      <p>Front end developer, designer, professional notetaker, NASA fan.</p>
+      <h4><%= @profile['name'] %></h4>
+      <p><%= @profile['description'] %></p>
 
       <div style="clear: both;"></div>
   </div>
@@ -75,6 +79,10 @@
   <textarea id="HIDDENTitle" name="title"></textarea>
   <textarea id="HIDDENDescription" name="description"></textarea>
   <textarea id="HIDDENStartingPrice" name="starting-price"></textarea>
+  <!-- fields -->
+  <textarea name="fields[manufacturer]">Edit me</textarea>
+  <textarea name="fields[condtion]">Edit me</textarea>
+  <textarea name="fields[year]">Edit me</textarea>
 </form>
 
 <script type="text/javascript">
@@ -103,6 +111,7 @@ $('#productImage').on('click', function (e) {
   return false;
 });
 
+// tell users they chose an image.
 $('#HIDDENImageName').on('change', function (e) {
   $('#productImage').attr("src", '/images/Uploaded.png');
 });
@@ -112,13 +121,32 @@ $("#publishBtn").on('click', function (e) {
   $("#HIDDENForm").submit();
 });
 
+// append to fields.
 $('#rowCreator select').on('change', function(){
-  var value = $(this).val();
-  $('#rowCreator').before('<div class="fieldRow"><p class="key">Condtion <span>- Delete</span></p><p class="value" contenteditable="true">Like new</p></div>');
+  var keyName = $(this).val();
+  $('#rowCreator').before('<div class="fieldRow"><p class="key">'+ keyName +' <span>- Delete</span></p><p class="value" contenteditable="true">Edit me</p></div>');
+  var added = $('.fieldRow').last();
+
+  // add to hidden form
+  $('#HIDDENForm').append("<textarea name='fields["+ keyName.toLowerCase() +"]'>Edit me</textarea>");
+
+  added.find('.value').focusout(function (e) {
+    var val = $(this).html();
+    $('#HIDDENForm textarea[name="fields['+ keyName.toLowerCase() +']"]').html(val);
+  });
 
   $('#productDetials .productStats .fieldRow .key span').click(function(){
-    $(this).parent().parent().slideUp();
+    $(this).parent().parent().remove();
+    $('#HIDDENForm textarea[name="fields['+ keyName.toLowerCase() +']"]').remove();
   });
+});
+
+// assigning HIDDEN from fields
+$('.fieldRow .value').focusout(function (e) {
+  var input = $(e.target);
+  var keyName = input.parent().find('.key').html();
+  var val = input.html();
+  $('#HIDDENForm textarea[name="fields['+ keyName.toLowerCase() +']"]').html(val);
 });
 
 </script>
