@@ -162,12 +162,12 @@ h6 {
 }
 
 #userIconSmall {
-	width: 20px;
-	height: 20px;
+	width: 23px;
+	height: 23px;
 
 	float: left;
-	margin-right: 8px;
-	margin-top: -1px;
+	margin-right: 10px;
+	margin-top: -2px;
 
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
@@ -295,6 +295,7 @@ section.productEdits:hover, section.productEdits:active {
 	max-height: 635px;
 	display: -moz-inline-box; /* Firefox 2 */
 	display: inline-block;
+	border-radius: 3px;
 }
 
 .productGallery .noImage:hover {
@@ -302,7 +303,7 @@ section.productEdits:hover, section.productEdits:active {
 }
 
 #productDetials {
-	margin-top: 17px;
+	margin-top: 10px;
 }
 
 #productDetials h1 {
@@ -314,9 +315,6 @@ section.productEdits:hover, section.productEdits:active {
 	color: #434343;
 	line-height: 20px;
 	font-size: 14px;
-}
-
-#productDetials .productCopy {
 }
 
 #productDetials .productStats {
@@ -333,7 +331,7 @@ section.productEdits:hover, section.productEdits:active {
 	margin-top: 10px;
 }
 
-#productDetials .editMode .row {
+#productDetials .editMode .fieldRow {
 	margin-bottom: 15px;
 }
 
@@ -349,18 +347,42 @@ section.productEdits:hover, section.productEdits:active {
 	padding: 2px;
 }
 
-#productDetials .productStats .row {
+#productDetials .editMode .breakLine p {
+	font-size: .7em;
+	color: rgb(131, 131, 131);
+	text-align: center;
+}
+
+.horizontalLine {
+	height: 1px;
+	width: 90%;
+	background: rgb(214, 214, 214);
+	margin: 4px auto;
+}
+
+#productDetials .productStats .fieldRow {
 	width: 100%;
 	height: 20px;
 	clear: both;
 }
 
-#productDetials .productStats .row .key {
+#productDetials .productStats .fieldRow .key {
 	font-weight: bold;
 	float: left;
 }
 
-#productDetials .productStats .row .value {
+#productDetials .productStats .fieldRow .key span {
+	font-weight: normal;
+	font-size: 11px;
+	font-style: italic;
+}
+
+.key span:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#productDetials .productStats .fieldRow .value {
 	float: right;
 }
 
@@ -412,16 +434,37 @@ div#publishBtn {
 	background: #fffeca;
 	padding: 2px 10px;
 	color: #3e3e3e;
-	font-size: 1.1em;
+	font-size: 1.4em;
 }
 
-.bidWidget .row {
+.bidWidget .fieldRow {
 	width: 100%;
 	margin-bottom: 15px;
 }
 
-.bidWidget .row:first-child p span {
+.bidWidget .fieldRow:first-child p span {
 	font-weight: bold;
+}
+
+#productDetials .editMode #rowCreator {
+	height: 28px;
+	margin-top: 10px;
+	background-color: rgb(230, 230, 230);
+
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+#rowCreator p {
+	float: right;
+	font-size: .8em;
+	font-style: italic;
+	margin: 5px;
+}
+
+#rowCreator select {
+	float: left;
+	margin: 5px;
 }
 
 .amountRow input {
@@ -438,7 +481,7 @@ div#publishBtn {
 
 .bidWidget a div {
 position: absolute;
-bottom: -30px;
+bottom: -40px;
 left: 0px;
 padding: 13px 0px;
 width: 320px;
@@ -450,6 +493,26 @@ text-align: center;
 
 .bidWidget a div:hover {
 	background-color: #1ed348;
+}
+
+.userWidget {
+	margin-top: 60px;
+}
+
+.userWidget img {
+	width: 90px;
+	float: left;
+	margin: 0px 5px 5px 0px;
+}
+
+.userWidget h4 {
+	float: left;
+	margin-left: 2px;
+	width: 60%;
+}
+
+.statsWidget {
+	margin-top: 20px;
 }
 
 /* New Post Styles */

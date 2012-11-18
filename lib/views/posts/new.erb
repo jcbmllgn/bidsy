@@ -1,6 +1,6 @@
 <div id="productLeftCol">
   <div class="productGallery">
-    <img class="noImage" src="/images/clickToUpload.png">
+    <img id="imageUpload" class="noImage" src="/images/clickToUpload.png">
   </div>
 
   <div id="productDetials">
@@ -13,18 +13,30 @@
     </section>
 
     <div class="productStats editMode">
-      <div class="row">
+      <div class="fieldRow">
           <p class="key">Manufacturer</p>
           <p class="value" contenteditable="true">Breville</p>
       </div>
-      <div class="row">
-        <p class="key">Dimensions</p>
-        <p class="value" contenteditable="true">3ft x 1ft x 1ft</p>
-      </div>
-      <div class="row">
+      <div class="fieldRow">
         <p class="key">Condtion</p>
         <p class="value" contenteditable="true">Like new</p>
       </div>
+
+      <div class="breakLine">
+        <p>All inputs above this line are required</p>
+        <div class="horizontalLine"></div>
+        <p>The more fields you select and fill out the most attractive it will be to a buyer.</p>
+      </div>
+
+      <div class="fieldRow" id="rowCreator">
+        <select>
+          <option>Select one</option>
+          <option value="Year">Year</option>
+          <option value="Dimensions">Dimensions</option>
+        </select>
+        <p>< Select an attribute</p>
+      </div>
+
     </div>
 
     <section class="productEdits" id="descriptionEdits" contenteditable="true"> 
@@ -57,7 +69,7 @@
 <script type="text/javascript">
 
 // assigning HIDDENImageName
-$('#productImage').on('click', function (e) {
+$('#imageUpload').on('click', function (e) {
   $('#HIDDENImageName').click();
   setInterval(function () {
     $('#HIDDENImageName').html($('#HIDDENImageName').val());
@@ -66,13 +78,20 @@ $('#productImage').on('click', function (e) {
 });
 
 // submission of hidden form
-// $("#").on('click', function (e) {
-//   $("#HIDDENForm").submit();
-// });
+$("#publishBtn").on('click', function (e) {
+  $("#HIDDENForm").submit();
+});
+
+$('#rowCreator select').on('change', function(){
+  var value = $(this).val();
+  $('#rowCreator').before('<div class="fieldRow"><p class="key">Condtion <span>- Delete</span></p><p class="value" contenteditable="true">Like new</p></div>');
+
+  $('#productDetials .productStats .fieldRow .key span').click(function(){
+    $(this).parent().parent().slideUp();
+  });
+});
 
 </script>
-
-
 
 
 
