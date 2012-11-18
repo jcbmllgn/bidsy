@@ -116,20 +116,20 @@ $("#publishBtn").on('click', function (e) {
 // append to fields.
 $('#rowCreator select').on('change', function(){
   var keyName = $(this).val();
-  $('#rowCreator').before('<div class="fieldRow"><p class="key">'+ keyName +' <span>- Delete</span></p><p class="value" contenteditable="true">Edit me</p></div>');
+  $('#rowCreator').before('<div class="fieldRow"><p class="key">'+ keyName.toLowerCase() +' <span>- Delete</span></p><p class="value" contenteditable="true">Edit me</p></div>');
   var added = $('.fieldRow').last();
 
   // add to hidden form
-  $('#HIDDENForm').append("<textarea name='fields["+ keyName +"]'>Edit me</textarea>");
+  $('#HIDDENForm').append("<textarea name='fields["+ keyName.toLowerCase() +"]'>Edit me</textarea>");
 
   added.find('.value').focusout(function (e) {
     var val = $(this).html();
-    $('#HIDDENForm textarea[name="fields['+ keyName +']"]').html(val);
+    $('#HIDDENForm textarea[name="fields['+ keyName.toLowerCase() +']"]').html(val);
   });
 
   $('#productDetials .productStats .fieldRow .key span').click(function(){
     $(this).parent().parent().remove();
-    $('#HIDDENForm textarea[name="fields['+ keyName +']"]').remove();
+    $('#HIDDENForm textarea[name="fields['+ keyName.toLowerCase() +']"]').remove();
   });
 });
 
@@ -138,7 +138,7 @@ $('.fieldRow .value').focusout(function (e) {
   var input = $(e.target);
   var keyName = input.parent().find('.key').html();
   var val = input.html();
-  $('#HIDDENForm textarea[name="fields['+ keyName +']"]').html(val);
+  $('#HIDDENForm textarea[name="fields['+ keyName.toLowerCase() +']"]').html(val);
 });
 
 </script>
