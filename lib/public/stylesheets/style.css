@@ -56,6 +56,7 @@ Custom css here:
 /* Font styling: */
 
 p {
+	line-height: 1.4em;
 	color: #3e3e3e;
 }
 
@@ -172,21 +173,55 @@ h6 {
 	border-radius: 4px;
 }
 
+/* Login page */
+#logins {
+	width: 400px;
+	height: 100px;
+	margin: 0 auto;
+	text-align: center;
+}
 
+#logins h3 {
+	margin-bottom: 15px;
+}
 
+.facebook-signin {
+	float: left;
+	background: url('src/facebook_signin.png') no-repeat 0 0;
+	width: 150px;
+	height: 23px;
+}
+.facebook-signin:hover {
+	background-position: 0 -24px;
+}
+.facebook-signin:active {
+	background-position: 0 -48px;
+}
 
+.linkedin-signin {
+	float: right;
+	background: url('src/linkedin_signin.png') no-repeat 0 0;
+	width: 150px;
+	height: 23px;
+}
+.linkedin-signin:hover {
+	background-position: 0 -24px;
+}
+.linkedin-signin:active {
+	background-position: 0 -48px;
+}
 
 /* Landing page: */
-#landingBlocks {
+.landingBlocks {
 	width: 450px;
 	float: left;
 
-	padding-top: 100px;
+	padding-top: 150px;
 
 	text-align: center;
 }
 
-#landingBlocks h1 {
+.landingBlocks h1 {
 	font-size: 42px;
 	font-weight: bold;
 	margin-bottom: 50px;
