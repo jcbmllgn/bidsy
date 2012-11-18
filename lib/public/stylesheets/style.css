@@ -174,15 +174,49 @@ h6 {
 }
 
 /* Login page */
+
+#loginPage {
+	text-align: center;
+	margin: 100px auto 0px;
+}
+
 #logins {
-	width: 400px;
 	height: 100px;
 	margin: 0 auto;
 	text-align: center;
 }
 
-#logins h3 {
-	margin-bottom: 15px;
+#loginPage h1 {
+	margin-bottom: 85px;
+	font-size: 40px;
+}
+
+#logins span {
+	margin: 0px 15px;
+}
+
+#logins .facebookLogin {
+	background: #3B5998;
+	color: white;
+	padding: 8px 24px;
+	border-radius: 3px;
+}
+
+#logins .facebookLogin:hover {
+	background: #263961;
+	text-decoration: none;
+}
+
+#logins .linkedinLogin {
+	background: #4875B4;
+	color: white;
+	padding: 8px 24px;
+	border-radius: 3px;
+}
+
+#logins .linkedinLogin:hover {
+	background: #32517d;
+	text-decoration: none;
 }
 
 .facebook-signin {
@@ -511,9 +545,15 @@ text-align: center;
 	width: 60%;
 }
 
+#productRightCol .editMode {
+	margin-top: 20px;
+}
+
 .statsWidget {
 	margin-top: 20px;
 }
+
+.statsWidget h1 
 
 /* New Post Styles */
 

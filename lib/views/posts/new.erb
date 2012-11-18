@@ -53,11 +53,19 @@
 
 <div id="productRightCol">
 
-  <div id="publishBtn">Publish</div>
+  <div id="publishBtn">Post</div>
 
   <div class="widget bidWidget">
     <p>Enter starting amount:</p>
     <input id="startAmount" type="text" placeholder="Starting Amount">
+  </div>
+
+  <div class="widget userWidget editMode">
+      <img src="<%= @profile['thumbnail_url'] %>">
+      <h4>Jacob Mulligan</h4>
+      <p>Front end developer, designer, professional notetaker, NASA fan.</p>
+
+      <div style="clear: both;"></div>
   </div>
 
 </div>
