@@ -150,10 +150,15 @@ h6 {
 	float: right;
 	margin-left: 15px;
 	margin-top: 16px;
-	font-weight: bold;
+	font-size: 15px;
 }
 #header nav ul li:nth-child(n+2) a {
 	color: white;
+}
+
+#header nav ul li:nth-child(n+2) a:hover {
+	text-decoration: none;
+	border-bottom: 1px solid white;
 }
 
 #container {
@@ -162,8 +167,8 @@ h6 {
 }
 
 #userIconSmall {
-	width: 23px;
-	height: 23px;
+	width: 20px;
+	height: 20px;
 
 	float: left;
 	margin-right: 10px;
@@ -542,7 +547,8 @@ text-align: center;
 .userWidget img {
 	width: 90px;
 	float: left;
-	margin: 0px 5px 5px 0px;
+	margin: 0px 10px 0px 0px;
+	border-radius: 3px;
 }
 
 .userWidget h4 {
