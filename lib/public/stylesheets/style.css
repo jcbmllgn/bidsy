@@ -227,6 +227,10 @@ h6 {
 	margin-bottom: 50px;
 }
 
+.landingBlocks p {
+	margin-top: 70px;
+}
+
 .landingInput {
 	text-align: center;
 	width: 390px;
@@ -255,6 +259,22 @@ h6 {
 }
 
 /* Product page: */
+
+textarea, input, section { outline: none; }
+
+section.productEdits {
+	background: #fffeca;
+	padding: 2px 10px;
+}
+
+section.productEdits:hover, section.productEdits:active {
+	padding: 0px 8px;
+	border: 2px dashed #e1295a;
+}
+
+#descriptionEdits {
+	margin: 10px 0px;
+}
 
 #productLeftCol {
 	width: 635px;
@@ -325,6 +345,24 @@ h6 {
 	float: right;
 }
 
+div#publishBtn {
+	width: 319px;
+	height: 38px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	font-size: 22px;
+	color: #3e3e3e;
+	background: #29e154;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 20px;
+	padding: 15px 0px 0px;
+}
+
+#publishBtn:hover {
+	background: #1abd40;
+}
+
 /* style for widgets */
 
 .widget {
@@ -337,8 +375,17 @@ h6 {
 
 .bidWidget {
 	position: relative;
-	height: 115px;
 	text-align: center;
+	min-height: 60px;
+}
+
+#startAmount {
+	text-align: center;
+	border: none;
+	background: #fffeca;
+	padding: 2px 10px;
+	color: #3e3e3e;
+	font-size: 1.1em;
 }
 
 .bidWidget .row {
@@ -364,7 +411,7 @@ h6 {
 
 .bidWidget a div {
 position: absolute;
-bottom: 0px;
+bottom: -30px;
 left: 0px;
 padding: 13px 0px;
 width: 320px;
