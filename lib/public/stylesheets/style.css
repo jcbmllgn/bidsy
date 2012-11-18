@@ -48,6 +48,11 @@ table {
 	border-spacing: 0;
 }
 
+::selection {
+	color: white;
+	background-color: #5429e1;
+}
+
 /* ----------------------
 Custom css here:
 ---------------------- */
