@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'fileutils'
 require "httparty"
 require "omniauth-singly"
 require "sinatra"
@@ -14,7 +15,7 @@ SINGLY_SECRET = "30493d0e5acf724c92d10d20a7db80ad"
 DATA = { }
 
 class Post
-  attr_reader :title, :description, :starting_price, :fields
+  attr_reader :title, :description, :starting_price, :fields, :img_path
 
   @@field_options = [
     'condition',
@@ -22,15 +23,16 @@ class Post
     'year'
   ]
 
-  def initialize( params )
+  def initialize( img_path, params )
     @title = params['title']
     @description = params['description']
     @starting_price = params['starting-price']
+    @img_path = img_path
 
     @fields = { }
-    params['fields'].each do |key, value|
-      @fields[key] = value
-    end
+    # params['fields'].each do |key, value|
+    #   @fields[key] = value
+    # end
   end
 
 end
@@ -70,13 +72,19 @@ end
 post "/post/create" do
   authorize!
 
+  # take the given image and move it somewhere we can serve it.
+  name = params['image'][:filename]
+  path = File.join 'lib', 'public', 'uploaded_files', name
+  FileUtils.cp params['image'][:tempfile], path
+  img_path = File.join '/', 'uploaded_files', name
+
   # give this user a space in out array if they don't have one.
   unless DATA[@profile['id']]
     DATA[@profile['id']] = []
   end
 
   # add the new post to the DATA hash
-  DATA[@profile['id']] << Post.new(params)
+  DATA[@profile['id']] << Post.new(img_path, params)
 
   redirect "/post/#{@profile['id']}/#{DATA[@profile['id']].size - 1}"
 end

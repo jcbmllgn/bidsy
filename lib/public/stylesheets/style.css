@@ -378,6 +378,12 @@ text-align: center;
 	background-color: #1ed348;
 }
 
+/* New Post Styles */
+
+#HIDDENForm {
+	visibility: hidden;
+}
+
 
 
 
