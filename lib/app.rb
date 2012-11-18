@@ -11,8 +11,8 @@ SINGLY_ID = "9218ff10ccad13f577faa0e29b4827c1"
 SINGLY_SECRET = "30493d0e5acf724c92d10d20a7db80ad"
 
 # Mock a database
-# id => [ Posts ]
-DATA = { }
+# [ Posts ]
+DATA = []
 
 class Post
   attr_reader :title, :description, :starting_price, :current_price, :fields,
@@ -62,6 +62,12 @@ end
 
 # POSTS ====================================
 
+# index of all items
+get "/posts" do
+  @posts = DATA
+  erb :'posts/index'
+end
+
 # post item
 get "/post/new" do
   redirect "/profile/new" unless @profile
@@ -69,8 +75,8 @@ get "/post/new" do
 end
 
 # view item
-get "/post/:profile_id/:id" do
-  @post = DATA[params["profile_id"]][params["id"].to_i]
+get "/post/:id" do
+  @post = DATA[params["id"].to_i]
   erb :'posts/show'
 end
 
@@ -92,15 +98,10 @@ post "/post/create" do
     img_path = File.join '/', 'uploaded_files', name
   end
 
-  # give this user a space in out array if they don't have one.
-  unless DATA[@profile['id']]
-    DATA[@profile['id']] = []
-  end
-
   # add the new post to the DATA hash
-  DATA[@profile['id']] << Post.new(@profile, img_path, params)
+  DATA << Post.new(@profile, img_path, params)
 
-  redirect "/post/#{@profile['id']}/#{DATA[@profile['id']].size - 1}"
+  redirect "/post/#{DATA.size - 1}"
 end
 
 # AUTH =====================================
