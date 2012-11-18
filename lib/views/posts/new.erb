@@ -1,6 +1,22 @@
-<form action="/post/create" method="POST">
+<form id="publishForm" action="/post/create" method="POST">
   Title: <input type="text" name="title"><br>
-  Starting Price: <input type="text" name="starting-price"><br>
   Description: <textarea name="description"></textarea><br>
+
+  <!-- COMING FROM ARRAY -->
+  Condition: <input type="text" name="fields[condition]"><br>
+  Manufacturer: <input type="text" name="fields[manufacturer]"><br>
+  Year: <input type="text" name="fields[year]"><br>
+
   <input type="submit" value="Submit">
 </form>
+
+<script type="text/javascript">
+  // $('#publishForm').on('click', function (e) {
+    
+  //   console.log($('#publishForm').serializeArray());
+
+  //   // we handled this.
+  //   e.preventDefault()
+  //   return false;
+  // })
+</script>

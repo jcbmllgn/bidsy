@@ -14,12 +14,23 @@ SINGLY_SECRET = "30493d0e5acf724c92d10d20a7db80ad"
 DATA = { }
 
 class Post
-  attr_reader :title, :starting_price, :description
+  attr_reader :title, :description, :starting_price, :fields
+
+  @@field_options = [
+    'condition',
+    'manufacturer',
+    'year'
+  ]
 
   def initialize( params )
     @title = params['title']
-    @starting_price = params['starting-price']
     @description = params['description']
+    @starting_price = params['starting-price']
+
+    @fields = { }
+    params['fields'].each do |key, value|
+      @fields[key] = value
+    end
   end
 
 end
