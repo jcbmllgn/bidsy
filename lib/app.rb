@@ -81,6 +81,7 @@ get "/post/:profile_id/:id" do
   erb :'posts/show'
 end
 
+# create item
 post "/post/create" do
   authorize!
 
