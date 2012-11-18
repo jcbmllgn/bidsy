@@ -16,7 +16,7 @@ DATA = { }
 
 class Post
   attr_reader :title, :description, :starting_price, :current_price, :fields,
-    :img_path
+    :img_path, :profile
 
   @@field_options = [
     'condition',
@@ -24,12 +24,15 @@ class Post
     'year'
   ]
 
-  def initialize( img_path, params )
+  def initialize( profile, img_path, params )
     @img_path = img_path
     @title = params['title']
     @description = params['description']
     @starting_price = params['starting-price'].to_i
     @current_price = @starting_price
+
+    # save the creator
+    @profile = profile
 
     @fields = { }
     params['fields'].each do |key, value|
@@ -95,7 +98,7 @@ post "/post/create" do
   end
 
   # add the new post to the DATA hash
-  DATA[@profile['id']] << Post.new(img_path, params)
+  DATA[@profile['id']] << Post.new(@profile, img_path, params)
 
   redirect "/post/#{@profile['id']}/#{DATA[@profile['id']].size - 1}"
 end

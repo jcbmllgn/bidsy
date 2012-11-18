@@ -1,12 +1,10 @@
 <div id="productLeftCol">
+
   <div class="productGallery">
     <img id="productImage" class="noImage" src="/images/clickToUpload.png">
   </div>
 
   <div id="productDetials">
-
-
-
 
     <section class="productEdits" id="titleEdits" contenteditable="true">  
       <h1>Enter title here</h1>
@@ -40,16 +38,11 @@
         </select>
         <p>< Select an attribute</p>
       </div>
-
     </div>
 
     <section class="productEdits" id="descriptionEdits" contenteditable="true"> 
       <p>Enter product description here. Up to 450 characters. The best descriptions are to the point, clearly describe the condtion of what you're selling, say a little bit about your and why you're selling it, and a little humor.</p>
     </section>
-
-    <div id="productStatsEdit">
-
-    </div>
 
   </div>
 
@@ -68,7 +61,6 @@
       <img src="<%= @profile['thumbnail_url'] %>">
       <h4><%= @profile['name'] %></h4>
       <p><%= @profile['description'] %></p>
-
       <div style="clear: both;"></div>
   </div>
 
@@ -128,16 +120,16 @@ $('#rowCreator select').on('change', function(){
   var added = $('.fieldRow').last();
 
   // add to hidden form
-  $('#HIDDENForm').append("<textarea name='fields["+ keyName.toLowerCase() +"]'>Edit me</textarea>");
+  $('#HIDDENForm').append("<textarea name='fields["+ keyName +"]'>Edit me</textarea>");
 
   added.find('.value').focusout(function (e) {
     var val = $(this).html();
-    $('#HIDDENForm textarea[name="fields['+ keyName.toLowerCase() +']"]').html(val);
+    $('#HIDDENForm textarea[name="fields['+ keyName +']"]').html(val);
   });
 
   $('#productDetials .productStats .fieldRow .key span').click(function(){
     $(this).parent().parent().remove();
-    $('#HIDDENForm textarea[name="fields['+ keyName.toLowerCase() +']"]').remove();
+    $('#HIDDENForm textarea[name="fields['+ keyName +']"]').remove();
   });
 });
 
@@ -146,7 +138,7 @@ $('.fieldRow .value').focusout(function (e) {
   var input = $(e.target);
   var keyName = input.parent().find('.key').html();
   var val = input.html();
-  $('#HIDDENForm textarea[name="fields['+ keyName.toLowerCase() +']"]').html(val);
+  $('#HIDDENForm textarea[name="fields['+ keyName +']"]').html(val);
 });
 
 </script>
