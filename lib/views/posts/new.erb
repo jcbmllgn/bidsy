@@ -62,7 +62,7 @@
 
   <div class="widget userWidget editMode">
       <img src="<%= @profile['thumbnail_url'] %>">
-      <h4>Jacob Mulligan</h4>
+      <h4><%= @profile['name'] %></h4>
       <p>Front end developer, designer, professional notetaker, NASA fan.</p>
 
       <div style="clear: both;"></div>
@@ -103,6 +103,7 @@ $('#productImage').on('click', function (e) {
   return false;
 });
 
+// tell users they chose an image.
 $('#HIDDENImageName').on('change', function (e) {
   $('#productImage').attr("src", '/images/Uploaded.png');
 });
