@@ -521,7 +521,7 @@ div#publishBtn {
 }
 
 .amountRow input {
-	width: 220px;
+	width: 200px;
 	height: 21px;
 	font-size: 20px;
 	text-align: center;
@@ -655,7 +655,27 @@ text-align: center;
 	background-color: #1abd40;
 }
 
+/* POSTS PAGE */
 
+.listPost li {
+	margin-bottom: 10px;
+	padding: 10px;
+	background-color: #f4f4f4;
+}
+
+.listPost li:hover {
+	text-decoration: none;
+}
+
+.listPost img {
+	margin: -10px;
+	margin-right: 10px;
+	padding: 0;
+}
+
+.listPost .listPrice {
+	float: right;
+}
 
 
 
