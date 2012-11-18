@@ -9,7 +9,7 @@
 		<div class="productStats">
 			<% @post.fields.each do |k,v| %>
 				<div class="fieldRow">
-					<p class="key"><%= k %></p>
+					<p class="key"><%= k.capitalize %></p>
 					<p class="value"><%= v %></p>
 				</div>
 			<% end %>
