@@ -1,6 +1,6 @@
 <div id="productLeftCol">
   <div class="productGallery">
-    <img id="imageUpload" class="noImage" src="/images/clickToUpload.png">
+    <img id="productImage" class="noImage" src="/images/clickToUpload.png">
   </div>
 
   <div id="productDetials">
@@ -64,9 +64,27 @@
 
 <form id='HIDDENForm' action="/post/create" method="post" enctype="multipart/form-data">
   <input id="HIDDENImageName" type="file" name="image"/>
+  <textarea id="HIDDENTitle" name="title"></textarea>
+  <textarea id="HIDDENDescription" name="description"></textarea>
+  <textarea id="HIDDENStartingPrice" name="starting-price"></textarea>
 </form>
 
 <script type="text/javascript">
+
+// assigning Title
+$('#titleEdits').focusout(function (e) {
+  $('#HIDDENTitle').html($(this).text());
+});
+
+// assigning Description
+$('#descriptionEdits').focusout(function (e) {
+  $('#HIDDENDescription').html($(this).text());
+});
+
+// assigning Description
+$('#startAmount').focusout(function (e) {
+  $('#HIDDENStartingPrice').html($(this).val());
+});
 
 // assigning HIDDENImageName
 $('#imageUpload').on('click', function (e) {
