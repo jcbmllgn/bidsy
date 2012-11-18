@@ -83,6 +83,18 @@ $('#productImage').on('click', function (e) {
   return false;
 });
 
+$('#HIDDENImageName').on('change', function (argument) {
+  // also upload and set the image :[ 2 uploads
+  alert($("HIDDENImageName").html());
+  $.post("/post/image", { "image" : $("HIDDENImageName").val() })
+    .success(function() {
+      alert("We Win")
+    })
+    .error(function() {
+      alert("Error Uploading Image. :(");
+    })
+})
+
 // submission of hidden form
 $("#publishBtn").on('click', function (e) {
   $("#HIDDENForm").submit();
