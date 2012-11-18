@@ -87,13 +87,25 @@ $('#startAmount').focusout(function (e) {
 });
 
 // assigning HIDDENImageName
-$('#imageUpload').on('click', function (e) {
+$('#productImage').on('click', function (e) {
   $('#HIDDENImageName').click();
   setInterval(function () {
     $('#HIDDENImageName').html($('#HIDDENImageName').val());
   }, 1);
   return false;
 });
+
+$('#HIDDENImageName').on('change', function (argument) {
+  // also upload and set the image :[ 2 uploads
+  alert($("HIDDENImageName").html());
+  $.post("/post/image", { "image" : $("HIDDENImageName").val() })
+    .success(function() {
+      alert("We Win")
+    })
+    .error(function() {
+      alert("Error Uploading Image. :(");
+    })
+})
 
 // submission of hidden form
 $("#publishBtn").on('click', function (e) {
