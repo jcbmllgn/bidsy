@@ -49,3 +49,34 @@
   </div>
 
 </div>
+
+<form id='HIDDENForm' action="/post/create" method="post" enctype="multipart/form-data">
+  <input id="HIDDENImageName" type="file" name="image"/>
+</form>
+
+<script type="text/javascript">
+
+// assigning HIDDENImageName
+$('#productImage').on('click', function (e) {
+  $('#HIDDENImageName').click();
+  setInterval(function () {
+    $('#HIDDENImageName').html($('#HIDDENImageName').val());
+  }, 1);
+  return false;
+});
+
+// submission of hidden form
+// $("#").on('click', function (e) {
+//   $("#HIDDENForm").submit();
+// });
+
+</script>
+
+
+
+
+
+
+
+
+
