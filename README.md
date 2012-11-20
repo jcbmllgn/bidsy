@@ -21,7 +21,10 @@ orange-red `#e15249` lime-green `#49e152` royal-blue `#5249e1`
 
 ## Dev Tech
 
-* [singly](https://singly.com/)
-* [sinatra](http://www.sinatrarb.com)
-* [sinatra-static-assets](https://github.com/wbzyl/sinatra-static-assets/)
-* [color scheme](http://www.colorhexa.com/29b6e1)
+### [Singly](https://singly.com/)
+We are using singly for all authentication with social media. this will serve to get
+users onto the site and connected quickly. We will not prompt users for creditcards
+until we __need__ it. Fast, and easy signup is the goal here.
+
+Users information can come from more then one site thanks to singly. We will encourage
+users to link multiple accounts.
