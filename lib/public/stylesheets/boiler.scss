@@ -1,0 +1,26 @@
+/* ---------------
+Bidsy colors:;
+--------------- */
+$orange: #e15429;
+$blue: #5429e1;
+$green: #29e154;
+
+$grey: #3e3e3e;
+$lightGrey: #646464;
+$widgetGrey: #f2f2f2;
+
+$fb_blue: #3B5998;
+$linkedIn_blue: #4875B4;
+
+$borderRad
+
+@mixin widget( $color: @widgetGrey ) {
+	background-color: $color;
+} /* to call a @mixin, use @include widget; */
+
+
+
+
+@function border_color($color) {
+	@return desaturate(darken($color, 25%) 50%);
+}

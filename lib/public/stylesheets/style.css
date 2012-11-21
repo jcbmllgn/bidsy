@@ -280,6 +280,10 @@ h6 {
 	margin-top: 70px;
 }
 
+jQuery('.share-links, .meta, .section-player > p').remove()
+jQuery('.section-track').css('height','50px');
+
+
 .landingInput {
 	text-align: center;
 	width: 390px;
