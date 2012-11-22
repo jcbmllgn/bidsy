@@ -31,7 +31,8 @@ class User < ActiveRecord::Base
   # user. Things like their name, email, and photo_url.
   #
   def name
-    get_profile and @profile["name"]
+    get_profile
+    @profile["name"]
   end
 
 end
