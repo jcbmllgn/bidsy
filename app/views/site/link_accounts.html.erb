@@ -1,0 +1,5 @@
+<h1>Signup Please</h1>
+<% if current_user %>
+  <%= current_user.name %><br>
+<% end %>
+<%= link_to "Sign in", login_path('facebook') %>

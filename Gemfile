@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
 gem 'sqlite3'
+gem 'httparty'
 gem 'omniauth'
+gem 'omniauth-singly'
 
 group :test, :development do
   gem 'rspec-rails'
