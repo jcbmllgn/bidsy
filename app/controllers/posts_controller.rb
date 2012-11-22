@@ -18,7 +18,14 @@ class PostsController < ApplicationController
   #
   def new
     @user = current_user
-    @post = @user.posts.new
+
+    # Must be logged in to post things.
+    p @user
+    if @user
+      @post = @user.posts.new
+    else
+      redirect_to login_path
+    end
   end
 
   # Show a specific post.
