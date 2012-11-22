@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121122003423) do
+ActiveRecord::Schema.define(:version => 20121122051626) do
+
+  create_table "posts", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.string   "title"
+    t.text     "description"
+    t.text     "details"
+    t.integer  "starting_bid"
+    t.integer  "current_bid"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "uid"

@@ -4323,3 +4323,2149 @@ Served asset /jquery.js - 304 Not Modified (2ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 00:13:30 -0500
 Served asset /application.js - 304 Not Modified (5ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20121122003423)
+Migrating to CreatePosts (20121122051626)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "photo_file_name" varchar(255), "photo_content_type" varchar(255), "photo_file_size" integer, "title" varchar(255), "description" text, "attributes" text, "starting_bid" integer, "current_bid" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121122051626')[0m
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-22 00:23:40 -0500
+Connecting to database specified by database.yml
+Processing by AuthController#link as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered site/link_accounts.html.erb within layouts/application (1103.3ms)
+Compiled posts.css  (5ms)  (pid 45198)
+Compiled application.css  (14ms)  (pid 45198)
+Compiled posts.js  (92ms)  (pid 45198)
+Compiled application.js  (104ms)  (pid 45198)
+Completed 200 OK in 1302ms (Views: 1296.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-22 00:23:41 -0500
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-22 00:23:41 -0500
+Served asset /users.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-22 00:23:41 -0500
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-11-22 00:23:41 -0500
+Served asset /posts.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-22 00:23:41 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-11-22 00:23:41 -0500
+Served asset /posts.js - 200 OK (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-22 00:23:41 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 00:23:41 -0500
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-22 00:24:01 -0500
+Processing by AuthController#link as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered site/link_accounts.html.erb within layouts/application (1347.3ms)
+Completed 200 OK in 1356ms (Views: 1355.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-22 00:24:03 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-11-22 00:24:03 -0500
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-22 00:24:03 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-22 00:24:03 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-11-22 00:24:03 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-22 00:24:03 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-22 00:24:03 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 00:24:03 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-22 00:25:09 -0500
+Processing by AuthController#link as HTML
+ERROR: compiling _app_views_site_link_accounts_html_erb___1393728378192695927_70360791836700 RAISED /Users/nathanl/Documents/github/bidsy/app/views/site/link_accounts.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting ')'
+...me link_to "Logout" logout_path );@output_buffer.safe_concat...
+...                               ^
+Function body:           def _app_views_site_link_accounts_html_erb___1393728378192695927_70360791836700(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "site/link_accounts";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Signup Please</h1>
+'); if current_user 
+@output_buffer.safe_concat('  ');@output_buffer.append= ( current_user.name link_to "Logout" logout_path );@output_buffer.safe_concat('
+'); else 
+@output_buffer.safe_concat('  ');@output_buffer.append= ( link_to "Sign in", login_path('facebook') );@output_buffer.safe_concat('
+'); end ;@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `module_eval'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `compile'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:232:in `compile!'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:144:in `block in render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications.rb:125:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:143:in `render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/nathanl/Documents/github/bidsy/app/controllers/auth_controller.rb:11:in `link'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:414:in `_run__806348793784411064__process_action__2947486415075261122__callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:121:in `process'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal.rb:246:in `block in action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/omniauth-1.1.1/lib/omniauth/strategy.rb:177:in `call!'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/omniauth-1.1.1/lib/omniauth/strategy.rb:157:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/omniauth-1.1.1/lib/omniauth/builder.rb:48:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.9/lib/active_record/query_cache.rb:64:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `_run__1310939278453807412__call__1305173099357508096__callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/rack/logger.rb:32:in `call_app'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `block in call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/tagged_logging.rb:22:in `tagged'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/static.rb:62:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/engine.rb:479:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/application.rb:223:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered site/link_accounts.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (/Users/nathanl/Documents/github/bidsy/app/views/site/link_accounts.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting ')'
+...me link_to "Logout" logout_path );@output_buffer.safe_concat...
+...                               ^):
+    1: <h1>Signup Please</h1>
+    2: <% if current_user %>
+    3:   <%= current_user.name link_to "Logout" logout_path %>
+    4: <% else %>
+    5:   <%= link_to "Sign in", login_path('facebook') %>
+    6: <% end %>
+  app/controllers/auth_controller.rb:11:in `link'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-22 00:25:16 -0500
+Processing by AuthController#link as HTML
+ERROR: compiling _app_views_site_link_accounts_html_erb___1393728378192695927_70360836708920 RAISED /Users/nathanl/Documents/github/bidsy/app/views/site/link_accounts.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting ')'
+...me link_to("Logout" logout_path) );@output_buffer.safe_conca...
+...                               ^
+Function body:           def _app_views_site_link_accounts_html_erb___1393728378192695927_70360836708920(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "site/link_accounts";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Signup Please</h1>
+'); if current_user 
+@output_buffer.safe_concat('  ');@output_buffer.append= ( current_user.name link_to("Logout" logout_path) );@output_buffer.safe_concat('
+'); else 
+@output_buffer.safe_concat('  ');@output_buffer.append= ( link_to "Sign in", login_path('facebook') );@output_buffer.safe_concat('
+'); end ;@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `module_eval'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `compile'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:232:in `compile!'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:144:in `block in render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications.rb:125:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:143:in `render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/nathanl/Documents/github/bidsy/app/controllers/auth_controller.rb:11:in `link'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:414:in `_run__806348793784411064__process_action__2947486415075261122__callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:121:in `process'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal.rb:246:in `block in action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/omniauth-1.1.1/lib/omniauth/strategy.rb:177:in `call!'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/omniauth-1.1.1/lib/omniauth/strategy.rb:157:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/omniauth-1.1.1/lib/omniauth/builder.rb:48:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.9/lib/active_record/query_cache.rb:64:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `_run__1310939278453807412__call__1305173099357508096__callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/rack/logger.rb:32:in `call_app'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `block in call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/tagged_logging.rb:22:in `tagged'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/static.rb:62:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/engine.rb:479:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/application.rb:223:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered site/link_accounts.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (/Users/nathanl/Documents/github/bidsy/app/views/site/link_accounts.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting ')'
+...me link_to("Logout" logout_path) );@output_buffer.safe_conca...
+...                               ^):
+    1: <h1>Signup Please</h1>
+    2: <% if current_user %>
+    3:   <%= current_user.name link_to("Logout" logout_path) %>
+    4: <% else %>
+    5:   <%= link_to "Sign in", login_path('facebook') %>
+    6: <% end %>
+  app/controllers/auth_controller.rb:11:in `link'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-22 00:25:28 -0500
+Processing by AuthController#link as HTML
+ERROR: compiling _app_views_site_link_accounts_html_erb___1393728378192695927_70360821410600 RAISED /Users/nathanl/Documents/github/bidsy/app/views/site/link_accounts.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+... ( link_to("Logout" logout_path) );@output_buffer.safe_conca...
+...                               ^
+Function body:           def _app_views_site_link_accounts_html_erb___1393728378192695927_70360821410600(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "site/link_accounts";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Signup Please</h1>
+'); if current_user 
+@output_buffer.safe_concat('  ');@output_buffer.append= ( current_user.name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( link_to("Logout" logout_path) );@output_buffer.safe_concat('
+'); else 
+@output_buffer.safe_concat('  ');@output_buffer.append= ( link_to "Sign in", login_path('facebook') );@output_buffer.safe_concat('
+'); end ;@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `module_eval'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `compile'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:232:in `compile!'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:144:in `block in render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications.rb:125:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/template.rb:143:in `render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/nathanl/Documents/github/bidsy/app/controllers/auth_controller.rb:11:in `link'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:414:in `_run__806348793784411064__process_action__2947486415075261122__callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `instrument'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:121:in `process'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_controller/metal.rb:246:in `block in action'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/omniauth-1.1.1/lib/omniauth/strategy.rb:177:in `call!'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/omniauth-1.1.1/lib/omniauth/strategy.rb:157:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/omniauth-1.1.1/lib/omniauth/builder.rb:48:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.9/lib/active_record/query_cache.rb:64:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `_run__1310939278453807412__call__1305173099357508096__callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/rack/logger.rb:32:in `call_app'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `block in call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/tagged_logging.rb:22:in `tagged'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/static.rb:62:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/engine.rb:479:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/application.rb:223:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.9/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered site/link_accounts.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (/Users/nathanl/Documents/github/bidsy/app/views/site/link_accounts.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+... ( link_to("Logout" logout_path) );@output_buffer.safe_conca...
+...                               ^):
+    1: <h1>Signup Please</h1>
+    2: <% if current_user %>
+    3:   <%= current_user.name %>
+    4:   <%= link_to("Logout" logout_path) %>
+    5: <% else %>
+    6:   <%= link_to "Sign in", login_path('facebook') %>
+    7: <% end %>
+  app/controllers/auth_controller.rb:11:in `link'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-22 00:25:37 -0500
+Processing by AuthController#link as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered site/link_accounts.html.erb within layouts/application (675.1ms)
+Completed 200 OK in 684ms (Views: 683.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-22 00:25:38 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-22 00:25:38 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-11-22 00:25:38 -0500
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:38 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:38 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:38 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:38 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:38 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-22 00:25:47 -0500
+Processing by AuthController#link as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered site/link_accounts.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (wrong number of arguments (1 for 0)):
+    1: <h1>Signup Please</h1>
+    2: <% if current_user %>
+    3:   <%= current_user.name link_to("Logout", logout_path) %>
+    4: <% else %>
+    5:   <%= link_to "Sign in", login_path('facebook') %>
+    6: <% end %>
+  app/models/user.rb:11:in `name'
+  app/views/site/link_accounts.html.erb:3:in `_app_views_site_link_accounts_html_erb___1393728378192695927_70360792658660'
+  app/controllers/auth_controller.rb:11:in `link'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-22 00:25:53 -0500
+Processing by AuthController#link as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered site/link_accounts.html.erb within layouts/application (883.4ms)
+Completed 200 OK in 920ms (Views: 919.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-22 00:25:54 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-11-22 00:25:54 -0500
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-22 00:25:54 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:54 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:54 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:54 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:54 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:54 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2012-11-22 00:25:55 -0500
+Processing by AuthController#logout as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-22 00:25:55 -0500
+Processing by AuthController#link as HTML
+  Rendered site/link_accounts.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-22 00:25:55 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-11-22 00:25:55 -0500
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-22 00:25:55 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:55 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:55 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:55 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:55 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:55 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/auth/singly?service=facebook" for 127.0.0.1 at 2012-11-22 00:25:56 -0500
+
+
+Started GET "/auth/singly/callback?code=xpp2l3Amxk6rg_--CtuBWT&state=545b1d58317a2370cd11f1076120b51a5f03e1b49d4e8bdf" for 127.0.0.1 at 2012-11-22 00:25:58 -0500
+Processing by AuthController#callback as HTML
+  Parameters: {"code"=>"xpp2l3Amxk6rg_--CtuBWT", "state"=>"545b1d58317a2370cd11f1076120b51a5f03e1b49d4e8bdf", "service"=>"singly"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '62822c3f644135a87fbc6c0088da4db4' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "users" SET "token" = '1r-xJYJ7R008iBmZILO1wEVOR1g.wi1_k-Dab697d2ae719e985886074456e19672629ee2954e40d5b6ba14cc4e2550d51fd16de567a8adfc2236763f4c9b76a9f134abaaeff53411684a1f0f963033fae9db7dc5af6c51931e17128c935b8de1dd1ca03e9758b3ff99e2761522c61dcc1e4b', "updated_at" = '2012-11-22 05:25:58.661061' WHERE "users"."id" = 1
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 17ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-22 00:25:58 -0500
+Processing by AuthController#link as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered site/link_accounts.html.erb within layouts/application (639.8ms)
+Completed 200 OK in 647ms (Views: 646.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-22 00:25:59 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:59 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-22 00:25:59 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-11-22 00:25:59 -0500
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:59 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:59 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:59 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 00:25:59 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users" for 127.0.0.1 at 2012-11-22 00:44:42 -0500
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  actionpack (3.2.9) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.9) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  omniauth (1.1.1) lib/omniauth/strategy.rb:177:in `call!'
+  omniauth (1.1.1) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.1) lib/omniauth/builder.rb:48:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.9) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `_run__1310939278453807412__call__1305173099357508096__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.4ms)
+
+
+Started GET "/users/0" for 127.0.0.1 at 2012-11-22 00:44:51 -0500
+
+AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
+  actionpack (3.2.9) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.9) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  omniauth (1.1.1) lib/omniauth/strategy.rb:177:in `call!'
+  omniauth (1.1.1) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.1) lib/omniauth/builder.rb:48:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.9) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `_run__1310939278453807412__call__1305173099357508096__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2012-11-22 00:45:05 -0500
+
+AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
+  actionpack (3.2.9) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.9) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  omniauth (1.1.1) lib/omniauth/strategy.rb:177:in `call!'
+  omniauth (1.1.1) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.1) lib/omniauth/builder.rb:48:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.9) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `_run__1310939278453807412__call__1305173099357508096__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users/1/post/1" for 127.0.0.1 at 2012-11-22 00:45:13 -0500
+
+ActionController::RoutingError (No route matches [GET] "/users/1/post/1"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/1/posts/1" for 127.0.0.1 at 2012-11-22 00:45:29 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1 AND "posts"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 404 Not Found in 31ms
+
+ActiveRecord::RecordNotFound (Couldn't find Post with id=1 [WHERE "posts"."user_id" = 1]):
+  app/controllers/posts_controller.rb:5:in `show'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.5ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateUsers (20121122003423)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" varchar(255), "token" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121122003423')[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreatePosts (20121122051626)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "photo_file_name" varchar(255), "photo_content_type" varchar(255), "photo_file_size" integer, "title" varchar(255), "description" text, "details" text, "starting_bid" integer, "current_bid" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121122051626')[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/users/1/posts/1" for 127.0.0.1 at 2012-11-22 00:49:09 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 404 Not Found in 9ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=1):
+  app/controllers/posts_controller.rb:4:in `show'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-22 00:49:14 -0500
+Processing by AuthController#link as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered site/link_accounts.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=1):
+  app/controllers/application_controller.rb:7:in `current_user'
+  app/views/site/link_accounts.html.erb:2:in `_app_views_site_link_accounts_html_erb___1393728378192695927_70360823867920'
+  app/controllers/auth_controller.rb:11:in `link'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2012-11-22 00:49:18 -0500
+Processing by AuthController#logout as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-22 00:49:18 -0500
+Processing by AuthController#link as HTML
+  Rendered site/link_accounts.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-22 00:49:18 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-22 00:49:18 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-11-22 00:49:18 -0500
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-22 00:49:18 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-11-22 00:49:18 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-22 00:49:18 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-22 00:49:18 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 00:49:18 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/auth/singly?service=facebook" for 127.0.0.1 at 2012-11-22 00:49:20 -0500
+
+
+Started GET "/auth/singly/callback?code=xZ7jfnykL3xAkxQx7jSj5A&state=342f1687d04170975c0f8f6f512dbbc6ae6c899d05f59bf1" for 127.0.0.1 at 2012-11-22 00:49:21 -0500
+Processing by AuthController#callback as HTML
+  Parameters: {"code"=>"xZ7jfnykL3xAkxQx7jSj5A", "state"=>"342f1687d04170975c0f8f6f512dbbc6ae6c899d05f59bf1", "service"=>"singly"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '62822c3f644135a87fbc6c0088da4db4' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "token", "uid", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 22 Nov 2012 05:49:22 UTC +00:00], ["token", nil], ["uid", "62822c3f644135a87fbc6c0088da4db4"], ["updated_at", Thu, 22 Nov 2012 05:49:22 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "users" SET "token" = 'uZ9NFfnZN7OgHJ9GVP5LdycFe1I.uBZQjlHu1a4ab561e98f4862aa4c9d380cda14d076c100c9595471ec7e84b6b02a079e39ac08772d9142c6b859f5ee6e6e3c29f6c467b31039063dcb3d1f82d8f86510c241510f55f8b5683dc4195326c2f6f9997bb6603427e5511915cb9a7f5c26fc29', "updated_at" = '2012-11-22 05:49:22.665969' WHERE "users"."id" = 1
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 17ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-22 00:49:22 -0500
+Processing by AuthController#link as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered site/link_accounts.html.erb within layouts/application (561.0ms)
+Completed 200 OK in 568ms (Views: 568.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-22 00:49:23 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-11-22 00:49:23 -0500
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-22 00:49:23 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-22 00:49:23 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-11-22 00:49:23 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-22 00:49:23 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-22 00:49:23 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 00:49:23 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1/posts/1" for 127.0.0.1 at 2012-11-22 00:49:29 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1 AND "posts"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Post with id=1 [WHERE "posts"."user_id" = 1]):
+  app/controllers/posts_controller.rb:5:in `show'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.6ms)
+
+
+Started GET "/users/1/posts/1" for 127.0.0.1 at 2012-11-22 00:49:48 -0500
+Connecting to database specified by database.yml
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1 AND "posts"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 404 Not Found in 78ms
+
+ActiveRecord::RecordNotFound (Couldn't find Post with id=1 [WHERE "posts"."user_id" = 1]):
+  app/controllers/posts_controller.rb:5:in `show'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.8ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/1/posts/1" for 127.0.0.1 at 2012-11-22 00:49:59 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1 AND "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 25.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-22 00:49:59 -0500
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-22 00:49:59 -0500
+Served asset /users.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-22 00:49:59 -0500
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-11-22 00:49:59 -0500
+Served asset /posts.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-11-22 00:49:59 -0500
+Served asset /posts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-22 00:49:59 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-22 00:49:59 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 00:49:59 -0500
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/users/1/posts/1" for 127.0.0.1 at 2012-11-22 00:55:52 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1 AND "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-22 00:55:53 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-22 00:55:53 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-11-22 00:55:53 -0500
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-22 00:55:53 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-11-22 00:55:53 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-22 00:55:53 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-22 00:55:53 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 00:55:53 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1/posts/1" for 127.0.0.1 at 2012-11-22 01:19:54 -0500
+
+ActionController::RoutingError (No route matches [GET] "/users/1/posts/1"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/1/posts/1" for 127.0.0.1 at 2012-11-22 01:20:03 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1 AND "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 35ms (Views: 6.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-22 01:20:03 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-11-22 01:20:03 -0500
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-22 01:20:03 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-22 01:20:03 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-22 01:20:03 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-11-22 01:20:03 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-22 01:20:03 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 01:20:03 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2012-11-22 01:20:16 -0500
+Processing by PostsController#new as HTML
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/posts_controller.rb:12:in `new'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.8ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2012-11-22 01:20:38 -0500
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (3.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 64ms
+
+ActionView::MissingTemplate (Missing template posts/new, application/new with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/nathanl/Documents/github/bidsy/app/views"
+):
+  actionpack (3.2.9) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.9) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.9) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.9) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.9) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.9) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.9) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.9) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.9) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.9) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.9) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.9) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.9) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.9) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:414:in `_run__3477515565465014533__process_action__2923974446898654301__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.9) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.9) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.9) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.9) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  omniauth (1.1.1) lib/omniauth/strategy.rb:177:in `call!'
+  omniauth (1.1.1) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.1) lib/omniauth/builder.rb:48:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.9) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `_run__850171137525913333__call__1773673598031671154__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2012-11-22 01:22:07 -0500
+Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 28ms
+
+ActionView::MissingTemplate (Missing template posts/new, application/new with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/nathanl/Documents/github/bidsy/app/views"
+):
+  actionpack (3.2.9) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.9) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.9) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.9) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.9) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.9) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.9) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.9) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.9) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.9) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.9) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.9) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.9) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.9) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:414:in `_run__3477515565465014533__process_action__2923974446898654301__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.9) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.9) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.9) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.9) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  omniauth (1.1.1) lib/omniauth/strategy.rb:177:in `call!'
+  omniauth (1.1.1) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.1) lib/omniauth/builder.rb:48:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.9) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `_run__850171137525913333__call__1773673598031671154__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2012-11-22 01:22:28 -0500
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 29ms
+
+ActionView::MissingTemplate (Missing template posts/new, application/new with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/nathanl/Documents/github/bidsy/app/views"
+):
+  actionpack (3.2.9) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.9) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.9) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.9) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.9) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.9) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.9) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.9) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.9) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.9) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.9) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.9) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.9) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.9) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:414:in `_run__3477515565465014533__process_action__2923974446898654301__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.9) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.9) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.9) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.9) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  omniauth (1.1.1) lib/omniauth/strategy.rb:177:in `call!'
+  omniauth (1.1.1) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.1) lib/omniauth/builder.rb:48:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.9) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `_run__850171137525913333__call__1773673598031671154__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2012-11-22 01:24:18 -0500
+Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 74ms (Views: 45.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-22 01:24:18 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-11-22 01:24:18 -0500
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-22 01:24:18 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-22 01:24:18 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-11-22 01:24:18 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-22 01:24:18 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-22 01:24:18 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 01:24:18 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-11-22 01:24:26 -0500
+
+ActionController::RoutingError (No route matches [POST] "/posts"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-11-22 01:24:34 -0500
+
+ActionController::RoutingError (No route matches [POST] "/posts"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-11-22 01:24:41 -0500
+
+ActionController::RoutingError (No route matches [POST] "/posts"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-11-22 01:26:19 -0500
+
+ActionController::RoutingError (No route matches [POST] "/posts"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2012-11-22 01:26:22 -0500
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-22 01:26:22 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-11-22 01:26:22 -0500
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-22 01:26:22 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-22 01:26:22 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-22 01:26:22 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-11-22 01:26:22 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-22 01:26:22 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 01:26:22 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-11-22 01:26:25 -0500
+
+ActionController::RoutingError (No route matches [POST] "/posts"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2012-11-22 01:26:37 -0500
+Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-22 01:26:37 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-22 01:26:37 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-11-22 01:26:37 -0500
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-22 01:26:37 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-11-22 01:26:37 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-22 01:26:37 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-22 01:26:37 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 01:26:37 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/post" for 127.0.0.1 at 2012-11-22 01:26:39 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2qJIR3+/ZrBV4HwMqtgeYRiAGtIvYsrbfwTYBgoN/Pc=", "post"=>{"title"=>"asdas"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 1ms
+
+RuntimeError (TODO):
+  app/controllers/posts_controller.rb:8:in `create'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.6ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2012-11-22 01:27:58 -0500
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 66ms (Views: 8.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-22 01:27:59 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-11-22 01:27:59 -0500
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-22 01:27:59 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-22 01:27:59 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-22 01:27:59 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-11-22 01:27:59 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 01:27:59 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-22 01:27:59 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/post" for 127.0.0.1 at 2012-11-22 01:28:03 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2qJIR3+/ZrBV4HwMqtgeYRiAGtIvYsrbfwTYBgoN/Pc=", "post"=>{"title"=>"This is another Post"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "posts" ("created_at", "current_bid", "description", "details", "photo_content_type", "photo_file_name", "photo_file_size", "starting_bid", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 22 Nov 2012 06:28:03 UTC +00:00], ["current_bid", nil], ["description", nil], ["details", nil], ["photo_content_type", nil], ["photo_file_name", nil], ["photo_file_size", nil], ["starting_bid", nil], ["title", "This is another Post"], ["updated_at", Thu, 22 Nov 2012 06:28:03 UTC +00:00], ["user_id", 1]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 11ms
+
+ActionView::MissingTemplate (Missing template posts/create, application/create with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/nathanl/Documents/github/bidsy/app/views"
+):
+  actionpack (3.2.9) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.9) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.9) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.9) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.9) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.9) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.9) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.9) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.9) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.9) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.9) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.9) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.9) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.9) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.9) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.9) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:414:in `_run__3477515565465014533__process_action__698277015643821404__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.9) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.9) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.9) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.9) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.9) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.9) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.9) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.9) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.9) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.9) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  omniauth (1.1.1) lib/omniauth/strategy.rb:177:in `call!'
+  omniauth (1.1.1) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.1) lib/omniauth/builder.rb:48:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.9) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `_run__850171137525913333__call__1773673598031671154__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/nathanl/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/nathanl/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started POST "/post" for 127.0.0.1 at 2012-11-22 01:31:20 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2qJIR3+/ZrBV4HwMqtgeYRiAGtIvYsrbfwTYBgoN/Pc=", "post"=>{"title"=>"This is another Post"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "current_bid", "description", "details", "photo_content_type", "photo_file_name", "photo_file_size", "starting_bid", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 22 Nov 2012 06:31:20 UTC +00:00], ["current_bid", nil], ["description", nil], ["details", nil], ["photo_content_type", nil], ["photo_file_name", nil], ["photo_file_size", nil], ["starting_bid", nil], ["title", "This is another Post"], ["updated_at", Thu, 22 Nov 2012 06:31:20 UTC +00:00], ["user_id", 1]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/1/posts/3
+Completed 302 Found in 39ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/users/1/posts/3" for 127.0.0.1 at 2012-11-22 01:31:20 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1 AND "posts"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-22 01:31:20 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-11-22 01:31:20 -0500
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-22 01:31:20 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-22 01:31:20 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-22 01:31:20 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-11-22 01:31:20 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-22 01:31:20 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 01:31:20 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/post" for 127.0.0.1 at 2012-11-22 01:31:26 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2qJIR3+/ZrBV4HwMqtgeYRiAGtIvYsrbfwTYBgoN/Pc=", "post"=>{"title"=>"Woooo"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "current_bid", "description", "details", "photo_content_type", "photo_file_name", "photo_file_size", "starting_bid", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 22 Nov 2012 06:31:26 UTC +00:00], ["current_bid", nil], ["description", nil], ["details", nil], ["photo_content_type", nil], ["photo_file_name", nil], ["photo_file_size", nil], ["starting_bid", nil], ["title", "Woooo"], ["updated_at", Thu, 22 Nov 2012 06:31:26 UTC +00:00], ["user_id", 1]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/users/1/posts/4
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/users/1/posts/4" for 127.0.0.1 at 2012-11-22 01:31:26 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1 AND "posts"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-22 01:31:26 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-11-22 01:31:26 -0500
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-22 01:31:26 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-22 01:31:26 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-11-22 01:31:26 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-22 01:31:26 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-22 01:31:26 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-22 01:31:26 -0500
+Served asset /application.js - 304 Not Modified (0ms)

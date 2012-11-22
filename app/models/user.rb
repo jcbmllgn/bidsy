@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessible :uid
+  has_many :posts
 
   def get_profile
     @profile = HTTParty.get("https://api.singly.com/profile",
