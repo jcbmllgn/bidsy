@@ -35,9 +35,9 @@
 
   </div>
   <div class="widget userWidget">
-      <img src="<%#= @user.thumbnail_url %>">
+      <img src="<%= @user.thumbnail_url %>">
       <h4><%= @user.name %></h4>
-      <p><%#= @user.description %></p>
+      <p><%= @user.description %></p>
 
       <div style="clear: both;"></div>
   </div>
@@ -55,13 +55,13 @@
   <% if current_user %>
     <div class="modalTop">
       <div class="aBlock">
-        <img src="<%#= current_user.thumbnail_url %>" width="120" height="120">
+        <img src="<%= current_user.thumbnail_url %>" width="120" height="120">
       </div>
       <div class="aBlock">
         <%= image_tag "/images/arrows.png", style: "margin-top:30px;" %>
       </div>
       <div class="aBlock">
-        <img src="<%#= @user.thumbnail_url %>" width="120" height="120">
+        <img src="<%= @user.thumbnail_url %>" width="120" height="120">
       </div>
       <div style="clear:both;"></div>
     </div>
@@ -78,7 +78,7 @@
         <%= image_tag "/images/arrows.png", style: "margin-top:30px;" %>
       </div>
       <div class="aBlock">
-        <img src="<%#= @user.thumbnail_url %>">
+        <img src="<%= @user.thumbnail_url %>">
       </div>
       <div style="clear:both;"></div>
     </div>

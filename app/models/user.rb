@@ -19,10 +19,12 @@ class User < ActiveRecord::Base
   # We save the profile to `@profile` to avoid multiple HTTP requests
   # for the profile on one page.
   #
-  def get_profile
+  def with_profile
     @profile = HTTParty.get("#{SINGLY_API_BASE}/profile",
       :query => {:access_token => token}
     ).parsed_response unless @profile
+
+    yield @profile
   end
 
   # ## Profile Accessors
@@ -30,9 +32,13 @@ class User < ActiveRecord::Base
   # These are shortcuts to get information about this
   # user. Things like their name, email, and photo_url.
   #
-  def name
-    get_profile
-    @profile["name"]
-  end
+  def name;          with_profile { |p| p["name"] };          end
+  def url;           with_profile { |p| p["url"] };           end
+  def description;   with_profile { |p| p["description"] };   end
+  def email;         with_profile { |p| p["email"] }          end
+  def handle;        with_profile { |p| p["handle"] };        end
+  def thumbnail_url; with_profile { |p| p["thumbnail_url"] }; end
+  def website;       with_profile { |p| p["website"] };       end
+  def gravatar;      with_profile { |p| p["gravatar"] };      end
 
 end
