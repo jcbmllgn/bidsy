@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   # for the profile on one page.
   #
   def get_profile
-    @profile = HTTParty.get(SINGLY_API_BASE,
+    @profile = HTTParty.get("#{SINGLY_API_BASE}/profile",
       :query => {:access_token => token}
     ).parsed_response unless @profile
   end
