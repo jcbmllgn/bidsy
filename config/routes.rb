@@ -1,9 +1,10 @@
 Bidsy::Application.routes.draw do
 
   # Site
-  root to: 'auth#login'
+  root to: 'application#home'
 
   # Auth
+  match "login"                  => "auth#login"
   match "logout"                 => "auth#logout"
   match "auth/:service/callback" => "auth#callback"
 

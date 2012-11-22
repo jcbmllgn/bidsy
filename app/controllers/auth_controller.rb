@@ -6,7 +6,7 @@ class AuthController < ApplicationController
   # here and display all possible social login options.
   #
   def login
-    render 'site/login'
+    render 'application/login'
   end
 
   # After login in with singly handle fetching or creating a new

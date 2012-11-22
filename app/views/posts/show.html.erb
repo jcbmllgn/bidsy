@@ -1,2 +1,121 @@
-<%= @user %>
-<%= @post.title %>
+<div id="productLeftCol">
+  <div class="productGallery">
+    <%= image_tag @post.photo_file_name %>
+  </div>
+
+  <div id="productDetials">
+    <h1><%= @post.title %></h1>
+
+    <div class="productStats">
+      <%# @post.fields.each do |k,v| %>
+        <div class="fieldRow">
+          <p class="key"><%#= k.capitalize %></p>
+          <p class="value"><%#= v %></p>
+        </div>
+      <%# end %>
+    </div>
+
+    <p class="productParagraph"><%= @post.description %></p>
+
+  </div>
+
+</div>
+
+<div id="productRightCol">
+  <div class="widget bidWidget">
+    <div class="row">
+      <h3>Current Bid: <span>$<%= @post.current_bid %></span></h3>
+    </div>
+    <div class="row amountRow">
+      <input type="text" placeholder="$<%#= @post.current_bid + 1 %> or more">
+    </div>
+    <a id="placeBidBtn" href="#">
+      <div>Place bid</div>
+    </a>
+
+  </div>
+  <div class="widget userWidget">
+      <img src="<%#= @user.thumbnail_url %>">
+      <h4><%= @user.name %></h4>
+      <p><%#= @user.description %></p>
+
+      <div style="clear: both;"></div>
+  </div>
+
+  <div class="widget statsWidget">
+    <h1><span>6</span>d <span>59</span>min left</h1>
+    <h2><span>1</span> page views</h2>
+    <h2><span>0</span> bids</h2>
+    <h6>Boston, MA</h6>
+  </div>
+
+</div>
+
+<div class="popup">
+  <% if current_user %>
+    <div class="modalTop">
+      <div class="aBlock">
+        <img src="<%#= current_user.thumbnail_url %>" width="120" height="120">
+      </div>
+      <div class="aBlock">
+        <%= image_tag "/images/arrows.png", style: "margin-top:30px;" %>
+      </div>
+      <div class="aBlock">
+        <img src="<%#= @user.thumbnail_url %>" width="120" height="120">
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+    <div class="confirmBid">
+      <h2>Confirm your bid for $<span id="bidValue"><%#= @post.current_bid + 1 %></span></h2>
+      <a href="#">Confirm</a>
+    </div>
+  <% else %>
+    <div class="modalTop">
+      <div class="aBlock">
+        <%= image_tag "/images/questionMark.png" %>
+      </div>
+      <div class="aBlock">
+        <%= image_tag "/images/arrows.png", style: "margin-top:30px;" %>
+      </div>
+      <div class="aBlock">
+        <img src="<%#= @user.thumbnail_url %>">
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+    <div class="modalCopy">
+      <h5>You need to login first!</h5>
+      <p>Start bidding by connecting an accont with Bidsy.</p>
+    </div>
+    <div id="logins">
+      <a class="facebookLogin" href="/auth/singly?service=facebook">Sign in with Facebook</a> <span>or</span> <a class="linkedinLogin" href="/auth/singly?service=linkedin">Sign in with LinkedIn</a>
+    </div>
+  <% end %>
+  </div>
+  <div class="modalBlackout"></div>
+
+<script type="text/javascript">
+
+// price confirm update
+$('.bidWidget .amountRow input').on('change', function (e) {
+  $('.confirmBid #bidValue').html($(this).val());
+});
+
+//JS for the modal:
+
+// prompts modal when user clicks on "place bid button":
+$('#placeBidBtn').click(function(){
+  //Remove any modals, if there are any:
+  $('.modalBlackout, .popup').fadeIn();
+});
+
+// If user clicks on blackdrop or 'x' button the modal closes.
+$('.modalBlackout, #editModal').click(function(){
+  $(this).fadeOut();
+  $('.popup').fadeOut();
+});
+
+
+
+
+
+</script>
