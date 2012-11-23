@@ -15,4 +15,7 @@ Bidsy::Application.routes.draw do
   match "users/:user_id/posts/:id" => "posts#show", via: :get, as: "post"
   match "/posts/:id"               => "posts#destroy", via: :delete, as: "delete_post"
 
+  # Playground
+  match "/playground" => "application#playground"
+
 end
