@@ -66,8 +66,8 @@
 
 </div>
 
-<%= form_for @post, url: create_post_path, html: { enctype: "multipart/form-data", id: "HIDDENForm" } do |f| %>
-  <%= f.text_field(:photo_file_name, id: "HIDDENImageName") %>
+<%= form_for @post, url: create_post_path, :html => { multipart: true, id: "HIDDENForm" } do |f| %>
+  <%= f.file_field(:photo, id: "HIDDENImageName") %>
   <%= f.text_area(:title, id: "HIDDENTitle") %>
   <%= f.text_area(:description, id: "HIDDENDescription") %>
   <%= f.text_area(:'starting_bid', id: "HIDDENStartingPrice") %>
