@@ -56,3 +56,8 @@ $(document).bind 'new_posts.load', (e,obj) =>
   #   var val = input.html();
   #   $('#HIDDENForm textarea[name="fields['+ keyName.toLowerCase() +']"]').html(val);
   # });
+
+
+
+  # 
+

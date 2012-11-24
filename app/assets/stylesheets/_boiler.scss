@@ -4,6 +4,7 @@ Bidsy colors
 $orange: #e15429;
 $blue: #5429e1;
 $green: #29e154;
+$red: #e1295a;
 
 $grey: #3e3e3e;
 $lightGrey: #646464;
@@ -12,12 +13,14 @@ $widgetGrey: #f2f2f2;
 $fb_blue: #3B5998;
 $linkedIn_blue: #4875B4;
 
+$radius: 3px;
+
 
 @mixin widget( $color: $widgetGrey ) {
   background-color: $color;
   border-radius: 3px;
   padding: 10px;
-  -webkit-border-radius: 3px;
+  -webkit-border-radius: $radius;
 }
 
 
@@ -26,21 +29,42 @@ $linkedIn_blue: #4875B4;
 Flash Styling
 ---------------*/
 
-// $flashGreen: ;
+$flashGreen: $green;
 $flashYellow: #fffd7e;
-// $flashRed: ;
+$flashRed: $red;
 
 @mixin flash($color: $flashYellow) { // default to yello warning flash
   background-color: $color;
   width: 100%;
-  min-height: 3em;
-  position: absolute;
-  left: 0px;
-  top: 50px;
+  margin: -5px 0px 15px;
+  padding: .75em;
+  border-radius: $radius;
+  font-weight: lighter;
+
+  div,  img {
+    float: left;
+  }
+
+  img {
+    width: 23px;
+    margin-right: 20px;
+  }
 }
 
-.successFlash {
-  @include flash();
+.flash div, .flash img {
+  float: left;
+}
+
+.green {
+  @include flash($flashGreen);
+}
+
+.yellow {
+  @include flash($flashYellow);
+}
+
+.red {
+  @include flash($flashRed);
 }
 
 
@@ -107,4 +131,9 @@ h6 {
   font-size: 16px;
   line-height: 18px;
   margin-bottom: 5px;
+}
+
+
+.clear {
+  clear: both;
 }

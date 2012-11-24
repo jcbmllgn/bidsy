@@ -7,12 +7,12 @@
 
 textarea, input, section { outline: none; }
 
-.productEdits {
+.editable {
   background: #fffeca;
   padding: 4px 10px;
 }
 
-.productEdits:hover, .productEdits:active, .productEdits:focus {
+.editable:hover, .editable:active, .editable:focus {
   padding: 2px 8px;
   border: 2px dashed #e1295a;
   outline: none;
