@@ -23,12 +23,14 @@ class PostsController < ApplicationController
     if @user
       @post = @user.posts.new
 
-      # create 10 new images, this is the max number of images users
+      # create 1 new image, this is the max number of images users
       # can upload.
       1.times { @post.images << Image.new }
     else
       redirect_to login_path
     end
+
+    @editing = true
   end
 
   # Show a specific post.

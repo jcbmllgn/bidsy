@@ -18,7 +18,11 @@ if ( $('.flash') ) {
 
   <div id="productDetials">
 
-    <h1 class="productEdits" id="titleEdits" contenteditable="true">Enter title here</h1>
+    <% if @editing %>
+      <%= editable :h1, "Enter Title Here", id: "titleEdits" %>
+    <% else %>
+      <h1 id="titleEdits">Enter title here</h1>
+    <% end %>
 
     <div class="productStats editMode">
       <div class="fieldRow">
