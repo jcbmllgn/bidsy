@@ -9,12 +9,13 @@ textarea, input, section { outline: none; }
 
 .productEdits {
   background: #fffeca;
-  padding: 2px 10px;
+  padding: 4px 10px;
 }
 
-.productEdits:hover, .productEdits:active {
-  padding: 0px 8px;
+.productEdits:hover, .productEdits:active, .productEdits:focus {
+  padding: 2px 8px;
   border: 2px dashed #e1295a;
+  outline: none;
 }
 
 #titleEdits {

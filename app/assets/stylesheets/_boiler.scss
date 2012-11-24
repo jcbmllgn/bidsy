@@ -1,0 +1,110 @@
+/* ---------------
+Bidsy colors
+---------------*/
+$orange: #e15429;
+$blue: #5429e1;
+$green: #29e154;
+
+$grey: #3e3e3e;
+$lightGrey: #646464;
+$widgetGrey: #f2f2f2;
+
+$fb_blue: #3B5998;
+$linkedIn_blue: #4875B4;
+
+
+@mixin widget( $color: $widgetGrey ) {
+  background-color: $color;
+  border-radius: 3px;
+  padding: 10px;
+  -webkit-border-radius: 3px;
+}
+
+
+
+/* ---------------
+Flash Styling
+---------------*/
+
+// $flashGreen: ;
+$flashYellow: #fffd7e;
+// $flashRed: ;
+
+@mixin flash($color: $flashYellow) { // default to yello warning flash
+  background-color: $color;
+  width: 100%;
+  min-height: 3em;
+  position: absolute;
+  left: 0px;
+  top: 50px;
+}
+
+.successFlash {
+  @include flash();
+}
+
+
+/* ---------------
+Font styling
+---------------*/
+
+p {
+  line-height: 1.4em;
+  color: $grey;
+}
+
+a {
+  color: $grey;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  color: $grey;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: $lightGrey;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 26px;
+  margin-bottom: 8px;
+}
+
+h3 {
+  color: $grey;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 22px;
+  margin-bottom: 6px;
+}
+
+h4 {
+  color: #a0a0a0;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 22px;
+  margin-bottom: 5px;
+}
+
+h5 {
+  color: $grey;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 5px;
+}
+
+h6 {
+  color: $grey;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 5px;
+}
