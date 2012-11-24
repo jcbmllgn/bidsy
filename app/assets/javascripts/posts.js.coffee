@@ -1,33 +1,33 @@
 # NEW ACTION SCRIPT
 $(document).bind 'new_posts.load', (e,obj) =>
 
-  # assigning Title
-  $('#titleEdits').focusout (e) ->
-    $('#HIDDENTitle').html $(this).text()
+  # # assigning Title
+  # $('#titleEdits').focusout (e) ->
+  #   $('#HIDDENTitle').html $(this).text()
 
-  # assigning Description
-  $('#descriptionEdits').focusout (e) ->
-    $('#HIDDENDescription').html $(this).text()
+  # # assigning Description
+  # $('#descriptionEdits').focusout (e) ->
+  #   $('#HIDDENDescription').html $(this).text()
 
-  # assigning Description
-  $('#startAmount').focusout (e) ->
-    $('#HIDDENStartingPrice').html $(this).val()
+  # # assigning Description
+  # $('#startAmount').focusout (e) ->
+  #   $('#HIDDENStartingPrice').html $(this).val()
 
-  # assigning HIDDENImageName
-  # kinda a hack, not sure if there is a better way todo this.
-  $('#productImage').on 'click', (e) ->
-    $('#HIDDENImageName').click()
-    setInterval ->
-      $('#HIDDENImageName').html $('#HIDDENImageName').val()
-    , 1
-    return false
+  # # assigning HIDDENImageName
+  # # kinda a hack, not sure if there is a better way todo this.
+  # $('#productImage').on 'click', (e) ->
+  #   $('#HIDDENImageName').click()
+  #   setInterval ->
+  #     $('#HIDDENImageName').html $('#HIDDENImageName').val()
+  #   , 1
+  #   return false
 
-  # set image when user selects an image from the input drop-down.
-  hookImageSelection $("#HIDDENImageName"), $("#productImage")
+  # # set image when user selects an image from the input drop-down.
+  # hookImageSelection $("#HIDDENImageName"), $("#productImage")
 
-  # submission of hidden form
-  $("#publishBtn").on 'click', (e) ->
-    $("#HIDDENForm").submit()
+  # # submission of hidden form
+  # $("#publishBtn").on 'click', (e) ->
+  #   $("#HIDDENForm").submit()
 
   # # append to fields.
   # $('#rowCreator select').on('change', function(){

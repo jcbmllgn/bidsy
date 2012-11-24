@@ -1,77 +1,17 @@
-<div id="productLeftCol">
+<h1>New Post</h1>
+<%= form_for @post, url: create_post_path, html: { multipart: true } do |f| %>
 
-  <div class="productGallery">
-    <img id="productImage" class="noImage" src="/images/clickToUpload.png">
-  </div>
+  <%= f.label :title, "Post Title" %>
+  <%= f.text_field :title %><br>
 
-  <div id="productDetials">
+  <%= f.label :description, "Post Description" %>
+  <%= f.text_field :description %><br>
 
-    <section class="productEdits" id="titleEdits" contenteditable="true">  
-      <h1>Enter title here</h1>
-    </section>
+  <%= f.fields_for :images do |b| %>
+    <%= b.label :data, "Image File" %>
+    <%= b.file_field :data %><br>
+  <% end %>
 
-    <div class="productStats editMode">
-      <div class="fieldRow">
-          <p class="key">Manufacturer</p>
-          <p class="value" contenteditable="true">Edit this</p>
-      </div>
-      <div class="fieldRow">
-        <p class="key">Condtion</p>
-        <p class="value" contenteditable="true">Edit this</p>
-      </div>
-      <div class="fieldRow">
-        <p class="key">Year</p>
-        <p class="value" contenteditable="true">Edit this</p>
-      </div>
+  <%= f.submit "Post" %>
 
-      <div class="breakLine">
-        <p>All inputs above this line are required</p>
-        <div class="horizontalLine"></div>
-        <p>The more fields you select and fill out the most attractive it will be to a buyer.</p>
-      </div>
-
-      <div id="rowCreator">
-        <select>
-          <option>Select one</option>
-          <option value="Material">Material</option>
-          <option value="Dimensions">Dimensions</option>
-        </select>
-        <p>< Select an attribute</p>
-      </div>
-    </div>
-
-    <section class="productEdits" id="descriptionEdits" contenteditable="true"> 
-      <p>Enter product description here. Up to 450 characters. The best descriptions are to the point, clearly describe the condtion of what you're selling, say a little bit about your and why you're selling it, and a little humor.</p>
-    </section>
-
-  </div>
-
-</div>
-
-<div id="productRightCol">
-
-  <div id="publishBtn">Post</div>
-
-  <div class="widget bidWidget">
-    <p>Enter starting amount:</p>
-    <input id="startAmount" type="text" placeholder="Starting Amount">
-  </div>
-
-  <div class="widget userWidget editMode">
-      <img src="<%= current_user.thumbnail_url %>">
-      <h4><%= current_user.name %></h4>
-      <p><%= current_user.description %></p>
-      <div style="clear: both;"></div>
-  </div>
-
-</div>
-
-<%= form_for @post, url: create_post_path, :html => { multipart: true, id: "HIDDENForm" } do |f| %>
-  <%= f.file_field(:photo, id: "HIDDENImageName") %>
-  <%= f.text_area(:title, id: "HIDDENTitle") %>
-  <%= f.text_area(:description, id: "HIDDENDescription") %>
-  <%= f.text_area(:'starting_bid', id: "HIDDENStartingPrice") %>
-  <%#= f.text_area(:'fields[manufacturer]') %>
-  <%#= f.text_area(:'fields[condtion]') %>
-  <%#= f.text_area(:'fields[year]') %>
 <% end %>

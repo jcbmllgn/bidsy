@@ -5,10 +5,11 @@ class Post < ActiveRecord::Base
                   :details,             # a serialized hash of details
                   :starting_bid,        # the original bid price
                   :current_bid,         # current bid :P
-                  :photo                # paperclip photo
+                  :images_attributes
 
-  # paperclip's magic
-  has_attached_file :photo, styles: { medium: "300x300>", thumb: "100x100>" }
+  # Posts have many Images.
+  has_many :images, dependent: :destroy
+  accepts_nested_attributes_for :images
 
   # Every post belongs to a user that is selling the item.
   belongs_to :user
