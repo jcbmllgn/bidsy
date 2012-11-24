@@ -20,9 +20,12 @@ class PostsController < ApplicationController
     @user = current_user
 
     # Must be logged in to post things.
-    p @user
     if @user
       @post = @user.posts.new
+
+      # create 10 new images, this is the max number of images users
+      # can upload.
+      1.times { @post.images << Image.new }
     else
       redirect_to login_path
     end

@@ -5,6 +5,7 @@ gem 'sqlite3'
 gem 'httparty'
 gem 'omniauth'
 gem 'omniauth-singly'
+gem "paperclip", "~> 3.0"
 
 group :test, :development do
   gem 'rspec-rails'
