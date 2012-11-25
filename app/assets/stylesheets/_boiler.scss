@@ -6,6 +6,8 @@ $blue: #5429e1;
 $green: #29e154;
 $red: #e1295a;
 
+$yellow: #fffeca; // used for flash and editable background
+
 $grey: #3e3e3e;
 $lightGrey: #646464;
 $widgetGrey: #f2f2f2;
@@ -30,7 +32,7 @@ Flash Styling
 ---------------*/
 
 $flashGreen: $green;
-$flashYellow: #fffd7e;
+$flashYellow: $yellow;
 $flashRed: $red; // Need to find a better flash red
 
 @mixin flash($color: $flashYellow) { // default to yello warning flash
@@ -39,7 +41,6 @@ $flashRed: $red; // Need to find a better flash red
   margin: -5px 0px 15px;
   padding: 1% 3%;
   border-radius: $radius;
-  font-weight: lighter;
 
   div,  img {
     float: left;
@@ -53,7 +54,8 @@ $flashRed: $red; // Need to find a better flash red
   div p {
     padding: 5px 0px 7px;
     margin-bottom: 3px;
-    border-bottom: 2px solid saturate(darken($color, 30%), 20%);
+    // border-bottom: 2px solid darken($color, 40%);
+    color: lighten($grey, 10%);
   }
 
 }

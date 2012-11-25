@@ -179,7 +179,7 @@ div#publishBtn {
 #startAmount {
   text-align: center;
   border: none;
-  background: #fffeca;
+  background: $yellow;
   padding: 2px 10px;
   color: $grey;
   font-size: 1.4em;
@@ -236,20 +236,23 @@ text-align: center;
 
 .userWidget {
   margin-top: 60px;
+  img {
+    width: 90px;
+    height: 90px;
+    float: left;
+    margin: 0px 10px 0px 0px;
+    border-radius: 3px;
+  }
+
+  h4 {
+    float: left;
+    margin-left: 2px;
+    width: 65%;
+  }
 }
 
-.userWidget img {
-  width: 90px;
-  height: 90px;
-  float: left;
-  margin: 0px 10px 0px 0px;
-  border-radius: 3px;
-}
+.shippingInfo {
 
-.userWidget h4 {
-  float: left;
-  margin-left: 2px;
-  width: 65%;
 }
 
 #productRightCol .editMode {
