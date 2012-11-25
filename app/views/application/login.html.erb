@@ -1,9 +1,11 @@
-<div id="loginPage">
+<div class="login">
   <h1>Connect an account to bid or post</h1>
-  <div id="logins">
-    <a class="facebookLogin" href="/auth/singly?service=facebook">Sign in with Facebook</a> <span>or</span> <a class="linkedinLogin" href="/auth/singly?service=linkedin">Sign in with LinkedIn</a>
+
+  <div class="logins">
+    <%= link_to "Sign in with Facebook", auth_path(:facebook), class: "facebook-login" %>
+    <span>or</span>
+    <%= link_to "Sign in with LinkedIn", auth_path(:linkedin), class: "linkedin-login" %>
   </div>
 
   <p>We feel one of the problems with buying things online is that it's to impersonal. How can you trust someone who wont even tell you their name? We get all the profile information about you from the social media site of your choosing. Easy for you, and trustworthy for others.</p>
-
 </div>
