@@ -2,7 +2,7 @@
 GLOBAL FUNCTIONS
 ###
 
-# modal
+# toggle_modal
 # Toggles the page's modal. Never have a page with more then 1 modal,
 # this function will toggle all of them.
 this.toggle_modal = ->
