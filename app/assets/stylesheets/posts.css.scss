@@ -137,29 +137,18 @@ textarea, input, section { outline: none; }
 }
 
 div#publishBtn {
-  width: 319px;
-  height: 38px;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  font-size: 22px;
-  color: $grey;
-  background: $green;
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 20px;
-  padding: 15px 0px 0px;
+  @include bigButton($green);
+}
 
-  &:hover {
-    cursor: pointer;
-    background: saturate(darken($green, 15%), 15%);
-  }
+div#saveButton  {
+  @include bigButton( lighten($grey, 30%) );
 }
 
 /* style for widgets */
 
 .widget {
   @include widget();
-  width: 300px;
+  width: 280px;
 }
 
 .bidWidget {
@@ -237,8 +226,8 @@ text-align: center;
 .userWidget {
   margin-top: 60px;
   img {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     float: left;
     margin: 0px 10px 0px 0px;
     border-radius: 3px;
