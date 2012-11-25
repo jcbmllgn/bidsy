@@ -55,3 +55,15 @@ this.display_input_image = ( input_element, img ) ->
 this.hook_image_selection = ( input, img ) ->
   input.on "change", (e) ->
     display_input_image(e.target, img)
+
+
+
+
+
+
+
+
+
+
+
+
