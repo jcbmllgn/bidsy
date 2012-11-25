@@ -25,8 +25,6 @@ $radius: 3px;
   -webkit-border-radius: $radius;
 }
 
-
-
 /* ---------------
 Flash Styling
 ---------------*/
@@ -37,10 +35,10 @@ $flashRed: $red; // Need to find a better flash red
 
 @mixin flash($color: $flashYellow) { // default to yello warning flash
   background-color: $color;
-  width: 96%;
   margin: -5px 0px 15px;
   padding: 1% 3%;
   border-radius: $radius;
+  border: 3px solid darken($color, 35%);
 
   div,  img {
     float: left;
@@ -76,6 +74,29 @@ $flashRed: $red; // Need to find a better flash red
   @include flash($flashRed);
   div p {
     color: white;
+  }
+}
+
+/* ---------------
+Big button styling, used on the post page (eg "save" and "post")
+---------------*/
+
+@mixin bigButton( $color: $green ) {
+  width: 300px;
+  height: 38px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  font-size: 22px;
+  color: $grey;
+  background: $color;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 15px 0px 0px;
+
+  &:hover {
+    cursor: pointer;
+    background: darken($color, 15%);
   }
 }
 
