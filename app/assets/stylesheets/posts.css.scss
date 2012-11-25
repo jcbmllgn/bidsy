@@ -241,6 +241,26 @@ text-align: center;
 }
 
 .shippingInfo {
+  h4 {
+    text-align: center;
+  }
+
+  ul.checkboxes {
+    float: left;
+    li {
+      @include checkBox();
+      margin-bottom: 20px;
+    }
+  }
+
+  ul.options {
+    float: right;
+    width: 250px;
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
 
 }
 
