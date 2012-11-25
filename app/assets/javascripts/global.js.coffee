@@ -19,9 +19,9 @@ this.toggle_modal = ->
     toggle_modal()
 
 
-# displayInputImage : <input_element Element> <img jQueryElement>
+# display_input_image : <input_element Element> <img jQueryElement>
 # Sets the given img src to the first file of the given input.
-this.displayInputImage = ( input_element, img ) ->
+this.display_input_image = ( input_element, img ) ->
   if input_element.files && input_element.files[0]
     reader = new FileReader()
 
@@ -33,8 +33,8 @@ this.displayInputImage = ( input_element, img ) ->
     reader.readAsDataURL(input_element.files[0])
 
 
-# window.hookImageSelection : <input jQueryElemet> <img jQueryElement>
-# Calls displayInputImage on every change of the given input.
-this.hookImageSelection = ( input, img ) ->
+# window.hook_image_selection : <input jQueryElemet> <img jQueryElement>
+# Calls display_input_image on every change of the given input.
+this.hook_image_selection = ( input, img ) ->
   input.on "change", (e) ->
-    displayInputImage(e.target, img);
+    display_input_image(e.target, img);

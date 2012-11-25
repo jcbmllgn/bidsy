@@ -23,7 +23,7 @@ $(document).bind 'new_posts.load', (e,obj) =>
     return false
 
   # set image when user selects an image from the input drop-down.
-  hookImageSelection $("#HIDDENImageName"), $("#productImage")
+  hook_image_selection $("#HIDDENImageName"), $("#productImage")
 
   # submission of hidden form
   $("#publishBtn").on 'click', (e) ->
