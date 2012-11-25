@@ -15,9 +15,9 @@
   <nav>
     <ul>
       <li>
-        <a href="/">
+        <%= link_to root_path do %>
           <%= image_tag "logo_inv_small.png", class: "logo" %>
-        </a>
+        <% end %>
       </li>
 
       <% if current_user %>
