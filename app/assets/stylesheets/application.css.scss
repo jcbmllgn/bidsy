@@ -163,33 +163,6 @@
   }
 }
 
-.facebook-signin {
-  float: left;
-  background: url('src/facebook_signin.png') no-repeat 0 0;
-  width: 150px;
-  height: 23px;
-}
-.facebook-signin:hover {
-  background-position: 0 -24px;
-}
-.facebook-signin:active {
-  background-position: 0 -48px;
-}
-
-.linkedin-signin {
-  float: right;
-  background: url('src/linkedin_signin.png') no-repeat 0 0;
-  width: 150px;
-  height: 23px;
-}
-.linkedin-signin:hover {
-  background-position: 0 -24px;
-}
-.linkedin-signin:active {
-  background-position: 0 -48px;
-}
-
-
 /* Blackout */
 
 .blackout {
