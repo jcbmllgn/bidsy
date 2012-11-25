@@ -137,11 +137,11 @@ textarea, input, section { outline: none; }
 }
 
 div#publishBtn {
-  @include bigButton($green);
+  @include big-button($green);
 }
 
 div#saveButton  {
-  @include bigButton( lighten($grey, 30%) );
+  @include big-button( lighten($grey, 30%) );
 }
 
 /* style for widgets */
