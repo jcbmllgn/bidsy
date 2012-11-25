@@ -15,18 +15,18 @@
 
   <div id="publishBtn" class="btn btn-large btn-green">Post</div>
 
-  <div class="widget bidWidget">
+  <div class="widget">
     <p>Enter starting amount:</p>
     <input id="startAmount" type="text" placeholder="Starting Amount">
   </div>
 
-  <div class="widget userWidget">
-      <img src="<%= current_user.thumbnail_url %>">
-      <h4><%= current_user.name %></h4>
-      <p><%= current_user.description %></p>
-      <div style="clear: both;"></div>
+  <div class="widget">
+    <%= image_tag current_user.thumbnail_url, class: "user-icon medium" %>
+    <h4><%= current_user.name %></h4>
+    <p><%= current_user.description %></p>
   </div>
-  <div class="widget shipping-info">
+
+  <div class="widget">
     <h4>Shipping Information</h4>
     <ul class="checkboxes">
       <li></li>
