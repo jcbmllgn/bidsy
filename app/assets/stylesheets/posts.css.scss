@@ -136,14 +136,6 @@ textarea, input, section { outline: none; }
   float: right;
 }
 
-div#publishBtn {
-  @include big-button($green);
-}
-
-div#saveButton  {
-  @include big-button( lighten($grey, 30%) );
-}
-
 /* style for widgets */
 
 .widget {
