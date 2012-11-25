@@ -125,8 +125,8 @@ $(document).bind 'new_posts.load', (e,obj) =>
 
     $('.checkboxes li.unchecked').click ->
       $(this)
-	.removeClass('unchecked').addClass('checked')
-	.siblings().removeClass('checked').addClass('unchecked')
+        .removeClass('unchecked').addClass('checked')
+        .siblings().removeClass('checked').addClass('unchecked')
 
 
 
