@@ -1,6 +1,25 @@
 # NEW ACTION SCRIPT
 $(document).bind 'new_posts.load', (e,obj) =>
 
+  ###
+  SHIPPING WIDGET
+  ###
+  $('.shipping-info').hover ->
+    $('.shipping-tooltip').fadeIn();
+  , ->
+    $('.shipping-tooltip').fadeOut();
+
+  ###
+  IMAGE
+  ###
+
+  # set image when user selects an image from the input drop-down.
+  hook_image_selection $("#HIDDENImageName"), $("#productImage")
+
+  ###
+  HIDDEN FORM
+  ###
+
   # assigning Title
   $('#titleEdits').focusout (e) ->
     $('#HIDDENTitle').html $(this).text()
@@ -21,9 +40,6 @@ $(document).bind 'new_posts.load', (e,obj) =>
       $('#HIDDENImageName').html $('#HIDDENImageName').val()
     , 1
     return false
-
-  # set image when user selects an image from the input drop-down.
-  hook_image_selection $("#HIDDENImageName"), $("#productImage")
 
   # submission of hidden form
   $("#publishBtn").on 'click', (e) ->
@@ -56,50 +72,3 @@ $(document).bind 'new_posts.load', (e,obj) =>
   #   var val = input.html();
   #   $('#HIDDENForm textarea[name="fields['+ keyName.toLowerCase() +']"]').html(val);
   # });
-
-
-
-  # Script for the flashes begins here.
-  # js so that when someone clicks on a contenteditable field it automatically selects all text.
-
-  # jQuery.fn.selectText = () ->
-  #   doc = document
-  #   element = this[0]
-  #   if (doc.body.createTextRange)
-  #     range = document.body.createTextRange()
-  #     range.moveToElementText(element)
-  #     range.select()
-  #   else if (window.getSelection)
-  #     selection = window.getSelection()
-  #     range = document.createRange()
-  #     range.selectNodeContents(element)
-  #     selection.removeAllRanges()
-  #     selection.addRange(range)
-
-  #   ($ document).ready ->
-  #     if $('body').data('action') == 'new' # All this js is to be executed if on edit page
-  #       console.log 'DUCK'
-  #       $('.editable, .value').click =>
-  #         $(this).selectText();
-  #       # Sloppy js to make sure the flash height is correct
-  #       numChildren = $('div.flash div p').length
-  #       newHeight = ((numChildren * 9) + 20) + 'px'
-  #       $('div.flash').css height: 'newHeight'
-
-  #       $('.editable, .value').attr contenteditable: true
-
-  #     if $('body').data 'action' == 'show'  # All this js is to be executed if on view/show page
-  #       $('.editable').attr('contenteditable','false').removeClass('editable')
-
-  jQuery ($) ->
-    $('.shipping-info').hover ->
-      $('.shipping-tooltip').fadeIn();
-    , ->
-      $('.shipping-tooltip').fadeOut();
-
-
-
-
-
-
-
