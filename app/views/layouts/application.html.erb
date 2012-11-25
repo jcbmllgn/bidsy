@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bidsy.co - Sell Beautifully</title>
+  <title><%= site_title %></title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body data-controller="<%= params[:controller] %>"
-      data-action="<%= params[:action] %>">
+
+<%= content_tag "body", data: { controller: params[:controller],
+                                action:     params[:action] } do %>
 
 <div id="header">
   <nav>
@@ -47,5 +48,6 @@
 </div>
 
 
-</body>
+<% end %>
+
 </html>
