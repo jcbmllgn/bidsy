@@ -199,28 +199,3 @@
   background-color: white;
   border-radius: $radius;
 }
-
-/* POSTS PAGE */
-
-.listPost li {
-  margin-bottom: 10px;
-  padding: 10px;
-  background-color: #f4f4f4;
-}
-
-.listPost li:hover {
-  text-decoration: none;
-}
-
-.listPost img {
-  margin: -10px;
-  margin-right: 10px;
-  padding: 0;
-}
-
-.listPost .listPrice {
-  float: right;
-}
-
-
-
