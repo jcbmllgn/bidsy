@@ -91,8 +91,11 @@ $(document).bind 'new_posts.load', (e,obj) =>
   #     if $('body').data 'action' == 'show'  # All this js is to be executed if on view/show page
   #       $('.editable').attr('contenteditable','false').removeClass('editable')
 
-
-
+  jQuery ($) ->
+    $('.shipping-info').hover ->
+      $('.shipping-tooltip').fadeIn();
+    , ->
+      $('.shipping-tooltip').fadeOut();
 
 
 
