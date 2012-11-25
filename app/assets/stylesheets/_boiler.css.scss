@@ -18,25 +18,26 @@ $linkedin-blue: #4875B4;
 $radius: 3px;
 
 
+/* -----------
+Widget Styling
+-------------- */
+
 @mixin widget( $color: $widget-grey ) {
   background-color: $color;
-  border-radius: 3px;
+  border-radius: $radius;
   padding: 10px;
-  -webkit-border-radius: $radius;
 }
 
 
-/* ---------------
+/* ----------
 Flash Styling
----------------*/
+------------- */
 
-// default to yellow warning flash
 @mixin flash( $color: $yellow ) {
   background-color: $color;
   margin: -5px 0px 15px;
   padding: 1% 3%;
   border-radius: $radius;
-  border: 3px solid darken($color, 35%);
 
   div,  img {
     float: left;
@@ -50,25 +51,20 @@ Flash Styling
   div p {
     padding: 5px 0px 7px;
     margin-bottom: 3px;
-    // border-bottom: 2px solid darken($color, 40%);
     color: lighten($grey, 10%);
   }
 
 }
 
-.flash div, .flash img {
-  float: left;
-}
-
-.green {
-  @include flash($green);
-}
-
-.yellow {
+.flash, .flash.warning {
   @include flash($yellow);
 }
 
-.red {
+.flash.success {
+  @include flash($green);
+}
+
+.flash.error {
   @include flash($red);
 
   div p {
@@ -77,14 +73,13 @@ Flash Styling
 }
 
 /* ---------------
-Big button styling, used on the post page (eg "save" and "post")
----------------*/
+Big Button Styling
+------------------ */
 
 @mixin big-button( $color: $green ) {
   width: 300px;
   height: 38px;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
+  border-radius: $radius;
   font-size: 22px;
   color: $grey;
   background: $color;
@@ -122,9 +117,9 @@ Mixin for checkboxes (used on post edit page)
 }
 
 
-/* ---------------
-Font styling
----------------*/
+/* ---------
+Font Styling
+------------ */
 
 p {
   line-height: 1.4em;
@@ -187,6 +182,9 @@ h6 {
   margin-bottom: 5px;
 }
 
+/* ------------
+Utility Styling
+--------------- */
 
 .clear {
   clear: both;
