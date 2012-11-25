@@ -240,7 +240,8 @@ text-align: center;
   }
 }
 
-.shippingInfo {
+.shipping-info {
+  position: relative;
   h4 {
     text-align: center;
   }
@@ -267,6 +268,38 @@ text-align: center;
     }
   }
 
+  .shipping-tooltip {
+    display: none;
+
+    position: absolute;
+    top: 0px;
+    right: 310px;
+
+    width: 630px;
+    height: 94%;
+    padding: 10px 3%;
+    border-radius: $radius;
+
+    background-color: lighten($light-grey, 35%);
+
+    -webkit-box-shadow:  1px 1px 3px 3px #dadadc;
+    box-shadow:  1px 1px 3px 3px #dadadc;
+    opacity: .95;
+
+      p {
+        font-size: .8em;
+        line-height: 1.1em;
+      }
+
+      h3 {
+        font-size: 16px;
+        line-height: 17px;
+      }
+  }
+
+  // &:hover .shipping-tooltip {
+  //   display: block;
+  // }
 }
 
 #productRightCol .editMode {
