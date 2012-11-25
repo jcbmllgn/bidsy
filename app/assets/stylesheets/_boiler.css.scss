@@ -98,7 +98,7 @@ Big Button Styling
 Mixin for checkboxes (used on post edit page)
 ---------------*/
 
-@mixin checkBox() {
+.unchecked {
   width: 16px;
   height: 16px;
 
@@ -110,10 +110,16 @@ Mixin for checkboxes (used on post edit page)
     cursor: pointer;
   }
 }
-.checkedBox {
+.checked {
   background: url('check_sprite2.png') no-repeat 0 -44px;
   width: 17px;
   height: 16px;
+
+  &:hover {
+    background: url('check_sprite2.png') no-repeat 0px -21px;
+    width: 18px;
+    cursor: pointer;
+  }
 }
 
 
