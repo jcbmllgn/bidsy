@@ -1,15 +1,75 @@
-<button class="toggle-modal">Toggle Popup</button>
+<h1>Doesn't everyone want a playground?</h1>
+<p>This is a page to show off the sexy css/js of this site, and when I say css/js I really mean scss/coffeescript, but you get the idea. Anyway these are our creations.</p>
 
-<div class="modal">
-  <div>
-    <p>This is a modal</p>
+
+<section id="typography">
+  <h1>Typography</h1>
+  <hr>
+
+  <h1>This is a Header 1</h1>
+  <h2>A Fancy Header 2</h2>
+  <h3>Glorious Header 3</h3>
+  <h4>What is a Header 4</h4>
+  <h5>Do we even use Header 5</h5>
+  <h6>This is a silly Header 6</h6>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</section>
+
+<section id="button">
+  <h1>Buttons</h1>
+  <hr>
+
+  <h5>Standard Button</h5>
+  <div class="btn">Submit</div>
+
+  <h5>Other Colors</h5>
+  <div class="btn btn-green">Win</div>
+  <div class="btn btn-red">Errors</div>
+
+  <h5>Other Sizes</h5>
+  <div class="btn btn-large">Large</div>
+  <div class="btn btn-small">Small</div>
+</section>
+
+<section id="modal">
+  <h1>Modal</h1>
+  <hr>
+
+  <div class="btn btn-large toggle-modal">Show Modal</div>
+  <div class="modal"></div>
+</section>
+
+<section id="flash">
+  <h1>Flash</h1>
+  <hr>
+
+  <div class="flash">
+    <p>This is a boring flash.</p>
+    <p>Furthermore this is another line.</p>
   </div>
-</div>
 
-<script type="text/javascript">
+  <div class="flash flash-warning">
+    <p>This is a waning to all people that bad things are coming if you don't commit often.</p>
+  </div>
 
-$('.toggle-modal').on('click', function (e) {
-  toggle_modal();
-});
+  <div class="flash flash-success">
+    <p>This is a waning to all people that bad things are coming if you don't commit often.</p>
+  </div>
 
-</script>
+  <div class="flash flash-error">
+    <p>This is a waning to all people that bad things are coming if you don't commit often.</p>
+  </div>
+</section>
