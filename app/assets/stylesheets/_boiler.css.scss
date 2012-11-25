@@ -29,8 +29,8 @@ $radius: 3px;
 
 /* Flash */
 
-@mixin flash( $color: $yellow ) {
-  background-color: $color;
+.flash {
+  background-color: $widget-grey;
   margin: -5px 0px 15px;
   padding: 1% 3%;
   border-radius: $radius;
@@ -52,23 +52,20 @@ $radius: 3px;
 
 }
 
-.flash, .flash.warning {
-  @include flash($yellow);
+.flash.flash-warning {
+  background-color: $yellow;
 }
 
-.flash.success {
-  @include flash($green);
+.flash.flash-success {
+  background-color: $green;
 }
 
-.flash.error {
-  @include flash($red);
-
-  div p {
-    color: white;
-  }
+.flash.flash-error {
+  background-color: $red;
+  p { color: white; }
 }
 
-/* Big Button */
+/* Buttons */
 
 .btn {
   color: #fff;
@@ -93,8 +90,8 @@ $radius: 3px;
 .btn.btn-small {
   padding: 6px 0px 0px;
   font-size: 8px;
-  width: 75px;
-  height: 18px;
+  width: 50px;
+  height: 15px;
 }
 
 .btn.btn-large {
@@ -240,6 +237,16 @@ h6 {
 }
 
 /* Utility */
+
+hr {
+  margin: 15px 0 30px 0;
+  border: none;
+  border-bottom: 1px solid $light-grey;
+}
+
+section {
+  margin: 30px 0;
+}
 
 .clear {
   clear: both;
