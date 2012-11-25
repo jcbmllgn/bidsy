@@ -257,25 +257,34 @@ text-align: center;
         text-align: center;
       }
     }
+    .zip {
+      margin-left: -28px;
+      line-height: 1.8em;
+      font-size: .8em;
+
+      span.editable {
+	padding: 0px 10px;
+      }
+    }
   }
 
   .shipping-tooltip {
-
+    display: none;
 
     position: absolute;
     top: 0px;
     right: 310px;
 
-    width: 630px;
-    height: 94%;
-    padding: 10px 3%;
+    width: 593px;
+    height: 100%;
+    padding: 0% 25px;
     border-radius: $radius;
+    border: 3px solid lighten($light-grey, 30%);
+    background-color: lighten($light-grey, 50%);
 
-    background-color: lighten($light-grey, 35%);
-
-    -webkit-box-shadow:  1px 1px 3px 3px #dadadc;
-    box-shadow:  1px 1px 3px 3px #dadadc;
-    opacity: .95;
+    // -webkit-box-shadow:  1px 1px 3px 3px #dadadc;
+    // box-shadow:  1px 1px 3px 3px #dadadc;
+    opacity: .97;
 
       p {
         font-size: .8em;
@@ -284,7 +293,7 @@ text-align: center;
 
       h3 {
         font-size: 16px;
-        line-height: 17px;
+	margin: 11px 0px;
       }
   }
 
