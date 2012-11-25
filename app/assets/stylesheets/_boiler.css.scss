@@ -1,39 +1,37 @@
-/* ---------------
-Bidsy colors
----------------*/
+/* Thematic Colors */
 $orange: #e15429;
-$blue: #5429e1;
-$green: #29e154;
-$red: #e1295a;
+$blue:   #5429e1;
+$green:  #29e154;
+$red:    #e1295a;
 
-$yellow: #fffeca; // used for flash and editable background
+/* Affects */
+$yellow:     #fffeca;
+$grey:       #3e3e3e;
+$light-grey:  #646464;
+$widget-grey: #f2f2f2;
 
-$grey: #3e3e3e;
-$lightGrey: #646464;
-$widgetGrey: #f2f2f2;
+/* Social */
+$fb-blue: #3B5998;
+$linkedin-blue: #4875B4;
 
-$fb_blue: #3B5998;
-$linkedIn_blue: #4875B4;
-
+/* Dimensions */
 $radius: 3px;
 
 
-@mixin widget( $color: $widgetGrey ) {
+@mixin widget( $color: $widget-grey ) {
   background-color: $color;
   border-radius: 3px;
   padding: 10px;
   -webkit-border-radius: $radius;
 }
 
+
 /* ---------------
 Flash Styling
 ---------------*/
 
-$flashGreen: $green;
-$flashYellow: $yellow;
-$flashRed: $red; // Need to find a better flash red
-
-@mixin flash($color: $flashYellow) { // default to yello warning flash
+// default to yellow warning flash
+@mixin flash( $color: $yellow ) {
   background-color: $color;
   margin: -5px 0px 15px;
   padding: 1% 3%;
@@ -63,15 +61,16 @@ $flashRed: $red; // Need to find a better flash red
 }
 
 .green {
-  @include flash($flashGreen);
+  @include flash($green);
 }
 
 .yellow {
-  @include flash($flashYellow);
+  @include flash($yellow);
 }
 
 .red {
-  @include flash($flashRed);
+  @include flash($red);
+
   div p {
     color: white;
   }
@@ -81,7 +80,7 @@ $flashRed: $red; // Need to find a better flash red
 Big button styling, used on the post page (eg "save" and "post")
 ---------------*/
 
-@mixin bigButton( $color: $green ) {
+@mixin big-button( $color: $green ) {
   width: 300px;
   height: 38px;
   border-radius: 3px;
@@ -150,7 +149,7 @@ h1 {
 }
 
 h2 {
-  color: $lightGrey;
+  color: $light-grey;
   font-weight: bold;
   font-size: 24px;
   line-height: 26px;

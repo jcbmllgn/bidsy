@@ -7,8 +7,7 @@
   background-color: $blue;
 }
 
-/* Other styling */
-
+/* Header Styles */
 
 #header {
   background-color: $orange;
@@ -46,31 +45,84 @@
     }
   }
 
-  .headerLogo {
+  .logo {
     margin-top: 4px;
   }
 }
 
-#container {
+
+/* Site Container */
+
+.container {
   width: 960px;
   margin: 0px auto;
 }
 
-#userIconSmall {
-  width: 20px;
-  height: 20px;
 
+/* User Icon */
+
+.user-icon {
   float: left;
   margin-right: 10px;
   margin-top: -2px;
-
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
+  border-radius: $radius;
 }
 
-/* Login page */
+.user-icon.small {
+  width: 24px;
+  height: 24px;
+}
 
-#loginPage {
+
+/* Home Page: */
+
+.home-block {
+  width: 450px;
+  float: left;
+
+  padding-top: 150px;
+
+  text-align: center;
+}
+
+.home-block h1 {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 90px;
+}
+
+.home-block p {
+  margin-top: 70px;
+}
+
+.home-block input {
+  text-align: center;
+  width: 390px;
+  font-size: 22px;
+  height: 43px;
+  font-weight: bold;
+  margin: -12px auto 0px;
+  border-radius: 8px;
+  border: 2px solid $blue;
+}
+
+.home-block a {
+  background-color: $blue;
+  color: white;
+  padding: 8px 35px;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 8px;
+}
+
+.home-block a:hover {
+  background-color: darken($blue, 15%);
+  text-decoration: none;
+}
+
+/* Login Page */
+
+.login {
   text-align: center;
   margin: 100px auto 0px;
   h1 {
@@ -79,7 +131,7 @@
   }
 }
 
-#logins {
+.logins {
   height: 100px;
   margin: 0 auto;
   text-align: center;
@@ -88,32 +140,27 @@
     margin: 0px 15px;
   }
 
-  .facebookLogin {
-    background: $fb_blue;
+  .facebook-login {
+    background: $fb-blue;
     color: white;
     padding: 8px 24px;
     border-radius: 3px;
     &:hover {
-      background: darken($fb_blue, 15%);
+      background: darken($fb-blue, 15%);
       text-decoration: none;
     }
   }
 
-  .linkedinLogin {
-    background: $linkedIn_blue;
+  .linkedin-login {
+    background: $linkedin-blue;
     color: white;
     padding: 8px 24px;
     border-radius: 3px;
     &:hover {
-      background: darken($linkedIn_blue, 15%);
+      background: darken($linkedin-blue, 15%);
       text-decoration: none;
     }
   }
-}
-
-#singly {
-  width: 80px;
-  margin-top: 250px;
 }
 
 .facebook-signin {
@@ -140,57 +187,6 @@
 }
 .linkedin-signin:active {
   background-position: 0 -48px;
-}
-
-/* Landing page: */
-.landingBlocks {
-  width: 450px;
-  float: left;
-
-  padding-top: 150px;
-
-  text-align: center;
-}
-
-.landingBlocks h1 {
-  font-size: 42px;
-  font-weight: bold;
-  margin-bottom: 90px;
-}
-
-.landingBlocks p {
-  margin-top: 70px;
-}
-
-.landingInput {
-  text-align: center;
-  width: 390px;
-  font-size: 22px;
-  height: 43px;
-  font-weight: bold;
-  margin: -12px auto 0px;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border: 2px solid $blue;
-}
-
-#landingSellBtn {
-  background-color: $blue;
-  color: white;
-  padding: 8px 35px;
-  font-weight: bold;
-  font-size: 24px;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-}
-
-#landingSellBtn:hover {
-  background-color: #401abd;
-  text-decoration: none;
-}
-
-.landingBlocks .landingSellTag {
-  margin-top: 83px;
 }
 
 
