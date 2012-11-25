@@ -4,10 +4,19 @@ $(document).bind 'new_posts.load', (e,obj) =>
   ###
   SHIPPING WIDGET
   ###
+
+  # Hover tooltip
   $('.shipping-info').hover ->
     $('.shipping-tooltip').fadeIn();
   , ->
     $('.shipping-tooltip').fadeOut();
+
+
+  # Select boxes
+  $('.checkboxes li').addClass('unchecked')
+  $('.checkboxes li.unchecked').click ->
+    $(this).removeClass('unchecked').addClass('checked')
+           .siblings().removeClass('checked').addClass('unchecked')
 
   ###
   IMAGE
@@ -109,33 +118,3 @@ $(document).bind 'new_posts.load', (e,obj) =>
 
   # if $('body').data 'action' == 'show'  # All this js is to be executed if on view/show page
   #   $('.editable').attr('contenteditable','false').removeClass('editable')
-
-
-
-  jQuery ($) ->
-    #jquery for the shipping widget tooltip; It fades in/out on hover
-    $('.shipping-info').hover ->
-      $('.shipping-tooltip').fadeIn();
-    , ->
-      $('.shipping-tooltip').fadeOut();
-
-
-    #jquery for the select boxes
-    $('.checkboxes li').addClass('unchecked');
-
-    $('.checkboxes li.unchecked').click ->
-      $(this)
-        .removeClass('unchecked').addClass('checked')
-        .siblings().removeClass('checked').addClass('unchecked')
-
-
-
-
-
-
-
-
-
-
-
-
