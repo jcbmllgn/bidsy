@@ -1,308 +1,34 @@
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Structure of Post Page */
 
-
-/* Product page: */
-
-textarea, input, section { outline: none; }
-
-.editable {
-  background: #fffeca;
-  padding: 4px 10px;
-}
-
-.editable:hover, .editable:active, .editable:focus {
-  padding: 2px 8px;
-  border: 2px dashed #e1295a;
-  outline: none;
-}
-
-#titleEdits {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-#descriptionEdits {
-  margin: 10px 0px;
-  width: 305px;
-}
-
-#productLeftCol {
-  width: 635px;
-  min-height: 900px;
+.column {
   float: left;
+
+  &.column-left {
+    width: 635px;
+    margin-right: 20px
+  }
+
+  &.column-right {
+    width: 300px;
+  }
 }
 
-.productGallery {
-  width:635px;
-  max-height:635px;
-  text-align:center;
+/* Editable Styles */
+
+.post-field.editable {
+  background: $yellow;
+  padding: 4px 10px;
+
+  &:hover, &:active, &:focus {
+    padding: 2px 8px;
+    border: 2px dashed #e1295a;
+    outline: none;
+  }
 }
 
-.productGallery img {
-  vertical-align: middle;
+/* Post Image */
+
+img .post-field {
   width: 635px;
   max-height: 635px;
-  display: -moz-inline-box; /* Firefox 2 */
-  display: inline-block;
-  border-radius: 3px;
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-#productDetials {
-  margin-top: 10px;
-
-  .productParagraph {
-    width: 305px;
-    color: #434343;
-    line-height: 20px;
-    font-size: 14px;
-  }
-
-  .productStats {
-    width: 270px;
-    padding: 12px;
-    border-radius: 2px;
-    background: $widget-grey;
-    float: right;
-    margin-left: 10px;
-    margin-bottom: 10px;
-  }
-
-  .editMode {
-
-    .fieldRow {
-      margin-bottom: 15px;
-    }
-    .value {
-      background-color: #fffeca;
-      border: none;
-      padding: 4px;
-      outline: none;
-    }
-
-    .value:hover, .value:active {
-      border: 2px dashed #e1295a;
-      padding: 2px;
-    }
-
-    .breakLine p {
-      font-size: .7em;
-      color: rgb(131, 131, 131);
-      text-align: center;
-    }
-  }
-  .productStats {
-    .fieldRow {
-      width: 100%;
-      height: 20px;
-      clear: both;
-    }
-    .fieldRow .key {
-      font-weight: bold;
-      float: left;
-    }
-
-    .fieldRow .key span {
-      font-weight: normal;
-      font-size: 11px;
-      font-style: italic;
-    }
-
-    .key span:hover {
-      text-decoration: underline;
-      cursor: pointer;
-    }
-    .fieldRow .value {
-      float: right;
-    }
-  }
-}
-
-.horizontalLine {
-  height: 1px;
-  width: 90%;
-  background: rgb(214, 214, 214);
-  margin: 4px auto;
-}
-
-#productRightCol {
-  width: 300px;
-  height: 900px;
-  float: right;
-}
-
-/* style for widgets */
-
-.widget {
-  @include widget();
-  width: 280px;
-}
-
-.bidWidget {
-  position: relative;
-  text-align: center;
-  min-height: 60px;
-}
-
-.bidWidget .row h3 {
-  font-weight: normal;
-}
-
-.bidWidget .row h3 span {
-  font-weight: bold;
-}
-
-#startAmount {
-  text-align: center;
-  border: none;
-  background: $yellow;
-  padding: 2px 10px;
-  color: $grey;
-  font-size: 1.4em;
-}
-
-#productDetials .editMode #rowCreator {
-  height: 28px;
-  margin-top: 10px;
-  background-color: rgb(230, 230, 230);
-
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-}
-
-#rowCreator p {
-  float: right;
-  font-size: .8em;
-  font-style: italic;
-  margin: 5px;
-}
-
-#rowCreator select {
-  float: left;
-  margin: 5px;
-}
-
-.amountRow input {
-  width: 200px;
-  height: 21px;
-  font-size: 20px;
-  text-align: center;
-}
-
-.amountRow p {
-  margin-top: 4px;
-  font-size: 12px;
-}
-
-.bidWidget a div {
-position: absolute;
-bottom: -40px;
-left: 0px;
-padding: 13px 0px;
-width: 320px;
-background-color: $orange;
--webkit-border-radius: 0px 0px 3px 3px;
-border-radius: 0px 0px 3px 3px;
-text-align: center;
-}
-
-.bidWidget a div:hover {
-  background-color: #1ed348;
-}
-
-.userWidget {
-  margin-top: 60px;
-  img {
-    width: 80px;
-    height: 80px;
-    float: left;
-    margin: 0px 10px 0px 0px;
-    border-radius: 3px;
-  }
-
-  h4 {
-    float: left;
-    margin-left: 2px;
-    width: 65%;
-  }
-}
-
-.shipping-info {
-  position: relative;
-  h4 {
-    text-align: center;
-  }
-
-  ul.checkboxes {
-    float: left;
-    li {
-      margin-bottom: 20px;
-    }
-  }
-
-  ul.options {
-    float: right;
-    width: 250px;
-
-    li {
-      margin-bottom: 15px;
-
-      p.editable {
-        width: 67px;
-        text-align: center;
-      }
-    }
-  }
-
-  .shipping-tooltip {
-
-
-    position: absolute;
-    top: 0px;
-    right: 310px;
-
-    width: 630px;
-    height: 94%;
-    padding: 10px 3%;
-    border-radius: $radius;
-
-    background-color: lighten($light-grey, 35%);
-
-    -webkit-box-shadow:  1px 1px 3px 3px #dadadc;
-    box-shadow:  1px 1px 3px 3px #dadadc;
-    opacity: .95;
-
-      p {
-        font-size: .8em;
-        line-height: 1.1em;
-      }
-
-      h3 {
-        font-size: 16px;
-        line-height: 17px;
-      }
-  }
-
-  // &:hover .shipping-tooltip {
-  //   display: block;
-  // }
-}
-
-#productRightCol .editMode {
-  margin-top: 20px;
-}
-
-.statsWidget {
-  margin-top: 20px;
-}
-
-/* New Post Styles */
-
-#HIDDENForm {
-  visibility: hidden;
 }
