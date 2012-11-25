@@ -1,5 +1,15 @@
-<div id="testWidget" class="widget">
-  <h4>This is a widget</h4>
+<button class="toggle-modal">Toggle Popup</button>
+
+<div class="modal">
+  <div>
+    <p>This is a modal</p>
+  </div>
 </div>
 
-<button onclick="window.toggleBanner( 'testWidget' )">Toggle</button>
+<script type="text/javascript">
+
+$('.toggle-modal').on('click', function (e) {
+  toggle_modal();
+});
+
+</script>

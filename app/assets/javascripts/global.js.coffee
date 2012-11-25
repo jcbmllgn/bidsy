@@ -2,13 +2,21 @@
 GLOBAL FUNCTIONS
 ###
 
-# toggles a banner on the given id.
-this.toggleBanner = ( id ) ->
-  if $("##{id} .banner").length
-    banner = $("##{id} .banner")
-    banner.toggle()
+# modal
+# Toggles the page's modal. Never have a page with more then 1 modal,
+# this function will toggle all of them.
+this.toggle_modal = ->
+  if $('.modal').is(":visible")
+    $('.modal').fadeOut()
+    $('.blackout').fadeOut ->
+      $('.blackout').remove()
   else
-    banner = $("##{id}").prepend("<div class='banner'>thing</div>")
+    $('body').append("<div class='blackout'></div>")
+    $('.blackout, .modal').fadeIn()
+
+  # If user clicks on blackdrop or 'x' button the modal closes.
+  $('.blackout').on 'click', ->
+    toggle_modal()
 
 
 # displayInputImage : <input_element Element> <img jQueryElement>
