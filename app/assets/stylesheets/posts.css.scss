@@ -47,10 +47,10 @@ textarea, input, section { outline: none; }
   display: -moz-inline-box; /* Firefox 2 */
   display: inline-block;
   border-radius: 3px;
-}
 
-.productGallery .noImage:hover {
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 #productDetials {
