@@ -34,3 +34,30 @@ img.post-field {
   max-height: 635px;
   border-radius: $radius;
 }
+
+/* Post Description */
+
+.post-description {
+  float: left;
+  margin-right: 10px;
+  width: 355px;
+}
+
+/* Post Details */
+
+.post-details {
+  float: left;
+  width: 250px;
+
+  .detail {
+    @extend .clearfix
+  }
+
+  .detail p {
+    float: left;
+  }
+
+  .detail [data-field] {
+    float: right;
+  }
+}

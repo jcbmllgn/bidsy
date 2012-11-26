@@ -6,9 +6,17 @@
     Enter title here
   <% end %>
 
-  <%= post_field @post, :description, :p do %>
-    Enter product description here. Up to 450 characters. The best descriptions are to the point, clearly describe the condtion of what you're selling, say a little bit about your and why you're selling it, and a little humor.
-  <% end %>
+  <div class="post-description">
+    <%= post_field @post, :description, :p do %>
+      Enter product description here. Up to 450 characters. The best descriptions are to the point, clearly describe the condtion of what you're selling, say a little bit about your and why you're selling it, and a little humor.
+    <% end %>
+  </div>
+
+  <div class="post-details widget">
+    <%= post_detail @post, :manufacturer %>
+    <%= post_detail @post, :condition %>
+    <%= post_detail @post, :year %>
+  </div>
 
 </div>
 

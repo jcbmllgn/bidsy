@@ -14,4 +14,7 @@ class Post < ActiveRecord::Base
   # Every post belongs to a user that is selling the item.
   belongs_to :user
 
+  # Posts details are an array of values
+  serialize :details, Hash
+
 end
