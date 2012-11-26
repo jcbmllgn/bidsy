@@ -31,8 +31,6 @@ class PostsController < ApplicationController
     else
       redirect_to login_path
     end
-
-    @editing = true
   end
 
   # Show a specific post.

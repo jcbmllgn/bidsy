@@ -2,9 +2,14 @@
 
   <%= image_tag "click_to_upload.png", class: "post-field" %>
 
-  <h1 class="post-field input">Enter title here</h1>
+  <%= post_field @post, :title, :h1 do %>
+    Enter title here
+  <% end %>
 
-  <p class="post-field input">Enter product description here. Up to 450 characters. The best descriptions are to the point, clearly describe the condtion of what you're selling, say a little bit about your and why you're selling it, and a little humor.</p>
+  <%= post_field @post, :description, :p do %>
+    Enter product description here. Up to 450 characters. The best descriptions are to the point, clearly describe the condtion of what you're selling, say a little bit about your and why you're selling it, and a little humor.
+  <% end %>
+
 </div>
 
 <!-- BELOW HERE TODO -->
