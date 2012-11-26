@@ -16,6 +16,7 @@ $linkedin-blue: #4875B4;
 
 /* Dimensions */
 $radius: 3px;
+$line-height: 1.4;
 
 
 /* Widget */
@@ -177,7 +178,7 @@ $radius: 3px;
 /* Typography */
 
 p {
-  line-height: 1.4em;
+  line-height: $line-height;
   margin: 0 0 10px;
   color: $grey;
 }
@@ -195,7 +196,7 @@ h1 {
   color: $grey;
   font-weight: bold;
   font-size: 38.5px;
-  line-height: 1.4;
+  line-height: $line-height;
   margin: 10px 0px;
 }
 
@@ -203,7 +204,7 @@ h2 {
   color: $grey;
   font-weight: bold;
   font-size: 31.5px;
-  line-height: 40px;
+  line-height: $line-height;
   margin: 10px 0px;
 }
 
@@ -211,7 +212,7 @@ h3 {
   color: $grey;
   font-weight: bold;
   font-size: 24.5px;
-  line-height: 40px;
+  line-height: $line-height;
   margin: 10px 0px;
 }
 
@@ -219,7 +220,7 @@ h4 {
   color: $grey;
   font-weight: bold;
   font-size: 17.5px;
-  line-height: 20px;
+  line-height: $line-height;
   margin: 10px 0px;
 }
 
@@ -227,14 +228,14 @@ h5 {
   color: $grey;
   font-weight: bold;
   font-size: 14px;
-  line-height: 20px;
+  line-height: $line-height;
   margin: 10px 0px;
 }
 
 h6 {
   color: $grey;
   font-size: 11.9px;
-  line-height: 20px;
+  line-height: $line-height;
   margin: 10px 0px;
 }
 
