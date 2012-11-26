@@ -16,8 +16,9 @@
 /* Editable Styles */
 
 .post-field.editable {
-  background: $yellow;
   padding: 4px 10px;
+  background: $yellow;
+  border-radius: $radius;
 
   &:hover, &:active, &:focus {
     padding: 2px 8px;
@@ -28,7 +29,8 @@
 
 /* Post Image */
 
-img .post-field {
+img.post-field {
   width: 635px;
   max-height: 635px;
+  border-radius: $radius;
 }
