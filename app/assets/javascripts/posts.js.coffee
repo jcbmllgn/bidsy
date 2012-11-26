@@ -6,3 +6,8 @@ $(document).bind 'new_posts.load', (e,obj) =>
 
   # Make input fields editable
   input_fields.editable true
+
+  ###
+  FOR TESTING
+  ###
+  $('#toggle-editable').click -> input_fields.toggleEditable()
