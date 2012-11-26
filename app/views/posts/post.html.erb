@@ -13,32 +13,15 @@
 
   <div id="publish" class="btn btn-large btn-green">Post</div>
 
-  <div class="widget">
+  <div id="bid" class="widget">
     <p>Enter starting amount:</p>
     <input id="startAmount" type="text" placeholder="Starting Amount">
   </div>
 
-  <div class="widget">
+  <div id="user" class="widget">
     <%= image_tag current_user.thumbnail_url, class: "user-icon medium" %>
     <h4><%= current_user.name %></h4>
     <p><%= current_user.description %></p>
-  </div>
-
-  <div class="widget">
-    <h4>Shipping Information</h4>
-    <ul class="checkboxes">
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-
-    <ul class="options clearfix">
-      <li>Local pickup only</li>
-      <li>Delivery by mail only</li>
-      <li>Local pickup or mail delivery, buyer chooses</li>
-      <li class="zip">My zip code is: <span class="editable">zip</span> and the buyer must be within <span class="editable">xx</span> miles from me to do a local pickup.</li>
-      <li></li>
-    </ul>
   </div>
 
 </div>
