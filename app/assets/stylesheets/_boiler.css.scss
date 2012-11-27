@@ -21,6 +21,7 @@ $radius: 3px;
 /* Widget */
 
 @mixin widget( $color: $widget-grey ) {
+  position: relative;
   background-color: $color;
   border-radius: $radius;
   padding: 10px;
@@ -264,22 +265,20 @@ section {
 /* SCSS for widget-tooltips */
 
 .widget-tooltip {
-  // display: none;
+  display: none;
 
   position: absolute;
   top: 0px;
-  right: 310px;
 
-  width: 593px;
-  height: 100%;
-  padding: 0% 25px;
+  width: 623px;
+  padding: 5px 10px;
   border-radius: $radius;
   border: 3px solid lighten($light-grey, 30%);
   background-color: lighten($light-grey, 50%);
+  margin-bottom: 7px;
 
-  // -webkit-box-shadow:  1px 1px 3px 3px #dadadc;
-  // box-shadow:  1px 1px 3px 3px #dadadc;
-  opacity: .97;
+  box-shadow:  0px 0px 25px 4px #dfdfdf;
+  // opacity: .97;
 
     p {
       font-size: .8em;
@@ -290,6 +289,14 @@ section {
       font-size: 16px;
 margin: 11px 0px;
     }
+}
+
+.tooltip-left {
+  right: 310px;
+}
+
+.tooltip-right {
+  left: 310px;
 }
 
 // &:hover .shipping-tooltip {

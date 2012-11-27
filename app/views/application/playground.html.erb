@@ -82,12 +82,31 @@
     <h2>Sample widget.</h2>
     <p>Hover over me to see a tooltip.</p>
 
-    <div class="widget-tooltip">
-      <h4>Hello people!</h4>
+    <div class="widget-tooltip tooltip-right">
+      <h2>Hello people!</h2>
+    <p>If a widget is on the left side and the tooltip should be on the right, add the class "tooltip-right" to the tooltip.</p>
+    </div>
+  </div>
+<br><br>
+  <div class="widget" style="position:relative;left:660px;height:90px;">
+    <h2>Widget's on either side</h2>
+    <p>If a widget is on the right side and the tooltip should be on the left, add the class "tooltip-left" to the tooltip.</p>
+
+    <div class="widget-tooltip tooltip-left">
+      <h2>Hello people!</h2>
+    </div>
+  </div>
+<br><br>
+  <div class="widget">
+    <h2>Sample widget.</h2>
+    <p>Widget tooltips should be the last child inside a widget.</p>
+<br><br><br><br><br>
+    <div class="widget-tooltip tooltip-right">
+      <h2>Hello people!</h2>
     </div>
   </div>
 
-  <br><br><br>
+  <br><br><br><br><br><br>
 
 </section>
 
