@@ -5,6 +5,21 @@ $(document).bind 'new_posts.load', (e,obj) =>
   SHIPPING WIDGET
   ###
 
+  # Local pick up only
+  $('.shipping-info .checkboxes li.local-pickup').click ->
+    $('.options .zip').slideDown()
+    $('.options .shipping-option').slideUp()
+  # Shipping only
+  $('.shipping-info .checkboxes li.mail-delivery').click ->
+    $('.options .zip').slideUp()
+    $('.options .shipping-option').slideDown()
+  # Shipping and local pickup
+  $('.shipping-info .checkboxes li.both-options').click ->
+    $('.options .zip').slideDown()
+    $('.options .shipping-option').slideDown()
+
+
+
   # Hover tooltip
   $('.shipping-info').hover ->
     $('.shipping-tooltip').fadeIn();

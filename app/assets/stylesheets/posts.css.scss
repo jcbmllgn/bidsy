@@ -236,11 +236,12 @@ text-align: center;
   position: relative;
   h4 {
     text-align: center;
+    margin-bottom: 15px;
   }
 
   ul.checkboxes {
     position: absolute;
-    top: 40px;
+    top: 45px;
     li {
       margin-bottom: 20px;
     }
@@ -258,7 +259,9 @@ text-align: center;
         text-align: center;
       }
     }
-    .zip {
+    .zip, .shipping-option {
+      display: none;
+
       margin-left: -28px;
       line-height: 1.8em;
       font-size: .8em;
