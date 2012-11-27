@@ -16,7 +16,7 @@ $linkedin-blue: #4875B4;
 
 /* Dimensions */
 $radius: 3px;
-
+$line-height: 1.4em;
 
 /* Widget */
 
@@ -182,11 +182,12 @@ $radius: 3px;
 p {
   line-height: 1.4em;
   margin: 0 0 10px;
+  line-height: $line-height;
   color: $grey;
 }
 
 span {
-  line-height: 1.4em;
+  line-height: $line-height;
 }
 
 a {
