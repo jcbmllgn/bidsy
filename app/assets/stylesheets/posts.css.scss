@@ -267,39 +267,6 @@ text-align: center;
       }
     }
   }
-
-  .shipping-tooltip {
-    display: none;
-
-    position: absolute;
-    top: 0px;
-    right: 310px;
-
-    width: 593px;
-    height: 100%;
-    padding: 0% 25px;
-    border-radius: $radius;
-    border: 3px solid lighten($light-grey, 30%);
-    background-color: lighten($light-grey, 50%);
-
-    // -webkit-box-shadow:  1px 1px 3px 3px #dadadc;
-    // box-shadow:  1px 1px 3px 3px #dadadc;
-    opacity: .97;
-
-      p {
-        font-size: .8em;
-        line-height: 1.1em;
-      }
-
-      h3 {
-        font-size: 16px;
-	margin: 11px 0px;
-      }
-  }
-
-  // &:hover .shipping-tooltip {
-  //   display: block;
-  // }
 }
 
 #productRightCol .editMode {
