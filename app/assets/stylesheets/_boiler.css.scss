@@ -115,6 +115,11 @@ $line-height: 1.4;
   &:hover { background: darken($green, 10%); }
 }
 
+.btn.disabled {
+  cursor: not-allowed;
+  background: $light-grey;
+}
+
 
 /* Checkboxes */
 
