@@ -239,7 +239,8 @@ text-align: center;
   }
 
   ul.checkboxes {
-    float: left;
+    position: absolute;
+    top: 40px;
     li {
       margin-bottom: 20px;
     }
@@ -250,7 +251,7 @@ text-align: center;
     width: 250px;
 
     li {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
 
       p.editable {
         width: 67px;
@@ -293,7 +294,8 @@ text-align: center;
 
       h3 {
         font-size: 16px;
-	margin: 11px 0px;
+        line-height: 24px;
+      	margin: 0px;
       }
   }
 
