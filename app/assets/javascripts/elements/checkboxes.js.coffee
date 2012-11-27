@@ -1,3 +1,8 @@
+# $(...).checkboxesValue()
+# Get the given checkboxes value
+jQuery.fn.checkboxesValue = ->
+  $(this).children('.checked').html()
+
 jQuery ($) ->
   # Select boxes
   $('.checkboxes li').addClass('unchecked')
