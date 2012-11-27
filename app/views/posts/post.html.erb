@@ -24,11 +24,13 @@
 
 <div class="column column-right">
 
-  <div id="publish" class="btn btn-large btn-green">Post</div>
-
   <div id="bid" class="widget">
-    <p>Enter starting amount:</p>
-    <input id="startAmount" type="text" placeholder="Starting Amount">
+    <h4>Starting Bid</h4>
+    <%= post_field @post, :starting_bid, :h1 do %>
+      $1337
+    <% end %>
+
+    <div id="bid-btn" class="btn btn-large disabled">Bid</div>
   </div>
 
   <div id="user" class="widget">
@@ -36,6 +38,8 @@
     <h4><%= current_user.name %></h4>
     <p><%= current_user.description %></p>
   </div>
+
+  <div id="publish" class="btn btn-large btn-green">Post</div>
 
   <!-- For Testing -->
   <div id="toggle-editable" class="btn btn-large">Toggle Editable</div>
