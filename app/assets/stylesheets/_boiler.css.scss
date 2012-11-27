@@ -116,24 +116,27 @@ $radius: 3px;
 
 /* Checkboxes */
 
-.unchecked {
-  width: 18px;
-  height: 16px;
-  margin-top: 1px;
+.checkboxes {
+  margin: 10px 5px 20px;
 
-  background: url('check_sprite2.png') no-repeat 0px 0px;
-
-  &:hover {
-    background: url('check_sprite2.png') no-repeat 0px -21px;
-    cursor: pointer;
+  li {
+    margin: 1px 0 5px;
+    padding-left: 25px;
+    width: 18px;
+    height: 16px;
   }
-}
 
-.checked {
-  background: url('check_sprite2.png') no-repeat 0 -44px;
-  width: 18px;
-  height: 16px;
-  margin-top: 1px;
+  .unchecked {
+    background: url('check_sprite2.png') no-repeat 0px 0px;
+    &:hover {
+      background: url('check_sprite2.png') no-repeat 0px -21px;
+      cursor: pointer;
+    }
+  }
+
+  .checked {
+    background: url('check_sprite2.png') no-repeat 0 -44px;
+  }
 }
 
 /* Blackout */
