@@ -108,9 +108,27 @@ $(function(){
 
   <div id="publishBtn" class="btn btn-large btn-green">Post</div>
 
-  <div class="widget bidWidget">
-    <p>Enter starting amount:</p>
-    <input id="startAmount" type="text" placeholder="Starting Amount">
+  <div class="widget bid-widget">
+    <div class="bid-type-selector">
+      <h4>How do you want to sell your item?</h4>
+      <p class="fixed">Fixed Price</p>
+      <p class="auction">Online Auction</p>
+      <div  style="clear:both;"></div>
+    </div>
+    <div class="bid-type-placehoder"></div>
+
+    <div class="bid-types">
+      <div class="type-auction">
+        <h4>Select starting price:</h4>
+        <p class="editable">Starting price</p>
+        <p class="fee">There is no fee to post!</p>
+      </div>
+      <div class="type-fixed">
+        <h4>Enter buy it now price:</h4>
+        <p class="editable">price</p>
+        <p class="fee">There is no fee to post!</p>
+      </div>
+    </div>
   </div>
 
   <div class="widget userWidget">
