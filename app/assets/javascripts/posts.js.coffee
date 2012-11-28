@@ -31,7 +31,7 @@ $(document).bind 'new_posts.load', (e,obj) =>
 
     $(this)
       .css('color','#646464')
-      .siblings('.'+other).css('color', '#c2c2c2')
+      .siblings('.' + other).css('color', '#c2c2c2')
     $('.bid-type-placehoder, .bid-types .type-' + other).fadeOut(100) #fading out the default arrow background and the other option
     $('.bid-types .type-' + type).fadeIn(100) #fading in the selected option
     $('.bid-widget').css('height', '170px') #making sure the widget is tall enough
