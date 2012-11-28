@@ -26,6 +26,13 @@ $line-height: 1.4em;
   padding: 10px;
 }
 
+/* Crop image into square */
+
+@mixin crop-image-square ( $size: 80px ) {
+    width: $size;  // change to desired width.
+    height: $size; // change to desired height.
+    background-position: center center;
+}​
 
 /* Flash */
 

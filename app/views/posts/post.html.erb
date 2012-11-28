@@ -132,7 +132,7 @@ $(function(){
   </div>
 
   <div class="widget userWidget">
-      <img src="<%= current_user.thumbnail_url %>">
+      <div style="background-image: url('<%= current_user.thumbnail_url %>');" class="user-profile-image"></div>
       <h4><%= current_user.name %></h4>
       <p><%= current_user.description %></p>
       <div style="clear: both;"></div>
