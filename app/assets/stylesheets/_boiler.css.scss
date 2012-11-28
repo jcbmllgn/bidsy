@@ -21,6 +21,7 @@ $line-height: 1.4em;
 /* Widget */
 
 @mixin widget( $color: $widget-grey ) {
+  position: relative;
   background-color: $color;
   border-radius: $radius;
   padding: 10px;
@@ -269,3 +270,45 @@ hr {
 section {
   margin: 30px 0;
 }
+
+/* SCSS for widget-tooltips */
+
+.widget-tooltip {
+  display: none;
+
+  position: absolute;
+  top: 0px;
+
+  width: 450px;
+  padding: 5px 10px;
+  border-radius: $radius;
+  border: 3px solid lighten($light-grey, 30%);
+  background-color: lighten($light-grey, 50%);
+  margin-bottom: 7px;
+
+  box-shadow:  0px 0px 25px 4px #dfdfdf;
+  // opacity: .97;
+
+    p {
+      font-size: .8em;
+      line-height: 1.1em;
+    }
+
+    h3 {
+      font-size: 16px;
+margin: 11px 0px;
+    }
+}
+
+.tooltip-left {
+  right: 310px;
+}
+
+.tooltip-right {
+  left: 310px;
+}
+
+// &:hover .shipping-tooltip {
+//   display: block;
+// }
+
