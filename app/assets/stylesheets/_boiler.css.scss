@@ -299,7 +299,7 @@ section {
 
 
   .main-image {
-    @include image-center(625px, 420px);
+    @include image-center(635px, 420px);
 
     img {
       border-radius: $radius;
@@ -308,7 +308,7 @@ section {
 
 
   .image-picker {
-    width: 591px;
+    width: 603px;
     margin: -21px auto 0px;
     padding: 27px 15px 7px;
     overflow: hidden;
