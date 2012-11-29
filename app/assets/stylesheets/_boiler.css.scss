@@ -296,10 +296,14 @@ section {
   padding: 5px 0px;
 
   border-radius: $radius;
-  border: 1px solid lighten($light-grey, 45%);
+  border: 1px solid $widget-grey;
 
   .main-image {
-    @include image-center(625px, 420px)
+    @include image-center(625px, 420px);
+
+    img {
+      border: 1px solid lighten($light-grey, 40%);
+    }
   }
 
   .image-picker {
@@ -308,7 +312,7 @@ section {
     padding: 7px 15px;
     overflow: hidden;
 
-    background-color: $widget-grey;
+    background-color: lighten($light-grey, 32%);
     border-radius: $radius;
 
     .item-thumbnail {
