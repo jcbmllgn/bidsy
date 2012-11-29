@@ -58,14 +58,13 @@ $(function(){
 
 
 <div id="productLeftCol">
+    <h1 class="editable" id="titleEdits">Enter title here</h1>
 
   <div class="productGallery">
     <%= image_tag "click_to_upload.png", id: "productImage" %>
   </div>
 
   <div id="productDetials">
-
-    <h1 class="editable" id="titleEdits">Enter title here</h1>
 
     <div class="productStats">
       <div class="fieldRow">
@@ -128,9 +127,9 @@ $(function(){
     </ul>
 
     <ul class="options">
-      <li>Local pickup only</li>
+      <li>Local exchange only</li>
       <li>Delivery by mail only</li>
-      <li>Local pickup or mail delivery, buyer chooses</li>
+      <li>Local exchange or mail delivery, buyer chooses</li>
       <li class="zip">My zip code is: <span class="editable">zip</span> and the buyer must be within <span class="editable">xx</span> miles from me to do a local pickup.</li>
       <li class="shipping-option">Cost to ground ship item to anywhere in the US is <span class="editable">$0.00</span>. The shipping time is approximately <span class="editable">min</span> business days to <span class="editable">max</span> days.</li>
     </ul>

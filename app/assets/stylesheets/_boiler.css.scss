@@ -269,3 +269,88 @@ hr {
 section {
   margin: 30px 0;
 }
+
+
+/* Image slider css */
+
+@mixin image-center ( $width: 80px, $height: 80px ) {
+    overflow: hidden;
+    position: relative;
+    width: $width;
+    height: $height;
+    margin: 0px auto;
+
+    img {
+      display: block;
+      opacity: 1;
+      width: $width;
+      height: $height;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+}
+
+.image-slider-container {
+  width: 635px;
+  padding: 5px 0px;
+
+  border-radius: $radius;
+  border: 1px solid lighten($light-grey, 45%);
+
+  .main-image {
+    @include image-center(625px, 420px)
+  }
+
+  .image-picker {
+    width: 595px;
+    margin: 15px auto 0px;
+    padding: 7px 15px;
+    overflow: hidden;
+
+    background-color: $widget-grey;
+    border-radius: $radius;
+
+    .item-thumbnail {
+      @include image-center( 50px, 50px );
+      float: left;
+      margin-left: 10px;
+      border: 1px solid lighten($light-grey, 32%);
+
+      &:hover {
+        cursor: pointer;
+        border: 1px solid lighten($light-grey, 20%);
+      }
+    }
+
+    .current-main-image {
+      width: 47px;
+      height: 47px;
+      border: 3px solid $orange;
+
+      &:hover {
+        cursor: pointer;
+        border: 3px solid $orange;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
