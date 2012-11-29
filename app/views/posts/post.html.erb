@@ -58,14 +58,29 @@ $(function(){
 
 
 <div id="productLeftCol">
-    <h1 class="editable" id="titleEdits">Enter title here</h1>
 
-  <div class="productGallery">
-    <%= image_tag "click_to_upload.png", id: "productImage" %>
+  <div class="image-slider-container">
+
+    <div class="main-image">
+      <img src="assets/bose/1.jpeg">
+    </div>
+
+    <div class="image-picker">
+      <div class="item-thumbnail current-main-image">
+        <img src="assets/bose/1.jpeg">
+      </div>
+      <div class="item-thumbnail">
+        <img src="assets/bose/2.jpeg">
+      </div>
+      <div class="item-thumbnail">
+        <img src="assets/bose/3.jpeg">
+      </div>
+      <div style="clear:both;"></div>
+    </div>
   </div>
 
   <div id="productDetials">
-
+    <h1 class="editable" id="titleEdits">Enter title here</h1>
     <div class="productStats">
       <div class="fieldRow">
           <p class="key">Manufacturer</p>
