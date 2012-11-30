@@ -18,6 +18,28 @@ jQuery.fn.selectText = ->
     selection.removeAllRanges()
     selection.addRange(range)
 
+# $(...).editable()
+# Make this editable. adding class `editable.
+# contenteditable true, and selection of all text.
+jQuery.fn.editable = ( bool = true ) ->
+  if bool
+    this.attr 'contenteditable', 'true'
+    this.addClass 'editable'
+    this.click -> $(this).selectText()
+  else
+    this.attr 'contenteditable', 'false'
+    this.removeClass 'editable'
+    this.unbind 'click'
+
+# $(...).toggleEditable()
+# Toggle this's class `editable` and it's contenteditable field
+jQuery.fn.toggleEditable = ->
+  if this.attr('contenteditable') &&
+     this.attr('contenteditable') == 'true'
+    this.editable false
+  else
+    this.editable true
+
 
 # toggle_modal
 # Toggles the page's modal. Never have a page with more then 1 modal,

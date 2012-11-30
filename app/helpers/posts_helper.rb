@@ -1,22 +1,29 @@
 module PostsHelper
 
-  def editable(tag, *args, &block)
-    if block_given?
-      options      = args.first || {}
-      html_options = args.second
-      link_to(tag, capture(&block), options, html_options)
+  # Creates a field with data-field="field"
+  def post_field( post, field, tag, &block )
+    if post.new_record?
+      value = capture(&block) if block_given?
     else
-      tag          = tag.to_s
-      content      = args[0]
-      html_options = args[1]
-
-      html_options[:class] = "editable"
-      html_options[:contenteditable] = "true"
-      tag_options = tag_options(html_options)
-
-      html = "<#{tag} #{tag_options}>#{ERB::Util.html_escape(content)}</#{tag}>"
-      html.html_safe
+      value = post.send field
     end
+    d = "data-field='#{field}'"
+    "<#{tag} #{d} class='post-field input'>#{value}</#{tag}>".html_safe
+  end
+
+  # Creates a detail field with data-field="details[field]"
+  def post_detail( post, field )
+    d = "data-field='details[#{field}]'"
+    k = "<p>#{field.to_s.humanize}:</p>"
+
+    if post.new_record?
+      value = "Edit this"
+    else
+      value = post.details.send :[], field
+    end
+    v = "<p #{d} class='post-field input'>#{value}</p>"
+
+    "<div class='detail'>#{k} #{v}</div>".html_safe
   end
 
 end

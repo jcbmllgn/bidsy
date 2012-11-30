@@ -1,112 +1,34 @@
-<div class="flash warning">
-  <div>
-    <p>Required: Enter a starting amount for your bid</p>
-    <p>Required: Enter the name of what you're selling</p>
-    <div style="clear:both;"></div>
-  </div>
-  <div style="clear:both;"></div>
-</div>
+<div class="column column-left">
 
+  <%= image_tag "click_to_upload.png", class: "post-field" %>
 
+  <%= post_field @post, :title, :h1 do %>
+    Enter title here
+  <% end %>
 
-<script type="text/javascript">
-
-// js so that when someone clicks on a contenteditable field it automatically selects all text.
-jQuery.fn.selectText = function(){ // this whole function makes it so when someone clicks on an editable field they select everything.
-    var doc = document
-        , element = this[0]
-        , range, selection
-    ;
-    if (doc.body.createTextRange) {
-        range = document.body.createTextRange();
-        range.moveToElementText(element);
-        range.select();
-    } else if (window.getSelection) {
-        selection = window.getSelection();
-        range = document.createRange();
-        range.selectNodeContents(element);
-        selection.removeAllRanges();
-        selection.addRange(range);
-    }
-};
-
-$(function(){
-  if ( $('body').data('action') === 'new' ) {  // All this js is to be executed if on edit page
-    $('.editable, .value').click(function() {
-      $(this).selectText(); // Click on editable field innitiates selection.
-    });
-
-    $('.widget, .productStats').addClass('editMode'); // I use this class in the css
-
-
-    // js to make sure the flash height is correct
-    var numChildren = $('div.flash div p').length,
-        newHeight = ((numChildren * 32) + 5) + 'px';
-    $('div.flash').css('height', newHeight);
-
-  }
-
-  $('.editable, .value').attr('contenteditable','true'); // making editable fields editable..
-
-  if ( $('body').data('action') === 'show' ) {  // All this js is to be executed if on view/show page
-    $('.editable').attr('contenteditable','false').removeClass('editable');
-  };
-
-})();
-
-</script>
-
-
-<div id="productLeftCol">
-
-  <div class="productGallery">
-    <%= image_tag "click_to_upload.png", id: "productImage" %>
+  <div class="post-description">
+    <%= post_field @post, :description, :p do %>
+      Enter product description here. Up to 450 characters. The best descriptions are to the point, clearly describe the condtion of what you're selling, say a little bit about your and why you're selling it, and a little humor.
+    <% end %>
   </div>
 
-  <div id="productDetials">
-
-    <h1 class="editable" id="titleEdits">Enter title here</h1>
-
-    <div class="productStats">
-      <div class="fieldRow">
-          <p class="key">Manufacturer</p>
-          <p class="value">Edit this</p>
-      </div>
-      <div class="fieldRow">
-        <p class="key">Condtion</p>
-        <p class="value">Edit this</p>
-      </div>
-      <div class="fieldRow">
-        <p class="key">Year</p>
-        <p class="value">Edit this</p>
-      </div>
-
-      <div class="breakLine">
-        <p>All inputs above this line are required</p>
-        <div class="horizontalLine"></div>
-        <p>The more fields you select and fill out the most attractive it will be to a buyer.</p>
-      </div>
-
-      <div id="rowCreator">
-        <select>
-          <option>Select one</option>
-          <option value="Material">Material</option>
-          <option value="Dimensions">Dimensions</option>
-        </select>
-        <p>< Select an attribute</p>
-      </div>
-    </div>
-      <p class="editable" id="descriptionEdits">Enter product description here. Up to 450 characters. The best descriptions are to the point, clearly describe the condtion of what you're selling, say a little bit about your and why you're selling it, and a little humor.</p>
-
+  <div class="post-details widget">
+    <%= post_detail @post, :manufacturer %>
+    <%= post_detail @post, :condition %>
+    <%= post_detail @post, :year %>
   </div>
 
 </div>
 
-<div id="productRightCol">
+<!-- BELOW HERE TODO -->
 
-  <div id="saveButton" class="btn btn-large">Save</div>
+<div class="column column-right">
 
-  <div id="publishBtn" class="btn btn-large btn-green">Post</div>
+  <div id="bid" class="widget">
+    <h4>Starting Bid</h4>
+    <%= post_field @post, :starting_bid, :h1 do %>
+      $1337
+    <% end %>
 
   <div class="widget bid-widget">
     <div class="bid-type-selector">
@@ -165,18 +87,18 @@ $(function(){
       <p></p>
     </div>
 
+    <div id="bid-btn" class="btn btn-large disabled">Bid</div>
   </div>
 
-</div>
+  <div id="user" class="widget">
+    <%= image_tag current_user.thumbnail_url, class: "user-icon medium" %>
+    <h4><%= current_user.name %></h4>
+    <p><%= current_user.description %></p>
+  </div>
 
-<%= form_for @post, url: create_post_path, html: { enctype: "multipart/form-data", id: "HIDDENForm" } do |f| %>
-  <%= f.fields_for :images do |b| %>
-    <%= b.file_field :data, id: "HIDDENImageName" %><br>
-  <% end %>
-  <%= f.text_area(:title, id: "HIDDENTitle") %>
-  <%= f.text_area(:description, id: "HIDDENDescription") %>
-  <%= f.text_area(:'starting_bid', id: "HIDDENStartingPrice") %>
-  <%#= f.text_area(:'fields[manufacturer]') %>
-  <%#= f.text_area(:'fields[condtion]') %>
-  <%#= f.text_area(:'fields[year]') %>
-<% end %>
+  <div id="publish" class="btn btn-large btn-green">Post</div>
+
+  <!-- For Testing -->
+  <div id="toggle-editable" class="btn btn-large">Toggle Editable</div>
+
+</div>
