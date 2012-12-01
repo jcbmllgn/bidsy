@@ -30,7 +30,7 @@ $post-item-background: darken($widget-grey, 7%);
     margin-top: 13px;
 
     text-align: center;
-  
+
     p {
       font-size: 14px;
 
@@ -39,6 +39,10 @@ $post-item-background: darken($widget-grey, 7%);
         color: darken($grey, 45%);
         text-decoration: underline;
       }
+    }
+
+    &:last-child {
+      margin-top: 2px;
     }
   }
 }
