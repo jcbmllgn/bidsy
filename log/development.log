@@ -88272,3 +88272,824 @@ Served asset /logo_inv_small.png - 304 Not Modified (0ms)
 
 Started GET "/assets/fan/2.jpeg" for 127.0.0.1 at 2012-12-02 05:06:37 -0500
 Served asset /fan/2.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-02 12:06:20 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (8.8ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (17.8ms)
+Compiled application.css  (634ms)  (pid 80489)
+  [1m[35mUser Load (2.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 2637ms (Views: 2562.1ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2012-12-02 12:06:23 -0500
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-02 12:06:23 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements/checkboxes.js?body=1" for 127.0.0.1 at 2012-12-02 12:06:23 -0500
+Served asset /elements/checkboxes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-02 12:06:23 -0500
+Served asset /application.css - 200 OK (152ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-02 12:06:23 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements/widget_tooltips.js?body=1" for 127.0.0.1 at 2012-12-02 12:06:23 -0500
+Served asset /elements/widget_tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2012-12-02 12:06:23 -0500
+Served asset /index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2012-12-02 12:06:23 -0500
+Served asset /jquery.min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/playground.js?body=1" for 127.0.0.1 at 2012-12-02 12:06:23 -0500
+Served asset /playground.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-02 12:06:23 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-02 12:06:23 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-02 12:06:23 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fan/2.jpeg" for 127.0.0.1 at 2012-12-02 12:06:23 -0500
+Served asset /fan/2.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dot-filter-sprite.png" for 127.0.0.1 at 2012-12-02 12:06:23 -0500
+Served asset /dot-filter-sprite.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo_inv_small.png" for 127.0.0.1 at 2012-12-02 12:06:23 -0500
+Served asset /logo_inv_small.png - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-02 12:07:23 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Compiled application.css  (373ms)  (pid 80489)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 967ms (Views: 965.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-02 12:07:24 -0500
+Served asset /application.css - 200 OK (53ms)
+
+
+Started GET "/assets/elements/widget_tooltips.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:24 -0500
+Served asset /elements/widget_tooltips.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:24 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements/checkboxes.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:24 -0500
+Served asset /elements/checkboxes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:24 -0500
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:24 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:24 -0500
+Served asset /index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:24 -0500
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/playground.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:24 -0500
+Served asset /playground.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:24 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:24 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:24 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/fan/2.jpeg" for 127.0.0.1 at 2012-12-02 12:07:24 -0500
+Served asset /fan/2.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo_inv_small.png" for 127.0.0.1 at 2012-12-02 12:07:24 -0500
+Served asset /logo_inv_small.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dot-filter-sprite.png" for 127.0.0.1 at 2012-12-02 12:07:24 -0500
+Served asset /dot-filter-sprite.png - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-02 12:07:51 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (321ms)  (pid 80489)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 3474ms (Views: 3472.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-02 12:07:54 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 3176ms (Views: 3174.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-02 12:07:58 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 601ms (Views: 598.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-02 12:07:58 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 443ms (Views: 441.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:59 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements/checkboxes.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:59 -0500
+Served asset /elements/checkboxes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:59 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements/widget_tooltips.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:59 -0500
+Served asset /elements/widget_tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:59 -0500
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:59 -0500
+Served asset /index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:59 -0500
+Served asset /jquery.min.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/playground.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:59 -0500
+Served asset /playground.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:59 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:59 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-02 12:07:59 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logo_inv_small.png" for 127.0.0.1 at 2012-12-02 12:07:59 -0500
+Served asset /logo_inv_small.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fan/2.jpeg" for 127.0.0.1 at 2012-12-02 12:07:59 -0500
+Served asset /fan/2.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-02 12:09:01 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Compiled application.css  (438ms)  (pid 80489)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 969ms (Views: 967.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-02 12:09:02 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 489ms (Views: 486.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-02 12:09:02 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 2876ms (Views: 2874.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-02 12:09:05 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 465ms (Views: 462.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-02 12:09:06 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 408ms (Views: 406.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-02 12:09:06 -0500
+Served asset /application.css - 200 OK (12ms)
+
+
+Started GET "/assets/elements/widget_tooltips.js?body=1" for 127.0.0.1 at 2012-12-02 12:09:06 -0500
+Served asset /elements/widget_tooltips.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-02 12:09:06 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/elements/checkboxes.js?body=1" for 127.0.0.1 at 2012-12-02 12:09:06 -0500
+Served asset /elements/checkboxes.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-02 12:09:06 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2012-12-02 12:09:06 -0500
+Served asset /global.js - 200 OK (0ms)
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2012-12-02 12:09:06 -0500
+Served asset /index.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2012-12-02 12:09:06 -0500
+Served asset /jquery.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/playground.js?body=1" for 127.0.0.1 at 2012-12-02 12:09:06 -0500
+Served asset /playground.js - 200 OK (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-02 12:09:06 -0500
+Served asset /posts.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-02 12:09:06 -0500
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-02 12:09:06 -0500
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/fan/2.jpeg" for 127.0.0.1 at 2012-12-02 12:09:07 -0500
+Served asset /fan/2.jpeg - 200 OK (0ms)
+
+
+Started GET "/assets/logo_inv_small.png" for 127.0.0.1 at 2012-12-02 12:09:07 -0500
+Served asset /logo_inv_small.png - 200 OK (0ms)
+
+
+Started GET "/assets/dot-filter-sprite.png" for 127.0.0.1 at 2012-12-02 12:09:07 -0500
+Served asset /dot-filter-sprite.png - 200 OK (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-02 12:10:12 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Compiled application.css  (391ms)  (pid 80489)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 1991ms (Views: 1989.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-02 12:10:14 -0500
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:14 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:14 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:14 -0500
+Served asset /index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements/checkboxes.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:14 -0500
+Served asset /elements/checkboxes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:14 -0500
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements/widget_tooltips.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:14 -0500
+Served asset /elements/widget_tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/playground.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:14 -0500
+Served asset /playground.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:14 -0500
+Served asset /jquery.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:14 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:14 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:14 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/logo_inv_small.png" for 127.0.0.1 at 2012-12-02 12:10:15 -0500
+Served asset /logo_inv_small.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dot-filter-sprite.png" for 127.0.0.1 at 2012-12-02 12:10:15 -0500
+Served asset /dot-filter-sprite.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fan/2.jpeg" for 127.0.0.1 at 2012-12-02 12:10:15 -0500
+Served asset /fan/2.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-02 12:10:32 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (410ms)  (pid 80489)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 825ms (Views: 823.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-02 12:10:33 -0500
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:33 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:33 -0500
+Served asset /index.js - 200 OK (0ms)
+
+
+Started GET "/assets/elements/checkboxes.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:33 -0500
+Served asset /elements/checkboxes.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:33 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/elements/widget_tooltips.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:33 -0500
+Served asset /elements/widget_tooltips.js - 200 OK (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:33 -0500
+Served asset /global.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:33 -0500
+Served asset /jquery.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/playground.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:33 -0500
+Served asset /playground.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:33 -0500
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:33 -0500
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-02 12:10:33 -0500
+Served asset /posts.js - 200 OK (0ms)
+
+
+Started GET "/assets/logo_inv_small.png" for 127.0.0.1 at 2012-12-02 12:10:34 -0500
+Served asset /logo_inv_small.png - 200 OK (0ms)
+
+
+Started GET "/assets/fan/2.jpeg" for 127.0.0.1 at 2012-12-02 12:10:34 -0500
+Served asset /fan/2.jpeg - 200 OK (0ms)
+
+
+Started GET "/assets/dot-filter-sprite.png" for 127.0.0.1 at 2012-12-02 12:10:34 -0500
+Served asset /dot-filter-sprite.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-02 12:51:42 -0500
+Processing by ApplicationController#home as HTML
+  Rendered application/home.html.erb within layouts/application (0.4ms)
+Compiled index.js  (229ms)  (pid 80489)
+Compiled application.js  (280ms)  (pid 80489)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 1258ms (Views: 1257.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:43 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:43 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:43 -0500
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements/widget_tooltips.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:43 -0500
+Served asset /elements/widget_tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements/checkboxes.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:43 -0500
+Served asset /elements/checkboxes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:43 -0500
+Served asset /index.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:43 -0500
+Served asset /jquery.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/playground.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:43 -0500
+Served asset /playground.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:43 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:43 -0500
+Served asset /application.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:44 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2012-12-02 12:51:53 -0500
+Processing by AuthController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-02 12:51:53 -0500
+Processing by ApplicationController#home as HTML
+  Rendered application/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:54 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:54 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:54 -0500
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements/checkboxes.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:54 -0500
+Served asset /elements/checkboxes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements/widget_tooltips.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:54 -0500
+Served asset /elements/widget_tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:54 -0500
+Served asset /jquery.min.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:54 -0500
+Served asset /index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/playground.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:54 -0500
+Served asset /playground.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:54 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:54 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-02 12:51:54 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-02 12:52:08 -0500
+Processing by AuthController#login as HTML
+  Rendered application/login.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:09 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:09 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:09 -0500
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements/checkboxes.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:09 -0500
+Served asset /elements/checkboxes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements/widget_tooltips.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:09 -0500
+Served asset /elements/widget_tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:09 -0500
+Served asset /index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:09 -0500
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:09 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/playground.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:09 -0500
+Served asset /playground.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:09 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:09 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/auth/singly?service=facebook" for 127.0.0.1 at 2012-12-02 12:52:10 -0500
+
+
+Started GET "/auth/singly/callback?code=7Hjk3SUtn9KUpb-wpHfq0G&state=c6c9e2ec9f787c4b52d063a232e643bdfe99b110ffa88af5" for 127.0.0.1 at 2012-12-02 12:52:12 -0500
+Processing by AuthController#callback as HTML
+  Parameters: {"code"=>"7Hjk3SUtn9KUpb-wpHfq0G", "state"=>"c6c9e2ec9f787c4b52d063a232e643bdfe99b110ffa88af5", "service"=>"singly"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '0ea32f2d3651262cffae8bb2658405e2' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  UPDATE "users" SET "token" = 'YrjRawJth1qVG46LMOa1-rI2kxc.Fsy8gcEe27bbc05cc2ab8af563086f68b6ae92044781d491e7c266fba33d6af24d73dca9138cd98eb1d06e84de26a48d16103bb380600b387593ac8d242848e1846f35c12c98be613077e0402eb215a54c1752d581c1f47e112091f7d9edd2dc32065f9e', "updated_at" = '2012-12-02 17:52:13.568213' WHERE "users"."id" = 1
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-02 12:52:13 -0500
+Processing by ApplicationController#home as HTML
+  Rendered application/home.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 386ms (Views: 385.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:14 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:14 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements/checkboxes.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:14 -0500
+Served asset /elements/checkboxes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:14 -0500
+Served asset /index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements/widget_tooltips.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:14 -0500
+Served asset /elements/widget_tooltips.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:14 -0500
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:14 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:14 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/playground.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:14 -0500
+Served asset /playground.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:14 -0500
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:14 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2012-12-02 12:52:20 -0500
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/post.html.erb within layouts/application (419.3ms)
+Completed 200 OK in 436ms (Views: 432.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:21 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements/widget_tooltips.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:21 -0500
+Served asset /elements/widget_tooltips.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/elements/checkboxes.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:21 -0500
+Served asset /elements/checkboxes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:21 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:21 -0500
+Served asset /index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:21 -0500
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:21 -0500
+Served asset /jquery.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/playground.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:21 -0500
+Served asset /playground.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:21 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:21 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:21 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/arrow-up.png" for 127.0.0.1 at 2012-12-02 12:52:21 -0500
+Served asset /arrow-up.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/click_to_upload.png" for 127.0.0.1 at 2012-12-02 12:52:21 -0500
+Served asset /click_to_upload.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/check_sprite2.png" for 127.0.0.1 at 2012-12-02 12:52:21 -0500
+Served asset /check_sprite2.png - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-02 12:52:27 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 368ms (Views: 366.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/elements/checkboxes.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:27 -0500
+Served asset /elements/checkboxes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:27 -0500
+Served asset /global.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:27 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:27 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-02 12:52:27 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements/widget_tooltips.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:27 -0500
+Served asset /elements/widget_tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:27 -0500
+Served asset /index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:27 -0500
+Served asset /jquery.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/playground.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:27 -0500
+Served asset /playground.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:27 -0500
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:27 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-02 12:52:28 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fan/2.jpeg" for 127.0.0.1 at 2012-12-02 12:52:29 -0500
+Served asset /fan/2.jpeg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dot-filter-sprite.png" for 127.0.0.1 at 2012-12-02 12:52:29 -0500
+Served asset /dot-filter-sprite.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo_inv_small.png" for 127.0.0.1 at 2012-12-02 12:52:29 -0500
+Served asset /logo_inv_small.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dot-filter-sprite.png" for 127.0.0.1 at 2012-12-02 12:53:45 -0500
+Served asset /dot-filter-sprite.png - 304 Not Modified (0ms)

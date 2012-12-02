@@ -42,6 +42,7 @@ jQuery ($) ->
     document.selection.empty();
 
 
+# This handles the hiding/showing of the left filters
 
 
 

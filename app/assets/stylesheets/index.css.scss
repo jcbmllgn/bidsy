@@ -1,6 +1,26 @@
 $filter-background: $widget-grey;
 $post-item-background: darken($widget-grey, 7%);
 
+.more-filters {
+  position: absolute;
+  left: -100px;
+  top: 12px;
+
+  color: lighten($grey, 20%);
+
+  padding: 4px 6px;
+  border-radius: $radius;
+
+  font-size: 13px;
+  text-align: center;
+  background: darken($widget-grey, 15%);
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken($widget-grey, 25%);
+  }
+}
+
 .search-bar {
   width: 645px;
   height: 45px;
@@ -21,6 +41,7 @@ $post-item-background: darken($widget-grey, 7%);
 .filter-top {
   width: 645px;
   height: 45px;
+  position: relative;
 
   margin-bottom: 15px;
   margin-left: 15px;
