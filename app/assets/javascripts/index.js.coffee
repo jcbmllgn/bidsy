@@ -44,5 +44,28 @@ jQuery ($) ->
 
 # This handles the hiding/showing of the left filters
 
+  $('.filter-top .more-filters').click ->
+    $('.filter-left').animate({ # slide out animation
+      opacity: 1,
+      width: '270px'
+      }, 300)
+    $(this).fadeOut('200') # Fade out the button
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
