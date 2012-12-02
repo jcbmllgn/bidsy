@@ -147,3 +147,43 @@
     }
   }
 }
+
+/* Filters - used on the playground and /posts */
+
+.range-picker {
+  width: 15px;
+  height: 20px;
+
+  background-color: $light-grey;
+
+  display: inline;
+
+  span {
+    display: inline;
+  }
+  .up-arrow {
+    background: url('check_sprite2.png') no-repeat 0px 0px;
+    width: 18px;
+    height: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
