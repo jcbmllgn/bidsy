@@ -22,3 +22,26 @@ jQuery ($) ->
 
 # This unselects any seleted text. It's to fix a weird selection thing that was happening when clicking on the filters very fast
     document.selection.empty();
+
+
+
+# This is what toggles the 'open in new tab' sort filter
+# Default is to open item in new tab
+# Clicking the button toggles the 'target' attribute on the anchor links wrapping each item
+  newTab = true
+  $('.tab-open').click ->
+    if newTab == true
+      newTab = false
+      $('.post-column a').attr('target','')
+      $(this).children('span').text('No')
+    else
+      newTab = true
+      $('.post-column a').attr('target','_blank')
+      $(this).children('span').text('Yes')
+
+    document.selection.empty();
+
+
+
+
+

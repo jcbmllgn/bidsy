@@ -1,6 +1,23 @@
 $filter-background: $widget-grey;
 $post-item-background: darken($widget-grey, 7%);
 
+.search-bar {
+  width: 645px;
+  height: 45px;
+
+  margin-bottom: 15px;
+  margin-left: 15px;
+  float: left;
+
+  border-radius: 8px;
+  background-color: white;
+
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    border: 2px solid #5429e1;
+}
+
 .filter-top {
   width: 645px;
   height: 45px;
@@ -119,11 +136,20 @@ $post-item-background: darken($widget-grey, 7%);
 
 .filter-left {
   float: left;
-  width: 300px;
+  opacity: .001;
+  width: 110px;
+  // width: 280px;
+  padding: 0px 10px;
   min-height: 500px;
 
   border-radius: $radius;
   background-color: $filter-background;
+
+  & > h4 {
+    font-style: italic;
+    font-weight: 400;
+    color: #8b8b8b;
+  }
 }
 
 .post-column {
