@@ -150,23 +150,19 @@
 
 /* Filters - used on the playground and /posts */
 
-.range-picker {
-  width: 15px;
+@mixin range-picker ( $width: 100px, $background: $light-grey ) {
+  width: $width;
   height: 20px;
 
-  background-color: $light-grey;
-
-  display: inline;
-
-  span {
-    display: inline;
-  }
-  .up-arrow {
-    background: url('check_sprite2.png') no-repeat 0px 0px;
-    width: 18px;
-    height: 16px;
-  }
+  background-color: $background;
 }
+
+.default-range {
+  @include range-picker( 200px );
+}
+
+
+
 
 
 
