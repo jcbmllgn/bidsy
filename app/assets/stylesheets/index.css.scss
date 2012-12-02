@@ -263,7 +263,124 @@ $bottom-row-height: 50px;
   }
 }
 
+.post-item {
+  width: 635px;
+  height: $post-height;
+  padding: 5px;
+  background-color: $post-item-background;
+  border-radius: $radius;
+  margin-bottom: 15px;
 
+  &:hover {
+    padding: 4px;
+    border: 1px solid darken(#e3e3e3, 5%);
+    box-shadow:  0px 0px 5px 5px lighten(#e3e3e3, 5%);
+    cursor: pointer;
+  }
+
+  .post-image {
+    @include crop-image-square ($post-height);
+    background-size: 100% 100%;
+
+    margin-right: 10px;
+    float: left;
+
+    border-radius: $radius;
+  }
+
+  .post-text {
+    width: 380px;
+    height: 100%;
+    float: left;
+
+    h4, p {
+      width: 350px;
+    }
+  }
+
+  .post-numbers {
+    width: 100px;
+    height: 100%;
+    float: left;
+
+    text-align: center;
+
+    h5 {
+      font-weight: lighter;
+      margin: 0px;
+
+      &.bid-amount {
+        font-weight: 600;
+        font-size: 21px;
+      }
+
+      &.post-countdown {
+        margin-top: 26px;
+      }
+    }
+    p {
+      color: lighten($grey, 25%);
+      font-style: italic;
+      margin: 0px;
+    }
+  }
+
+/*
+
+  h4  {
+    font-size: 19.5px;
+    font-weight: 600;
+    margin: 0px;
+    float: left;
+    width: 480px;
+  }
+
+  p.description {
+    font-size: 13px;
+    float: left;
+    width: 480px;
+    color: lighten($grey,20%);
+  }
+
+  .post-info {
+    width: 115px;
+    margin-left: 39px;
+    margin-top: -9px;
+    height: $bottom-row-height;
+    float: left;
+    text-align: center;
+
+    h5 {
+      margin: 10px 0px -1px;
+      font-weight: lighter;
+
+      &.bid-amount {
+        font-weight: bold;
+        font-size: 21px;
+        margin-top: 7px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 0px;
+      font-style: italic;
+      color: lighten($grey, 20%);
+    }
+
+  }
+
+  .bid-button {
+    width: 115px;
+    height: $bottom-row-height;
+
+
+    &:hover {
+      background: $green;
+    }
+  }
+*/
+}
 
 
 

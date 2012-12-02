@@ -29,15 +29,15 @@ jQuery ($) ->
 # Default is to open item in new tab
 # Clicking the button toggles the 'target' attribute on the anchor links wrapping each item
   newTab = true
-  $('.tab-open').click ->
+  $('span.yes-toggle').click ->
     if newTab == true
       newTab = false
       $('.post-column a').attr('target','')
-      $(this).children('span').text('No')
+      $(this).text('No')
     else
       newTab = true
       $('.post-column a').attr('target','_blank')
-      $(this).children('span').text('Yes')
+      $(this).text('Yes')
 
     document.selection.empty();
 
