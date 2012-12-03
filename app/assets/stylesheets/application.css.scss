@@ -11,45 +11,47 @@
 
 #header {
   background-color: $orange;
-  width: 100%;
-  height: 50px;
   margin-bottom: 20px;
-
-  nav {
-    width: 960px;
-    margin: 0px auto;
-
-    ul {
-      list-style-type:none;
-      margin:0;
-      padding:0;
-
-      li {
-        display:inline;
-
-        &:nth-child(n+2) {
-          float: right;
-          margin-left: 15px;
-          margin-top: 16px;
-          font-size: 15px;
-            a {
-            color: white;
-
-            &:hover {
-              text-decoration: none;
-              border-bottom: 1px solid white;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .logo {
-    margin-top: 4px;
-  }
 }
 
+#header nav {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#header .logo {
+  display: inline-block;
+  padding: 4px 0;
+}
+
+#header nav ul {
+  height: 50px;
+  float: right;
+
+  li {
+    float: left;
+    margin-left: 10px;
+    height: 100%;
+
+    a {
+      font-size: 15px;
+      display: block;
+      padding: 17px 5px 18px;
+      color: white;
+
+      &:hover {
+        background: $blue;
+        text-decoration: none;
+      }
+    }
+
+    .user-icon {
+      float: left;
+      margin-top: -4px;
+      margin-right: 3px;
+    }
+  }
+}
 
 /* Site Container */
 

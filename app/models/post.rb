@@ -5,6 +5,8 @@ class Post < ActiveRecord::Base
                   :details,             # a serialized hash of details
                   :starting_bid,        # the original bid price
                   :current_bid,         # current bid :P
+                  :buyout_price,        # buyout price
+                  :delivery_method,     # One Of: local, ship, or both
                   :images_attributes
 
   # Posts have many Images.

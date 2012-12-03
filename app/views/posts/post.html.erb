@@ -24,81 +24,56 @@
 
 <div class="column column-right">
 
-  <div id="bid" class="widget">
-    <h4>Starting Bid</h4>
-    <%= post_field @post, :starting_bid, :h1 do %>
-      $1337
-    <% end %>
+  <div id="publish" class="btn btn-large btn-green">Post</div>
 
-  <div class="widget bid-widget">
-    <div class="bid-type-selector">
+  <!-- COST WIDGET -->
+  <div id="cost" class="widget">
+
+    <!-- Post type selection -->
+    <div class="type-selector clearfix">
       <h4>How do you want to sell your item?</h4>
       <p class="fixed">Fixed Price</p>
       <p class="auction">Online Auction</p>
-      <div  style="clear:both;"></div>
     </div>
-    <div class="bid-type-placehoder"></div>
 
-    <div class="bid-types">
-      <div class="type-auction">
+    <div class="type-placehoder"></div>
+
+    <div class="types">
+
+      <!-- Auction info entry -->
+      <div class="auction">
         <h4>Enter starting price:</h4>
-        <p class="editable">Enter here</p>
+        <%= post_field @post, :starting_bid, :p do %>
+          $1337
+        <% end %>
         <p class="fee">There is no fee to post!</p>
       </div>
-      <div class="type-fixed">
-        <h4>Enter buy it now price:</h4>
-        <p class="editable">Enter here</p>
+
+      <!-- Fixed info entry -->
+      <div class="fixed">
+        <h4>Enter a buyout price:</h4>
+        <%= post_field @post, :buyout_price, :p do %>
+          $1337
+        <% end %>
         <p class="fee">There is no fee to post!</p>
       </div>
     </div>
   </div>
 
-  <div class="widget userWidget">
-      <div style="background-image: url('<%= current_user.thumbnail_url %>');" class="user-profile-image"></div>
-      <h4><%= current_user.name %></h4>
-      <p><%= current_user.description %></p>
-      <div style="clear: both;"></div>
-  </div>
-  <div class="widget shipping-info">
-    <h4>Shipping Information</h4>
-    <ul class="checkboxes">
-      <li class="local-pickup"></li>
-      <li class="mail-delivery"></li>
-      <li class="both-options clicked"></li>
-    </ul>
-
-    <ul class="options">
-      <li>Local pickup only</li>
-      <li>Delivery by mail only</li>
-      <li>Local pickup or mail delivery, buyer chooses</li>
-      <li class="zip">My zip code is: <span class="editable">zip</span> and the buyer must be within <span class="editable">xx</span> miles from me to do a local pickup.</li>
-      <li class="shipping-option">Cost to ground ship item to anywhere in the US is <span class="editable">$0.00</span>. The shipping time is approximately <span class="editable">min</span> business days to <span class="editable">max</span> days.</li>
-    </ul>
-
-    <div style="clear: both;"></div>
-
-    <div class="widget-tooltip tooltip-left">
-      <h3>How local pickup works:</h3>
-      <p>When bidding ends, the winning bidder will be put in contact with the seller to arrange a mutually agreed upon location to pick up the item.</p>
-      <h3>How "delivery by mail only" works:</h3>
-      <p>The seller sets a shipping price (based on size and weight of item), this amount will be added onto the final price.</p>
-      <h3>If seller allows for pickup or delivery, then the buyer gets to choose which methond she prefers.</h3>
-      <p>Filler text</p>
-      <p></p>
-    </div>
-
-    <div id="bid-btn" class="btn btn-large disabled">Bid</div>
-  </div>
-
+  <!-- USER WIDGET -->
   <div id="user" class="widget">
-    <%= image_tag current_user.thumbnail_url, class: "user-icon medium" %>
+    <div style="background-image: url(<%= current_user.thumbnail_url %>);", class="user-icon"></div>
     <h4><%= current_user.name %></h4>
     <p><%= current_user.description %></p>
   </div>
 
-  <div id="publish" class="btn btn-large btn-green">Post</div>
-
-  <!-- For Testing -->
-  <div id="toggle-editable" class="btn btn-large">Toggle Editable</div>
-
+  <!-- SHIPPING WIDGET -->
+  <div id="delivery" class="widget clearfix">
+    <h4>Shipping Information</h4>
+    <ul class="checkboxes">
+      <li class="local-pickup">Local Pickup Only</li>
+      <li class="mail-delivery">Shipping Only</li>
+      <li class="both-options clicked">Local Pickup or Shipping</li>
+    </ul>
+  </div>
 </div>

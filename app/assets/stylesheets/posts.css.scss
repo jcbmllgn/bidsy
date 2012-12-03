@@ -62,27 +62,9 @@ img.post-field {
   }
 }
 
-/* Bid Widget */
+/* COST WIDGET */
 
-#startAmount {
-  text-align: center;
-  border: none;
-  background: $yellow;
-  padding: 2px 10px;
-  color: $grey;
-  font-size: 1.4em;
-}
-
-#productDetials .editMode #rowCreator {
-  height: 28px;
-  margin-top: 10px;
-  background-color: rgb(230, 230, 230);
-
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-}
-
-.bid-widget {
+#cost {
   position: relative;
   text-align: center;
   min-height: 60px;
@@ -92,7 +74,7 @@ img.post-field {
   }
 
 
-  .bid-type-selector {
+  .type-selector {
     width: 300px;
     margin-left: -10px;
 
@@ -122,7 +104,7 @@ img.post-field {
     }
   }
 
-  .bid-type-placehoder {
+  .type-placehoder {
     height: 150px;
     background-image: url('arrow-up.png');
     background-repeat: no-repeat;
@@ -131,7 +113,7 @@ img.post-field {
     margin: 0px auto;
   }
 
-  .bid-types {
+  .types {
 
     div {
       display: none;
@@ -158,85 +140,24 @@ img.post-field {
   }
 }
 
+/* USER WIDGET */
 
-.userWidget {
-  margin-top: 60px;
-
-  div.user-profile-image {
-    @include crop-image-square(80px);
+#user {
+  .user-icon {
     float: left;
-    margin: 0px 10px 0px 0px;
-    border-radius: $radius;
+    margin-right: 10px;
   }
 }
 
-.shipping-info {
-  position: relative;
+/* DELIVERY WIDGET */
+
+#delivery {
   h4 {
     text-align: center;
     margin-bottom: 15px;
   }
 
-  ul.checkboxes {
-    position: absolute;
-    top: 45px;
-    li {
-      margin-bottom: 20px;
-    }
-  }
-
-  ul.options {
-    float: right;
-    width: 250px;
-
-    li {
-      margin-bottom: 20px;
-
-      p.editable {
-        width: 67px;
-        text-align: center;
-      }
-    }
-    .zip, .shipping-option {
-      display: none;
-
-      margin-left: -28px;
-      line-height: 1.8em;
-      font-size: .8em;
-
-      span.editable {
-      	padding: 0px 10px;
-      }
-    }
-  }
-
-  .shipping-tooltip {
-    display: none;
-
-    position: absolute;
-    top: 0px;
-    right: 310px;
-
-    width: 593px;
-    height: 100%;
-    padding: 0% 25px;
-    border-radius: $radius;
-    border: 3px solid lighten($light-grey, 30%);
-    background-color: lighten($light-grey, 50%);
-
-    // -webkit-box-shadow:  1px 1px 3px 3px #dadadc;
-    // box-shadow:  1px 1px 3px 3px #dadadc;
-    opacity: .97;
-
-      p {
-        font-size: .8em;
-        line-height: 1.1em;
-      }
-
-      h3 {
-        font-size: 16px;
-        line-height: 24px;
-      	margin: 0px;
-      }
+  .checkboxes li {
+    margin-bottom: 20px;
   }
 }
