@@ -18,4 +18,12 @@ class Post < ActiveRecord::Base
   # Posts details are an array of values
   serialize :details, Hash
 
+  private
+
+  # Set current_bid to the starting_bid
+  after_initialize :set_current_bid
+  def set_current_bid
+    self.current_bid = self.starting_bid
+  end
+
 end
