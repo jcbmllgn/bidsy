@@ -11,7 +11,7 @@ Bidsy::Application.routes.draw do
   # Posts
   match "/posts"                   => "posts#index", via: :get
   match "/post"                    => "posts#new", via: :get, as: "new_post"
-  match "/post"                    => "posts#create", via: :post, as: "create_post"
+  match "/posts"                    => "posts#create", via: :post, as: "create_post"
   match "users/:user_id/posts/:id" => "posts#show", via: :get, as: "post"
   match "/posts/:id"               => "posts#destroy", via: :delete, as: "delete_post"
 
