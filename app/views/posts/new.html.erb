@@ -1,5 +1,7 @@
 <%= form_for @post do |f| %>
 
+  <h2>Info</h2>
+
   <%= f.label :starting_bid %><br>
   <%= f.text_field :starting_bid %><br>
 
@@ -12,7 +14,15 @@
   <%= f.label :description %><br>
   <%= f.text_area :description %><br>
 
-  <br>
+  <h2>Details</h2>
+  <%= f.fields_for :details, @post.details do |d| %>
+    <%= d.label :manufacturer %>
+    <%= d.text_field :manufacturer %>
+    <%= d.label :condition %>
+    <%= d.text_field :condition %>
+  <% end %>
+
+  <br><br>
 
   <%= f.submit %>
 
