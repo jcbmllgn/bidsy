@@ -150,57 +150,6 @@
   }
 }
 
-/* Filters - used on the playground and /posts */
-
-@mixin range-picker ( $width: 100px, $background: lighten($light-grey, 50%) ) {
-  width: $width;
-  height: 12px;
-  position: relative;
-
-  background-color: $background;
-  border-radius: $radius;
-
-  .range-min {
-    position: absolute;
-    top: -25px;
-    left: 0px;
-    width: 27px;
-    text-align: center;
-    background-color: $background;
-    border-radius: $radius;
-  }
-  .range-max {
-    position: absolute;
-    top: -25px;
-    right: 0px;
-    width: 27px;
-    text-align: center;
-    background-color: $background;
-    border-radius: $radius;
-  }
-
-  .min-picker, .max-picker {
-    position: absolute;
-    top: -3px;
-    left: 2px;
-
-    width: 12px;
-    height: 17px;
-    border-radius: 5px;
-
-    background-color: darken($background, 25%);
-
-    &:hover {
-      cursor: pointer;
-      background-color: darken($background, 35%);
-    }
-  }
-}
-
-.default-range {
-  @include range-picker( 200px );
-}
-
 
 
 
