@@ -2,6 +2,10 @@
 
   <h2>Info</h2>
 
+  <%= f.fields_for :images do |i| %>
+    <%= i.file_field :data %><br>
+  <% end %>
+
   <%= f.label :starting_bid %><br>
   <%= f.text_field :starting_bid %><br>
 
