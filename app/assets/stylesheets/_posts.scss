@@ -1,11 +1,11 @@
-/* Structure of Post Page */
+// Structure of Post Page
 
 .column {
   float: left;
 
   &.column-left {
-    width: 635px;
     margin-right: 20px
+    width: 635px;
   }
 
   &.column-right {
@@ -13,29 +13,29 @@
   }
 }
 
-/* Editable Styles */
+// Editable Styles
 
 .post-field.editable {
-  padding: 4px 10px;
   background: $yellow;
   border-radius: $radius;
+  padding: 4px 10px;
 
   &:hover, &:active, &:focus {
-    padding: 2px 8px;
     border: 2px dashed #e1295a;
     outline: none;
+    padding: 2px 8px;
   }
 }
 
-/* Post Image */
+// Post Image
 
 img.post-field {
-  width: 635px;
-  max-height: 635px;
   border-radius: $radius;
+  max-height: 635px;
+  width: 635px;
 }
 
-/* Post Description */
+// Post Description
 
 .post-description {
   float: left;
@@ -43,7 +43,7 @@ img.post-field {
   width: 355px;
 }
 
-/* Post Details */
+// Post Details
 
 .post-details {
   float: left;
@@ -62,40 +62,37 @@ img.post-field {
   }
 }
 
-/* COST WIDGET */
+// Cost Widget
 
 #cost {
+  min-height: 60px;
   position: relative;
   text-align: center;
-  min-height: 60px;
 
   h4 {
     font-size: 15px;
   }
 
-
   .type-selector {
-    width: 300px;
-    margin-left: -10px;
-
     border-bottom: 1px solid lighten($light-grey, 45%);
+    margin-left: -10px;
+    width: 300px;
 
     p {
-      float: left;
-      margin-left: 16px;
-      width: 126px;
-      margin-bottom: 0px;
       background: lighten($light-grey, 45%);
-      color: $light-grey;
-      padding: 4px 0px;
-      font-size: 14px;
-
-      border-top-right-radius: $radius;
       border-top-left-radius: $radius;
+      border-top-right-radius: $radius;
+      color: $light-grey;
+      float: left;
+      font-size: 14px;
+      margin-bottom: 0px;
+      margin-left: 16px;
+      padding: 4px 0px;
+      width: 126px;
 
       &:hover {
-        cursor: pointer;
         background: lighten($light-grey, 37%);
+        cursor: pointer;
       }
 
       &:active {
@@ -105,11 +102,10 @@ img.post-field {
   }
 
   .type-placehoder {
-    height: 150px;
     background-image: url('arrow-up.png');
-    background-repeat: no-repeat;
     background-position:center;
-
+    background-repeat: no-repeat;
+    height: 150px;
     margin: 0px auto;
   }
 
@@ -117,20 +113,20 @@ img.post-field {
 
     div {
       display: none;
-      width: 280px;
       min-height: 150px;
       position: absolute;
       top: 78px;
+      width: 280px;
 
       p.editable {
-        width: 110px;
         margin: 0px auto;
+        width: 110px;
       }
 
       p.fee {
         font-size: .7em;
-        margin-top: 4px;
         font-style: italic;
+        margin-top: 4px;
       }
 
       .selected {
@@ -140,7 +136,7 @@ img.post-field {
   }
 }
 
-/* USER WIDGET */
+// User Widget
 
 #user {
   .user-icon {
@@ -149,12 +145,12 @@ img.post-field {
   }
 }
 
-/* DELIVERY WIDGET */
+// Delivery Widget
 
 #delivery {
   h4 {
-    text-align: center;
     margin-bottom: 15px;
+    text-align: center;
   }
 
   .checkboxes li {
