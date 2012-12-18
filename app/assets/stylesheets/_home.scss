@@ -13,24 +13,32 @@
     margin-top: 70px;
   }
 
-  input {
-    border: 2px solid $blue;
+  input, a {
     border-radius: 8px;
-    font-size: 22px;
+    box-sizing: border-box;
+    display: block;
+    font-size: 24px;
     font-weight: bold;
-    height: 43px;
-    margin: -12px auto 0px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    padding: 0 .25em;
     text-align: center;
     width: 390px;
   }
 
+  input {
+    border: 2px solid $blue;
+
+    &:focus {
+      border-color: darken($blue, 15%);
+      outline: none;
+    }
+  }
+
   a {
     background-color: $blue;
-    border-radius: 8px;
     color: white;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 8px 35px;
 
     &:hover {
       background-color: darken($blue, 15%);
