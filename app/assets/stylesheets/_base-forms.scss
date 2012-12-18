@@ -1,0 +1,22 @@
+.checkboxes {
+  margin: 10px 5px 20px;
+
+  li {
+    height: 16px;
+    margin: 1px 0 5px;
+    padding-left: 25px;
+  }
+
+  .unchecked {
+    background: url('check_sprite2.png') no-repeat 0px 0px;
+
+    &:hover {
+      background: url('check_sprite2.png') no-repeat 0px -21px;
+      cursor: pointer;
+    }
+  }
+
+  .checked {
+    background: url('check_sprite2.png') no-repeat 0 -44px;
+  }
+}

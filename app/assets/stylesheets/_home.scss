@@ -1,0 +1,40 @@
+.home-block {
+  float: left;
+  padding-top: 150px;
+  text-align: center;
+  width: 450px;
+
+  h1 {
+    font-size: 42px;
+    margin-bottom: 90px;
+  }
+
+  p {
+    margin-top: 70px;
+  }
+
+  input {
+    border: 2px solid $blue;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: bold;
+    height: 43px;
+    margin: -12px auto 0px;
+    text-align: center;
+    width: 390px;
+  }
+
+  a {
+    background-color: $blue;
+    border-radius: 8px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px 35px;
+
+    &:hover {
+      background-color: darken($blue, 15%);
+      text-decoration: none;
+    }
+  }
+}
